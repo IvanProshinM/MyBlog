@@ -2,38 +2,46 @@
 
 namespace app\models;
 
-class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
+use app\query\UserQuery;
+use Yii;
+use yii\web\IdentityInterface;
+
+/**
+ * This is the model class for table "user".
+ *
+ * @property int $id
+ * @property string|null $username
+ * @property string|null $nickname
+ * @property string|null $email
+ * @property string|null $password
+ * @property int|null $gender
+ * @property string|null $resetHash
+ * @property string|null $activateHash
+ * @property string|null $activatedAt
+ */
+class User extends \yii\db\ActiveRecord implements IdentityInterface
 {
-    public $id;
-    public $username;
-    public $password;
-    public $authKey;
-    public $accessToken;
 
-    private static $users = [
-        '100' => [
-            'id' => '100',
-            'username' => 'admin',
-            'password' => 'admin',
-            'authKey' => 'test100key',
-            'accessToken' => '100-token',
-        ],
-        '101' => [
-            'id' => '101',
-            'username' => 'demo',
-            'password' => 'demo',
-            'authKey' => 'test101key',
-            'accessToken' => '101-token',
-        ],
-    ];
 
+    public static function tableName()
+    {
+        return 'user';
+    }
 
     /**
      * {@inheritdoc}
      */
     public static function findIdentity($id)
     {
-        return isset(self::$users[$id]) ? new static(self::$users[$id]) : null;
+        return self::findOne($id);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function validateAuthKey($authKey)
+    {
+        return $this->authKey === $authKey;
     }
 
     /**
@@ -67,17 +75,6 @@ class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
         return null;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function getAuthKey()
     {
         return $this->authKey;
@@ -86,10 +83,11 @@ class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
     /**
      * {@inheritdoc}
      */
-    public function validateAuthKey($authKey)
+    public function getId()
     {
-        return $this->authKey === $authKey;
+        return $this->id;
     }
+
 
     /**
      * Validates password
@@ -99,6 +97,22 @@ class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
      */
     public function validatePassword($password)
     {
-        return $this->password === $password;
+        return Yii::$app->security->validatePassword($password, $this->password);
     }
+
+    public function setPassword($password)
+    {
+        $this->password = \Yii::$app->security->generatePasswordHash($password);
+    }
+
+    public function isAdmin()
+    {
+        return $this->nickname === "Gerdvi";
+    }
+
+    public static function find()
+    {
+        return new UserQuery(static::class);
+    }
+
 }
