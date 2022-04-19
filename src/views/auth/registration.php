@@ -26,7 +26,7 @@ $this->title = 'Регистрация';
 
 <?php echo $form->field($model, 'gender')->dropDownList([
     '0' => 'Мужской',
-    '1' => 'неМужской',
+    '1' => 'Женский',
 
 ]);
 ?>

@@ -107,7 +107,7 @@ class AuthController extends Controller
         if ($model->load(\Yii::$app->request->post()) && $model->validate()) {
             $resetPassword = $this->userRecoverPasswordService->reset($model);
             if ($resetPassword) {
-                $session->setFlash('success', 'Пароль успешно сброшен. Ссылка для сброса пароля отправлена на почту');
+                $session->setFlash('success', 'Ссылка для сброса пароля отправлена на почту');
                 return $this->redirect(['auth/authorization']);
             }
             $session->setFlash('error', 'Пользователь с такой почтой не найден');

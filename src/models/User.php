@@ -18,10 +18,14 @@ use yii\web\IdentityInterface;
  * @property string|null $resetHash
  * @property string|null $activateHash
  * @property string|null $activatedAt
+ * @property int $role
  */
 class User extends \yii\db\ActiveRecord implements IdentityInterface
 {
 
+    public CONST ROLE_READER = 0;
+    public CONST ROLE_REDACTOR = 1;
+    public CONST ROLE_ADMIN = 2;
 
     public static function tableName()
     {

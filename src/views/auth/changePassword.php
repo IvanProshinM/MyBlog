@@ -17,9 +17,9 @@ use yii\widgets\ActiveForm;
 
 <?php $form = ActiveForm::begin(); ?>
     <h2><?= 'Введите новый пароль' ?></h2>
-<?= $form->field($model, 'password') ?>
+<?= $form->field($model, 'password')->passwordInput()?>
     <h2><?= 'Подтвердите новый пароль' ?></h2>
-<?= $form->field($model, 'confirmPassword') ?>
+<?= $form->field($model, 'confirmPassword')->passwordInput() ?>
 
 
     <div class="form-group">

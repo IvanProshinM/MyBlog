@@ -11,7 +11,7 @@ $config = [
     'language' => 'ru',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
-        '@npm'   => '@vendor/npm-asset',
+        '@npm' => '@vendor/npm-asset',
     ],
     /*'container' => require __DIR__ . '/container.php',*/
     'components' => [
@@ -41,6 +41,13 @@ $config = [
                 'password' => 'onphovhouktqjlfl',
             ],
         ],
+
+        'modules' => [
+            'admin' => [
+                'class' => 'app\modules\admin\Module',
+            ],
+        ],
+
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
@@ -69,14 +76,14 @@ if (YII_ENV_DEV) {
     $config['modules']['debug'] = [
         'class' => 'yii\debug\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
-        'allowedIPs' => ['*','127.0.0.1', '::1'],
+        'allowedIPs' => ['*', '127.0.0.1', '::1'],
     ];
 
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1'],
+        'allowedIPs' => ['*', '127.0.0.1', '::1', '192.168.0.*', '192.168.178.20'],
     ];
 }
 
