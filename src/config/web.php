@@ -13,6 +13,13 @@ $config = [
         '@bower' => '@vendor/bower-asset',
         '@npm' => '@vendor/npm-asset',
     ],
+
+    'modules' => [
+        'admin' => [
+            'class' => 'app\modules\admin\Module',
+        ],
+    ],
+
     /*'container' => require __DIR__ . '/container.php',*/
     'components' => [
         'request' => [
@@ -41,13 +48,6 @@ $config = [
                 'password' => 'onphovhouktqjlfl',
             ],
         ],
-
-        'modules' => [
-            'admin' => [
-                'class' => 'app\modules\admin\Module',
-            ],
-        ],
-
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
