@@ -2,7 +2,7 @@
 
 namespace app\models;
 
-use app\query\UserQuery;
+use app\query\CategoryQuery;
 use Yii;
 use yii\web\IdentityInterface;
 
@@ -111,12 +111,12 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
 
     public function isAdmin()
     {
-        return $this->nickname === "Gerdvi";
+        return $this->role == 2;
     }
 
     public static function find()
     {
-        return new UserQuery(static::class);
+        return new CategoryQuery(static::class);
     }
 
 }

@@ -57,6 +57,11 @@ AppAsset::register($this);
             ['label' => 'Registration', 'url' => ['auth/registration']]
             ) : (
             ""
+            ),
+            (!Yii::$app->user->isGuest && Yii::$app->user->identity->isAdmin()) ? (
+            ['label' => 'Admin Page', 'url' => ['/admin/admin/admin-page']]
+            ) : (
+            ""
             )
         ],
     ]);

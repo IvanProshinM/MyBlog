@@ -91,6 +91,10 @@ class AuthController extends Controller
             $user = $this->userAuthorizationService->authorizate($model);
             if ($user != null) {
                 \Yii::$app->user->login($user, 3600);
+                if ($user->isAdmin() == 2) {
+                    $session->setFlash('success', 'Вы успешно авторизовались как Админ');
+                    return $this->redirect(['site/index']);
+                }
                 $session->setFlash('success', 'Вы успешно авторизовались');
                 return $this->redirect(['site/index']);
             }
