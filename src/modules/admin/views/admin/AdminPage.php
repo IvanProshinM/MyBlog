@@ -23,11 +23,11 @@ $this->title = 'Admin Kingdom';
     'dataProvider' => $dataProvider,
     'itemOptions' => ['class' => 'item'],
     'itemView' => function ($model) {
-        return $this->render('staffItem', ['model' => $model]);
+        return $this->render('CategoryItem', ['model' => $model]);
     },
 ]) ?>
 
-<?= Html::a('Add category', ['admin/category-create'], ['target' => '_blank']); ?>
+<?= Html::a('Add category', ['admin/update-category'], ['target' => '_blank']); ?>
     <br>
     <br>
 

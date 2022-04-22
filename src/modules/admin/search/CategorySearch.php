@@ -56,7 +56,7 @@ class CategorySearch extends Category
             'id' => $this->id,
         ]);
 
-        $query->andFilterWhere(['like', 'CategoryName', $this->name]);
+        $query->andFilterWhere(['like', 'name', $this->name]);
         return $dataProvider;
     }
 }

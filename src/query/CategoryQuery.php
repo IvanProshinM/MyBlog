@@ -3,16 +3,16 @@
 namespace app\query;
 
 /**
- * This is the ActiveQuery class for [[\app\models\User]].
+ * This is the ActiveQuery class for [[\app\models\Category]].
  *
- * @see \app\models\User
+ * @see \app\models\Category
  */
 
 class CategoryQuery extends \yii\db\ActiveQuery
 {
     /**
      * {@inheritdoc}
-     * @return \app\models\User[]|array
+     * @return \app\models\Category[]|array
      */
     public function all($db = null)
     {
@@ -21,7 +21,7 @@ class CategoryQuery extends \yii\db\ActiveQuery
 
     /**
      * {@inheritdoc}
-     * @return \app\models\User|array|null
+     * @return \app\models\Category|array|null
      */
     public function one($db = null)
     {
