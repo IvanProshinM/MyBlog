@@ -27,7 +27,7 @@ $this->title = 'Admin Kingdom';
     },
 ]) ?>
 
-<?= Html::a('Add category', ['admin/update-category'], ['target' => '_blank']); ?>
+<?= Html::a('Add category', ['admin/category-create'], ['target' => '_blank']); ?>
     <br>
     <br>
 

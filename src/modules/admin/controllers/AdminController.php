@@ -88,10 +88,19 @@ class AdminController extends Controller
         $session = Yii::$app->session;
         $model->load($Category->attributes, '');
         if ($model->load(Yii::$app->request->post()) && Yii::$app->request->isPost) {
-            $Category->name = $model->name;
-            $Category->save();
-            $session->setFlash('success', 'Категория успешно изменена');
-            return $this->redirect('/admin/admin/admin-page');
+            $UniqueCategory = Category::find()
+                ->where(['name' => $model->name])
+                ->one();
+            if ($model->name === $UniqueCategory->name) {
+                $session->setFlash('error', 'Категория с таким именем уже существует');
+                return $this->render('CategoryUpdate', ['model' => $model]);
+            } else {
+
+                $Category->name = $model->name;
+                $Category->save();
+                $session->setFlash('success', 'Категория успешно изменена');
+                return $this->redirect('/admin/admin/admin-page');
+            }
         }
 
         return $this->render('CategoryUpdate', ['model' => $model]);

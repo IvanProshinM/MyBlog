@@ -119,4 +119,5 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
         return new CategoryQuery(static::class);
     }
 
+
 }
