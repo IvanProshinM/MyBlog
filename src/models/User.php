@@ -111,7 +111,7 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
 
     public function isAdmin()
     {
-        return $this->role == 2;
+        return $this->role == User::ROLE_ADMIN;
     }
 
     public static function find()

@@ -2,7 +2,7 @@
 
 namespace app\modules\admin\controllers;
 ;
-
+use app\components\AccessRuleAdmin;
 use app\models\Category;
 use app\models\User;
 use app\modules\admin\models\CreateCategory;
@@ -14,6 +14,7 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use Yii;
 
+
 class AdminController extends Controller
 {
     public function behaviors()
@@ -21,10 +22,12 @@ class AdminController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::class,
+                'ruleConfig' => [
+                  'class' => AccessRuleAdmin::class,
+                ],
                 'rules' => [
                     [
                         'allow' => true,
-                        'roles' => ['@']
                     ],
                 ]
             ],

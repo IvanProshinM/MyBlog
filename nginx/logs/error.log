@@ -265,3 +265,264 @@
 2022/04/25 09:58:42 [notice] 1#1: start worker process 31
 2022/04/25 09:58:42 [notice] 1#1: start worker process 32
 2022/04/25 09:58:42 [notice] 1#1: start worker process 33
+2022/04/25 10:25:32 [error] 22#22: *140 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/modules/admin/controllers/AdminController.php on line 92. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/modules/admin/controllers/AdminController.php on line 92. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOME' => '/var/www',
+    'PHP_IDE_CONFIG' => 'serverName=Docker',
+    'VERSION_PRESTISSIMO_PLUGIN' => '^0.3.0',
+    'PHP_MD5' => '',
+    'PHP_URL' => 'https://www.php.net/get/php-7.4.4.tar.xz/from/this/mirror',
+    'SUPERVISOR_GROUP_NAME' => 'php-fpm',
+    'GPG_KEYS' => '42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312',
+    'PATH' => '/app:/app/vendor/bin:/root/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ENABLE_XDEBUG' => '0',
+    'TERM' => 'linux',
+    'SUPERVISOR_SERVER_URL' => 'unix:///var/run/supervisor.sock',
+    'XDEBUG_CONFIG' => 'remote_host=host.docker.internal remote_enable=1',
+    'SUPERVISOR_ENABLED' => '1',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O
+2022/04/25 10:25:32 [error] 22#22: *140 FastCGI sent in stderr: "-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'VERSION_CODECEPTION' => '^2.2.6',
+    'HOSTNAME' => 'b7aa3d07383d',
+    'PWD' => '/var/www/html',
+    'PHP_LDFLAGS' => '-Wl,-O1 -Wl,--hash-style=both -pie',
+    'VERSION_YII2' => '^2.0.15',
+    'PHP_ASC_URL' => 'https://www.php.net/get/php-7.4.4.tar.xz.asc/from/this/mirror',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'PHPSESSID=58a9d6c9e93219b91a5428105e489308; _identity=efc5d20fe7113aa7ef8cd56d2c2b9b326312ed08bab024f2554f5914919ffceba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A13%3A%22%5B6%2Cnull%2C3600%5D%22%3B%7D; _csrf=0fa2da3252d80dc80357d44252cef888c6ec9c333c8340c541fcf66d56b2581fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22VBrtKsMsiLxbXen___gWf9Rk7N2lGTLQ%22%3B%7D',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_REFERER' => 'http://localhost/admin/admin/update-category?id=16',
+    'HTTP_SEC_FETCH_DEST' => 'document',
+    'HTTP_SEC_FETCH_USER' => '?1',
+    'HTTP_SEC_FETCH_MODE' => 'navigate',
+    'HTTP_SEC_FETCH_SITE' => 'same-origin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36',
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'HTTP_ORIGIN' => 'http://localhost',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_SEC_CH_UA_PLATFORM' => '"Windows"',
+    'HTTP_SEC_CH_UA_MOBILE' => '?0',
+    'HTTP_SEC_CH_UA' => '" Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONTENT_LENGTH' => '160',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => 'localhost',
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php',
+    'REDIRECT
+2022/04/25 10:26:25 [error] 22#22: *140 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/modules/admin/controllers/AdminController.php on line 92. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/modules/admin/controllers/AdminController.php on line 92. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOME' => '/var/www',
+    'PHP_IDE_CONFIG' => 'serverName=Docker',
+    'VERSION_PRESTISSIMO_PLUGIN' => '^0.3.0',
+    'PHP_MD5' => '',
+    'PHP_URL' => 'https://www.php.net/get/php-7.4.4.tar.xz/from/this/mirror',
+    'SUPERVISOR_GROUP_NAME' => 'php-fpm',
+    'GPG_KEYS' => '42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312',
+    'PATH' => '/app:/app/vendor/bin:/root/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ENABLE_XDEBUG' => '0',
+    'TERM' => 'linux',
+    'SUPERVISOR_SERVER_URL' => 'unix:///var/run/supervisor.sock',
+    'XDEBUG_CONFIG' => 'remote_host=host.docker.internal remote_enable=1',
+    'SUPERVISOR_ENABLED' => '1',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O
+2022/04/25 10:26:25 [error] 22#22: *140 FastCGI sent in stderr: "-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'VERSION_CODECEPTION' => '^2.2.6',
+    'HOSTNAME' => 'b7aa3d07383d',
+    'PWD' => '/var/www/html',
+    'PHP_LDFLAGS' => '-Wl,-O1 -Wl,--hash-style=both -pie',
+    'VERSION_YII2' => '^2.0.15',
+    'PHP_ASC_URL' => 'https://www.php.net/get/php-7.4.4.tar.xz.asc/from/this/mirror',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'PHPSESSID=58a9d6c9e93219b91a5428105e489308; _identity=efc5d20fe7113aa7ef8cd56d2c2b9b326312ed08bab024f2554f5914919ffceba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A13%3A%22%5B6%2Cnull%2C3600%5D%22%3B%7D; _csrf=0fa2da3252d80dc80357d44252cef888c6ec9c333c8340c541fcf66d56b2581fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22VBrtKsMsiLxbXen___gWf9Rk7N2lGTLQ%22%3B%7D',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_REFERER' => 'http://localhost/admin/admin/update-category?id=16',
+    'HTTP_SEC_FETCH_DEST' => 'document',
+    'HTTP_SEC_FETCH_USER' => '?1',
+    'HTTP_SEC_FETCH_MODE' => 'navigate',
+    'HTTP_SEC_FETCH_SITE' => 'same-origin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36',
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'HTTP_ORIGIN' => 'http://localhost',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_SEC_CH_UA_PLATFORM' => '"Windows"',
+    'HTTP_SEC_CH_UA_MOBILE' => '?0',
+    'HTTP_SEC_CH_UA' => '" Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONTENT_LENGTH' => '160',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => 'localhost',
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php',
+    'REDIRECT
+2022/04/25 10:26:35 [error] 22#22: *140 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/modules/admin/controllers/AdminController.php on line 92. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->s" while reading upstream, client: 192.168.220.1, server: _ls, request: "POST /admin/admin/update-category?id=16 HTTP/1.1", upstream: "fastcgi://192.168.220.3:9000", host: "localhost", referrer: "http://localhost/admin/admin/update-category?id=16"
+2022/04/25 10:26:35 [error] 22#22: *140 FastCGI sent in stderr: "endHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/modules/admin/controllers/AdminController.php on line 92. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOME' => '/var/www',
+    'PHP_IDE_CONFIG' => 'serverName=Docker',
+    'VERSION_PRESTISSIMO_PLUGIN' => '^0.3.0',
+    'PHP_MD5' => '',
+    'PHP_URL' => 'https://www.php.net/get/php-7.4.4.tar.xz/from/this/mirror',
+    'SUPERVISOR_GROUP_NAME' => 'php-fpm',
+    'GPG_KEYS' => '42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312',
+    'PATH' => '/app:/app/vendor/bin:/root/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ENABLE_XDEBUG' => '0',
+    'TERM' => 'linux',
+    'SUPERVISOR_SERVER_URL' => 'unix:///var/run/supervisor.sock',
+    'XDEBUG_CONFIG' => 'remote_host=host.docker.internal remote_enable=1',
+    'SUPERVISOR_ENABLED' => '1',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_SHA256' => '1873c4cefdd3df9a78dcffb2198bba5c2f0464f55c9c960720c84df483fca74c',
+    'PHP_USER_ID' => '33',
+    'PHP_VERSION' => '7.4.4',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'VERSION_COMPOSER_ASSET_PLUGIN' => '^1.4.4',
+  
+2022/04/25 10:26:35 [error] 22#22: *140 FastCGI sent in stderr: " 'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONTENT_LENGTH' => '160',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => 'localhost',
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '_ls',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '192.168.220.4',
+    'REMOTE_PORT' => '54636',
+    'REMOTE_ADDR' => '192.168.220.1',
+    'SERVER_SOFTWARE' => 'nginx/1.21.6',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/var/www/html/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/admin/admin/update-category?id=16',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '160',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => 'id=16',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1650882394.614269,
+    'REQUEST_TIME' => 1650882394,
+    'argv' => [
+        'id=16',
+    ],
+    'argc' => 1,
+]" while reading upstream, client: 192.168.220.1, server: _ls, request: "POST /admin/admin/update-category?id=16 HTTP/1.1", upstream: "fastcgi://192.168.220.3:9000", host: "localhost", referrer: "http://localhost/admin/admin/update-category?id=16"
+2022/04/25 10:26:55 [error] 22#22: *140 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/modules/admin/controllers/AdminController.php on line 92. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/modules/admin/controllers/AdminController.php on line 92. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOME' => '/var/www',
+    'PHP_IDE_CONFIG' => 'serverName=Docker',
+    'VERSION_PRESTISSIMO_PLUGIN' => '^0.3.0',
+    'PHP_MD5' => '',
+    'PHP_URL' => 'https://www.php.net/get/php-7.4.4.tar.xz/from/this/mirror',
+    'SUPERVISOR_GROUP_NAME' => 'php-fpm',
+    'GPG_KEYS' => '42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312',
+    'PATH' => '/app:/app/vendor/bin:/root/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ENABLE_XDEBUG' => '0',
+    'TERM' => 'linux',
+    'SUPERVISOR_SERVER_URL' => 'unix:///var/run/supervisor.sock',
+    'XDEBUG_CONFIG' => 'remote_host=host.docker.internal remote_enable=1',
+    'SUPERVISOR_ENABLED' => '1',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O
+2022/04/25 10:26:55 [error] 22#22: *140 FastCGI sent in stderr: "TCH_MODE' => 'navigate',
+    'HTTP_SEC_FETCH_SITE' => 'same-origin',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'HTTP_ORIGIN' => 'http://localhost',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_SEC_CH_UA_PLATFORM' => '"Windows"',
+    'HTTP_SEC_CH_UA_MOBILE' => '?0',
+    'HTTP_SEC_CH_UA' => '" Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONTENT_LENGTH' => '160',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => 'localhost',
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '_ls',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '192.168.220.4',
+    'REMOTE_PORT' => '54636',
+    'REMOTE_ADDR' => '192.168.220.1',
+    'SERVER_SOFTWARE' => 'nginx/1.21.6',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/var/www/html/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/admin/admin/update-category?id=16',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '160',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => 'id=16',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1650882414.508061,
+    'REQUEST_TIME' => 1650882414,
+    'argv' => [
+        'id=16',
+    ],
+    'argc' => 1,
+]" while reading upstream, client: 192.168.220.1, server: _ls, request: "POST /admin/admin/update-category?id=16 HTTP/1.1", upstream: "fastcgi://192.168.220.3:9000", host: "localhost", referrer: "http://loca
