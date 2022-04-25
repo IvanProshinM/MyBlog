@@ -19,17 +19,10 @@ $this->title = 'Admin Kingdom';
 <?php $form = ActiveForm::begin(); ?>
 
 
-<?= ListView::widget([
-    'dataProvider' => $dataProvider,
-    'itemOptions' => ['class' => 'item'],
-    'itemView' => function ($model) {
-        return $this->render('CategoryItem', ['model' => $model]);
-    },
-]) ?>
-
-<?= Html::a('Add category', ['admin/category-create'], ['target' => '_blank']); ?>
+<?= Html::a('Category Page', ['admin/category-page'], ['target' => '_blank']); ?>
     <br>
     <br>
+<?= Html::a('Users Page', ['admin/user-page'], ['target' => '_blank']); ?>
 
 
 <?php ActiveForm::end(); ?>

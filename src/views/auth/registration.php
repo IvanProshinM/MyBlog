@@ -1,13 +1,12 @@
 <?php
+
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-
 
 
 /* @var $this yii\web\View */
 /* @var $form yii\widgets\ActiveForm */
 /* @var $model app\models\Registration */
-
 
 
 $this->title = 'Регистрация';
@@ -21,7 +20,6 @@ $this->title = 'Регистрация';
 <?= $form->field($model, 'email') ?>
 <?= $form->field($model, 'password')->passwordInput() ?>
 <?= $form->field($model, 'confirmPassword')->passwordInput() ?>
-
 
 
 <?php echo $form->field($model, 'gender')->dropDownList([

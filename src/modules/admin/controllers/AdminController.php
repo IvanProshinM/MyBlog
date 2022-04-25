@@ -2,17 +2,22 @@
 
 namespace app\modules\admin\controllers;
 ;
+
 use app\components\AccessRuleAdmin;
 use app\models\Category;
 use app\models\User;
+use app\modules\admin\models\ChangeUser;
 use app\modules\admin\models\CreateCategory;
 use app\modules\admin\models\UpdateCategory;
+use app\modules\admin\services\ChangeUserService;
 use app\modules\admin\services\FindCategoryService;
 use app\modules\admin\search\CategorySearch;
+use app\services\UserCreateService;
 use app\services\UserRegistrationNotification;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use Yii;
+use app\modules\admin\search\UserSearch;
 
 
 class AdminController extends Controller
@@ -23,7 +28,7 @@ class AdminController extends Controller
             'access' => [
                 'class' => AccessControl::class,
                 'ruleConfig' => [
-                  'class' => AccessRuleAdmin::class,
+                    'class' => AccessRuleAdmin::class,
                 ],
                 'rules' => [
                     [
@@ -40,27 +45,40 @@ class AdminController extends Controller
      */
     private $categoryService;
 
+    /**
+     * @var ChangeUserService;
+     */
+    private $changeUserService;
+
     public function __construct(
         $id,
         $module,
         FindCategoryService $categoryService,
+        ChangeUserService $changeUserService,
         $config = [])
     {
         parent::__construct($id, $module, $config);
         $this->categoryService = $categoryService;
+        $this->changeUserService = $changeUserService;
+
     }
 
 
     public function actionAdminPage()
     {
+        return ($this->render('adminPage'));
+    }
+
+    public function actionCategoryPage()
+    {
         $searchModel = new CategorySearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
-        return ($this->render('adminPage', [
+        return ($this->render('CategoryPage', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]));
-
     }
+
 
     public function actionCategoryCreate()
     {
@@ -108,4 +126,34 @@ class AdminController extends Controller
 
         return $this->render('CategoryUpdate', ['model' => $model]);
     }
+
+    public function actionUserPage()
+    {
+        $searchModel = new UserSearch();
+        $dataProvider = $searchModel->search($this->request->queryParams);
+        return ($this->render('UserPage', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]));
+    }
+
+    public function actionChangeUser($id)
+    {
+        $user = User::find()
+            ->where(['id' => $id])
+            ->one();
+        $session = Yii::$app->session;
+        $model = new ChangeUser();
+        $attributes = $user->attributes;
+        unset($attributes['password']);
+        $model->load($attributes, '');
+        if ($model->load(Yii::$app->request->post()) && Yii::$app->request->isPost) {
+            $user = $this->changeUserService->change($model, $user);
+            $user->save();
+            $session->setFlash('success', 'Данные пользоваетля успешно изменены');
+            $this->redirect('/admin/admin/user-page');
+        }
+        return $this->render('UserChange', ['model' => $model]);
+    }
+
 }
