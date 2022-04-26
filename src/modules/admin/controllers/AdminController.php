@@ -148,6 +148,7 @@ class AdminController extends Controller
         unset($attributes['password']);
         $model->load($attributes, '');
         if ($model->load(Yii::$app->request->post()) && Yii::$app->request->isPost) {
+/*            var_dump($model);*/
             $user = $this->changeUserService->change($model, $user);
             $user->save();
             $session->setFlash('success', 'Данные пользоваетля успешно изменены');

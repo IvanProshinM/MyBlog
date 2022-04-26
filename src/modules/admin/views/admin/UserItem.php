@@ -39,6 +39,12 @@ $this->registerCssFile("@web/css/userItem.css");
             <li>
                 Пол (Уокер) пользователя:
             </li>
+            <li>
+                Статус пользователя:
+            </li>
+            <li>
+                Позиция
+            </li>
         </ul>
     </div>
     <div>
@@ -62,6 +68,29 @@ $this->registerCssFile("@web/css/userItem.css");
                 } else {
                     $gender = 'мужской';
                     echo $gender;
+                }
+
+                ?>
+            </li>
+
+            <li>
+                <?php if ($model->status == 0) {
+                    echo $status = 'Заблокирован';
+                } elseif ($model->status == 1) {
+                    echo $status = 'Не подтвержден';
+                } else {
+                    echo $status = 'Подвержден';
+                }
+
+                ?>
+            </li>
+            <li>
+                <?php if ($model->role == 0) {
+                    echo $role = 'Гость';
+                } elseif ($model->role == 1) {
+                    echo $role = 'Редактор';
+                } else {
+                    echo $role = 'Админ';
                 }
 
                 ?>

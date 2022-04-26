@@ -23,8 +23,12 @@ class UserCreateService
         $User->setPassword($model->password);
         $User->gender = $model->gender;
         $User->activateHash = md5($model->email);
-        /*$User->activatedAt = date("F j, Y, g:i a");*/
+
         $User->activatedAt = null;
+        /**
+         * статус пользователя - не подтвержден
+         */
+        $User->status = 1;
         $User->role = User::ROLE_READER;
 
         return $User;

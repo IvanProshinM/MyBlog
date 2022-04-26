@@ -36,6 +36,13 @@ $this->title = 'Change User';
 ]);
 ?>
 
+<?php echo $form->field($model, 'status')->dropDownList([
+    '0' => 'Заблокировать',
+    '1' => 'Установить не подвержденный статус',
+    '2' => 'Установить подтвержденный статус'
+
+]); ?>
+
     <div class="form-group">
         <br>
         <?= Html::submitButton('Change  ', ['class' => 'btn btn-primary']) ?>

@@ -20,6 +20,7 @@ use app\modules\admin\query\UserQuery;
  * @property string|null $activateHash
  * @property string|null $activatedAt
  * @property int $role
+ * @property string|null $status
  */
 class User extends \yii\db\ActiveRecord implements IdentityInterface
 {

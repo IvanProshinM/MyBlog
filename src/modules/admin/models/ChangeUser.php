@@ -13,6 +13,7 @@ class ChangeUser extends Model
     public string $password = '';
     public int $gender;
     public int $role;
+    public int $status;
 
 
     public function rules()
@@ -23,7 +24,9 @@ class ChangeUser extends Model
             [['username'], 'match', 'pattern' => '/^[А-яА-Я_ ]/'],
             [['username', 'nickname'], 'string', 'min' => 4, 'max' => 15],
             ['gender', 'in', 'range' => [0, 1]],
-            ['role', 'in', 'range' => [0, 1, 2]]
+            ['role', 'in', 'range' => [0, 1, 2]],
+            ['status', 'in', 'range' => [0, 1, 2]],
+
         ];
     }
 

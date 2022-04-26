@@ -93,6 +93,12 @@ class AuthController extends Controller
         if ($user) {
             $user->activateHash = null;
             $user->activatedAt = date("F j, Y, g:i a");
+
+            /**
+             * статус пользователя - подтвержден.
+             */
+            $user->status = 2;
+            $user->role = 1;
             $user->save();
             $session->setFlash('success', 'Аккаунт успешно активирован');
             return $this->redirect('/auth/authorization');
@@ -110,7 +116,7 @@ class AuthController extends Controller
         $session = \Yii::$app->session;
         if ($model->load(\Yii::$app->request->post()) && $model->validate()) {
             $user = $this->userAuthorizationService->authorizate($model);
-            if ($user != null && $user->activateHash === null) {
+            if ($user != null && $user->activateHash === null && $user->status !== 0) {
                 \Yii::$app->user->login($user, 3600);
                 if ($user->isAdmin() == 2) {
                     $session->setFlash('success', 'Вы успешно авторизовались как Админ');
@@ -119,7 +125,7 @@ class AuthController extends Controller
                 $session->setFlash('success', 'Вы успешно авторизовались');
                 return $this->redirect(['site/index']);
             }
-            $session->setFlash('error', 'Пользователь с таким email отсутствует или профиль с таким email не был активирован');
+            $session->setFlash('error', 'Пользователь с таким email отсутствует или профиль с таким email не был активирован, или Вас заблокировали к хуям.');
             return $this->render('authorization', ['model' => $model]);
         }
         return $this->render('authorization', ['model' => $model]);

@@ -21,11 +21,18 @@ class ChangeUserService
         $User->username = $model->username;
         $User->nickname = $model->nickname;
         $User->email = $model->email;
-        $User->setPassword($model->password);
-        $User->gender = $model->gender;
+
+        if ($model->password !== '') {
+            $User->setPassword($model->password);
+        } else {
+            $User->password = $user->password;
+        }
+
+        $User->gender = $model->gender;/*
         $User->activateHash = Yii::$app->security->generatePasswordHash($model->email);
-        $User->activatedAt = date("F j, Y, g:i a");
+        $User->activatedAt = date("F j, Y, g:i a");*/
         $User->role = $model->role;
+        $User->status = $model->status;
 
         return $User;
     }
