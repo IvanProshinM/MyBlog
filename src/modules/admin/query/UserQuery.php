@@ -1,6 +1,6 @@
 <?php
 
-namespace app\query;
+namespace app\modules\admin\query;
 
 use app\models\User;
 

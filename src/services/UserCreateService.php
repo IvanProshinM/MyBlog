@@ -22,8 +22,9 @@ class UserCreateService
         $User->email = $model->email;
         $User->setPassword($model->password);
         $User->gender = $model->gender;
-        $User->activateHash = Yii::$app->security->generatePasswordHash($model->email);
-        $User->activatedAt = date("F j, Y, g:i a");
+        $User->activateHash = md5($model->email);
+        /*$User->activatedAt = date("F j, Y, g:i a");*/
+        $User->activatedAt = null;
         $User->role = User::ROLE_READER;
 
         return $User;

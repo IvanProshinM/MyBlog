@@ -56,7 +56,15 @@ $this->registerCssFile("@web/css/userItem.css");
             </li>
 
             <li>
-                <?= $model->gender ?>
+                <?php if ($model->gender === '1') {
+                    $gender = 'женский';
+                    echo $gender;
+                } else {
+                    $gender = 'мужской';
+                    echo $gender;
+                }
+
+                ?>
             </li>
         </ul>
     </div>

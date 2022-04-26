@@ -5,6 +5,7 @@ namespace app\models;
 use app\query\CategoryQuery;
 use Yii;
 use yii\web\IdentityInterface;
+use app\modules\admin\query\UserQuery;
 
 /**
  * This is the model class for table "user".
@@ -116,7 +117,7 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
 
     public static function find()
     {
-        return new CategoryQuery(static::class);
+        return new UserQuery(static::class);
     }
 
 
