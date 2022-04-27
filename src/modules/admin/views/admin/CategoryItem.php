@@ -16,7 +16,7 @@ $id = $model->id;
     </li>
 </ul>
 <span>
-   <?= Html::a('update category', ['update-category', 'id'=>$id], ['target' => '_blank']) ?>
+   <?= Html::a('update category', ['update-category', 'id'=>$id]) ?>
 </span>
 <br>
 <br>

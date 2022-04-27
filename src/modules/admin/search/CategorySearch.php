@@ -7,8 +7,8 @@ use yii\base\Model;
 use yii\data\ActiveDataProvider;
 
 
-
 class CategorySearch extends Category
+
 {
     /**
      * {@inheritdoc}
@@ -44,6 +44,11 @@ class CategorySearch extends Category
             'query' => $query,
             'pagination' => [
                 'pageSize' => 3,
+            ],
+            'sort' => [
+                'defaultOrder' => [
+                    'id' => SORT_DESC
+                ]
             ]
         ]);
 
@@ -52,9 +57,10 @@ class CategorySearch extends Category
         if (!$this->validate()) {
             return $dataProvider;
         }
-        $query->andFilterWhere([
-            'id' => $this->id,
-        ]);
+        /*        $query->andFilterWhere([
+                    'id' => $this->id,
+                ]);*/
+
 
         $query->andFilterWhere(['like', 'name', $this->name]);
         return $dataProvider;

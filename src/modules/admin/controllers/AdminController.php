@@ -91,7 +91,7 @@ class AdminController extends Controller
                 $Category->name = $model->name;
                 $Category->save();
                 $session->setFlash('success', 'Категория успешно добавлена');
-                return $this->redirect(['/admin/admin/admin-page']);
+                return $this->redirect(['/admin/admin/category-page']);
             } else {
                 $session->setFlash('error', 'Категория с таким именем уже существует');
                 return $this->render('CategoryCreate', ['model' => $model]);
@@ -120,7 +120,7 @@ class AdminController extends Controller
                 $Category->name = $model->name;
                 $Category->save();
                 $session->setFlash('success', 'Категория успешно изменена');
-                return $this->redirect('/admin/admin/admin-page');
+                return $this->redirect('/admin/admin/category-page');
             }
         }
 

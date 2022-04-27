@@ -544,3 +544,85 @@ $_SERVER = [
 2022/04/26 10:36:38 [notice] 1#1: start worker process 32
 2022/04/26 10:36:38 [notice] 1#1: start worker process 33
 2022/04/26 10:36:38 [notice] 1#1: start worker process 34
+2022/04/26 15:48:21 [error] 27#27: *472 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/modules/admin/controllers/AdminController.php on line 151. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/modules/admin/controllers/AdminController.php on" while reading upstream, client: 192.168.220.1, server: _ls, request: "POST /admin/admin/change-user?id=20 HTTP/1.1", upstream: "fastcgi://192.168.220.2:9000", host: "localhost", referrer: "http://localhost/admin/admin/change-user?id=20"
+2022/04/26 15:48:21 [error] 27#27: *472 FastCGI sent in stderr: " line 151. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOME' => '/var/www',
+    'PHP_IDE_CONFIG' => 'serverName=Docker',
+    'VERSION_PRESTISSIMO_PLUGIN' => '^0.3.0',
+    'PHP_MD5' => '',
+    'PHP_URL' => 'https://www.php.net/get/php-7.4.4.tar.xz/from/this/mirror',
+    'SUPERVISOR_GROUP_NAME' => 'php-fpm',
+    'GPG_KEYS' => '42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312',
+    'PATH' => '/app:/app/vendor/bin:/root/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ENABLE_XDEBUG' => '0',
+    'TERM' => 'linux',
+    'SUPERVISOR_SERVER_URL' => 'unix:///var/run/supervisor.sock',
+    'XDEBUG_CONFIG' => 'remote_host=host.docker.internal remote_enable=1',
+    'SUPERVISOR_ENABLED' => '1',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_SHA256' => '1873c4cefdd3df9a78dcffb2198bba5c2f0464f55c9c960720c84df483fca74c',
+    'PHP_USER_ID' => '33',
+    'PHP_VERSION' => '7.4.4',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'VERSION_COMPOSER_ASSET_PLUGIN' => '^1.4.4',
+    'COMPOSER_ALLOW_SUPERUSER' => '1',
+    'VERSION_COMPOSER_MERGE_PLUGIN' => '^1.4.1',
+    'SUPERVISOR_PROCESS_NAME' => 'php-fpm',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'VERSION_CODECEPTION' => '^2.2.6',
+    'HOSTNAME' => 'b7aa3d07383d',
+    'PWD' => '/var/www/html',
+    'PHP_LDF
+2022/04/26 15:48:21 [error] 27#27: *472 FastCGI sent in stderr: "OCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/var/www/html/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/admin/admin/change-user?id=20',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '362',
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+    'REQUEST_METHOD' => 'POST',
+    'QUERY_STRING' => 'id=20',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1650988099.411433,
+    'REQUEST_TIME' => 1650988099,
+    'argv' => [
+        'id=20',
+    ],
+    'argc' => 1,
+]" while reading upstream, client: 192.168.220.1, server: _ls, request: "POST /admin/admin/change-user?id=20 HTTP/1.1", upstream: "fastcgi://192.168.220.2:9000", host: "localhost", referrer: "http://localhost/admin/admin/change-user?id=20"
+2022/04/27 12:37:58 [notice] 1#1: using the "epoll" event method
+2022/04/27 12:37:58 [notice] 1#1: nginx/1.21.6
+2022/04/27 12:37:58 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/04/27 12:37:58 [notice] 1#1: OS: Linux 5.10.16.3-microsoft-standard-WSL2
+2022/04/27 12:37:58 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/04/27 12:37:58 [notice] 1#1: start worker processes
+2022/04/27 12:37:58 [notice] 1#1: start worker process 23
+2022/04/27 12:37:58 [notice] 1#1: start worker process 24
+2022/04/27 12:37:58 [notice] 1#1: start worker process 25
+2022/04/27 12:37:58 [notice] 1#1: start worker process 26
+2022/04/27 12:37:58 [notice] 1#1: start worker process 27
+2022/04/27 12:37:58 [notice] 1#1: start worker process 28
+2022/04/27 12:37:58 [notice] 1#1: start worker process 29
+2022/04/27 12:37:58 [notice] 1#1: start worker process 30
+2022/04/27 12:37:58 [notice] 1#1: start worker process 31
+2022/04/27 12:37:58 [notice] 1#1: start worker process 32
+2022/04/27 12:37:58 [notice] 1#1: start worker process 33
+2022/04/27 12:37:58 [notice] 1#1: start worker process 34

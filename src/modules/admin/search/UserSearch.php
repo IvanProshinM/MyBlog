@@ -43,7 +43,13 @@ class UserSearch extends User
             'query' => $query,
             'pagination' => [
                 'pageSize' => 3,
+            ],
+            'sort' => [
+                'defaultOrder' => [
+                    'id' => SORT_DESC
+                ]
             ]
+
         ]);
 
         $this->load($params);
@@ -54,10 +60,10 @@ class UserSearch extends User
         $query->andFilterWhere([
             'id' => $this->id,
         ]);
-        $query->andFilterWhere(['like', 'username', $this->username]);
+       /* $query->andFilterWhere(['like', 'username', $this->username]);
         $query->andFilterWhere(['like', 'nickname', $this->nickname]);
         $query->andFilterWhere(['like', 'email', $this->email]);
-        $query->andFilterWhere(['like', 'gender', $this->gender]);
+        $query->andFilterWhere(['like', 'gender', $this->gender]);*/
         return $dataProvider;
     }
 }

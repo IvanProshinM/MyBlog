@@ -19,10 +19,10 @@ $this->title = 'Admin Kingdom';
 <?php $form = ActiveForm::begin(); ?>
 
 
-<?= Html::a('Category Page', ['admin/category-page'], ['target' => '_blank']); ?>
+<?= Html::a('Category Page', ['admin/category-page']); ?>
     <br>
     <br>
-<?= Html::a('Users Page', ['admin/user-page'], ['target' => '_blank']); ?>
+<?= Html::a('Users Page', ['admin/user-page']); ?>
 
 
 <?php ActiveForm::end(); ?>
