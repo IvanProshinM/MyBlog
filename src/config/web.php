@@ -18,6 +18,9 @@ $config = [
         'admin' => [
             'class' => 'app\modules\admin\Module',
         ],
+        'manager' => [
+            'class' => 'app\modules\manager\Manager',
+        ]
     ],
 
     /*'container' => require __DIR__ . '/container.php',*/
