@@ -1,6 +1,7 @@
 <?php
 
 /** @var yii\web\View $this */
+
 /** @var string $content */
 
 use app\assets\AppAsset;
@@ -42,7 +43,7 @@ AppAsset::register($this);
 
             ['label' => 'Contact', 'url' => ['/site/contact']],
             Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['auth/authorization']]
+            ['label' => 'Login', 'url' => ['auth/authorization']]
             ) : (
                 '<li>'
                 . Html::beginForm(['/site/logout'], 'post', ['class' => 'form-inline'])
@@ -62,7 +63,12 @@ AppAsset::register($this);
             ['label' => 'Admin Page', 'url' => ['/admin/admin/admin-page']]
             ) : (
             ""
-            )
+            ),
+            !Yii::$app->user->isGuest ? (
+            ['label' => 'Post Creation', 'url' => ['/manager/manager/manager-create']]
+            ) : (
+            ""
+            ),
         ],
     ]);
     NavBar::end();

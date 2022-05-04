@@ -17,8 +17,25 @@ $this->title = 'Post Creation';
 
 <?php $form = ActiveForm::begin(); ?>
 
+<?php
+$categoryList = \app\models\Category::find()->asArray()->all();
+$result = [];
+/*foreach ($categoryList as $category) {
+    $result[$category['id']] = $category['name'];
+
+}*/
+
+$result = \yii\helpers\ArrayHelper::map($categoryList, 'id', 'name');
+
+\yii\helpers\VarDumper::dump($result, 10, true);
+
+?>
+    ?>
 <?= $form->field($model, 'name') ?>
 <?= $form->field($model, 'category') ?>
+<?= $form->field($model, 'category')->checkboxList(
+   $result
+) ?>
 <?= $form->field($model, 'textShort')->textarea(['rows' => '3']) ?>
 <? /*= $form->field($model, 'textFull')->textarea(['rows' => '6']) */ ?>
 
