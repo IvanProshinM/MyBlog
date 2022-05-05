@@ -23,6 +23,8 @@ $this->title = 'Admin Kingdom';
     <br>
     <br>
 <?= Html::a('Users Page', ['admin/user-page']); ?>
-
+    <br>
+    <br>
+<?= Html::a('Post List', ['/manager/manager/manager']) ?>
 
 <?php ActiveForm::end(); ?>

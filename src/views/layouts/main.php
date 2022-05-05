@@ -69,6 +69,8 @@ AppAsset::register($this);
             ) : (
             ""
             ),
+
+            ['label' => 'Post List', 'url' => ['/manager/manager/manager']]
         ],
     ]);
     NavBar::end();
