@@ -11,6 +11,7 @@ class CreatePostService
     public function createPost(PostCreate $model)
     {
         $session = \Yii::$app->session;
+
         $post = Post::find()
             ->where(['name' => $model->name])
             ->one();
@@ -19,12 +20,12 @@ class CreatePostService
         } else {
             $newPost = new Post();
             $newPost->name = $model->name;
-            $newPost->category = $model->category;
             $newPost->textShort = $model->textShort;
             $newPost->textFull = $model->textFull;
             $newPost->status = Post::STATUS_NOT_PUBLIC;
             $newPost->commentOff = false;
             $newPost->publicDate = time();
+            $newPost->categoriesListId = $model->categoriesList;
             return $newPost;
         }
     }

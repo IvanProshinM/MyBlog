@@ -3,10 +3,9 @@
 namespace app\models;
 
 use app\modules\manager\query\PostQuery;
-use yii\base\Model;
-use yii\behaviors\SluggableBehavior;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
+use yii\helpers\ArrayHelper;
 
 /**
  * @property int id;
@@ -15,14 +14,16 @@ use yii\db\ActiveRecord;
  * @property string publicDate;
  * @property string|null textShort;
  * @property string|null textFull;
- * @property string|null category;
  * @property boolean commentOff;
  * @property int createdAt;
  * @property int updatedAt;
+ * @property Category[] categories;
+ * @property int[] categoriesListId;
  */
 class Post extends ActiveRecord
 {
 
+    public array $categoriesListId;
 
     public const STATUS_NOT_PUBLIC = 0;
     public const STATUS_PUBLIC = 1;
@@ -35,9 +36,10 @@ class Post extends ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'textShort', 'textFull', 'category'], 'string'],
+            [['name', 'textShort', 'textFull'], 'string'],
             [['id', 'status'], 'integer'],
-            [['commentOff'], 'boolean']
+            [['commentOff'], 'boolean'],
+            ['categoriesListId', 'safe']
         ];
     }
 
@@ -46,19 +48,71 @@ class Post extends ActiveRecord
     {
         return [
             TimestampBehavior::class,
-     /*       [
-                'class' => SluggableBehavior::class,
-                'attribute' => 'name',
-            ],*/
+            /*       [
+                       'class' => SluggableBehavior::class,
+                       'attribute' => 'name',
+                   ],*/
         ];
 
     }
-
 
 
     public static function find()
     {
         return new PostQuery(static::class);
     }
+
+    public function getPostCategories()
+    {
+        return $this->hasMany(PostCategory::class, ['post_id' => 'id']);
+    }
+
+    public function getCategories()
+    {
+        return $this->hasMany(Category::class, ['id' => 'category_id'])->via('postCategories');
+    }
+
+    public function getCategoriesListId()
+    {
+        if ($this->categoriesListId === null) {
+            $this->categoriesListId = ArrayHelper::map($this->categories, 'id', 'id');
+        }
+        return $this->categoriesListId;
+    }
+
+    public function setCategoriesListId($value)
+    {
+        $this->categoriesListId = $value;
+    }
+
+    public function afterSave($insert, $changedAttributes)
+    {
+        $this->refreshCategories();
+        parent::afterSave($insert, $changedAttributes);
+    }
+
+    protected function refreshCategories()
+    {
+        $categories = $this->categoriesListId;
+        PostCategory::deleteAll(['post_id' => $this->id]);
+        if (!is_array($categories)) {
+            return;
+        }
+        \Yii::warning('categories list');
+        \Yii::warning($this->categoriesListId);
+        foreach ($categories as $id) {
+            $category = Category::find()->andWhere(['id' => $id])->one();
+
+            if ($category === null) {
+                continue;
+            }
+            $postCategory = new PostCategory();
+            $postCategory->category_id = $id;
+            $postCategory->post_id = $this->id;
+            $postCategory->save();
+            \Yii::warning($postCategory->errors);
+        }
+    }
+
 
 }

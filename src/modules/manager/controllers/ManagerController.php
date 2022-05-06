@@ -53,7 +53,6 @@ class ManagerController extends Controller
 
         $model = new PostCreate();
         $session = \Yii::$app->session;
-        $this->render('PostCreate', ['model' => $model]);;
         if ($model->load(\Yii::$app->request->post()) && $model->validate()) {
             $post = $this->createPostService->createPost($model);
             if ($post == null) {
@@ -65,10 +64,9 @@ class ManagerController extends Controller
                 $session->setFlash('success', 'пост успешно создан');
                 return $this->render('PostCreate', ['model' => $model]);
             }
-        } else {
-            $this->render('PostCreate', ['model' => $model]);
-            return $this->render('PostCreate', ['model' => $model]);
         }
+        return $this->render('PostCreate', ['model' => $model]);
+
 
     }
 
