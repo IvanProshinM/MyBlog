@@ -10,24 +10,40 @@ use yii\widgets\ListView;
 /* @var $Category app\models\Post; */
 /* @var $dataProvider yii\data\ActiveDataProvider; */
 
+$this->registerCssFile("@web/css/postList.css");
 
 $this->title = 'Post List';
 ?>
-<h1><?= Html::encode($this->title) ?></h1>
+
+<div class="post-list">
+
+    <div class="post-list_content">
+        <h1><?= Html::encode($this->title) ?></h1>
 
 
-<?php $form = ActiveForm::begin(); ?>
+        <?php $form = ActiveForm::begin(); ?>
 
 
-<?= ListView::widget([
-    'dataProvider' => $dataProvider,
-    'itemOptions' => ['class' => 'item'],
-    'itemView' => function ($model) {
-        return $this->render('PostItem', ['model' => $model]);
-    },
-    'layout' => "{items}",
-]) ?>
-<br>
-<br>
+        <?= ListView::widget([
+            'dataProvider' => $dataProvider,
+            'itemOptions' => ['class' => 'item'],
+            'itemView' => function ($model) {
+                return $this->render('PostItem', ['model' => $model]);
+            },
+            'layout' => "{items}",
+        ]) ?>
+        <br>
+        <br>
+    </div>
+    <?php ActiveForm::end(); ?>
+    <div class="post-list_side-bar">
+        <p>Categories:</p>
+        <?php
+        $categoryName = \app\models\Category::find()->all();
+        foreach ($categoryName as $value): ?>
+            <?= Html::a($value->name, ['/manager/manager/search', 'slug'=>$value->slug ], ['target' => '_blank']) ?>
+            <br>
+        <?php endforeach ?>
 
-<?php ActiveForm::end(); ?>
+    </div>
+</div>

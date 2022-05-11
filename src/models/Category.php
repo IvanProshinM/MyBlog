@@ -53,4 +53,17 @@ class Category extends ActiveRecord
     {
         return new CategoryQuery(static::class);
     }
+
+
+    public function getCategoriesPost()
+    {
+        return $this->hasMany(PostCategory::class, ['category_id' => 'id']);
+    }
+
+    public function getPost()
+    {
+        return $this->hasMany(Post::class, ['id' => 'post_id'])->via('postCategories');
+    }
+
+
 }

@@ -2,6 +2,7 @@
 
 namespace app\modules\manager\controllers;
 
+use app\models\Category;
 use app\models\Post;
 use app\modules\manager\models\PostChange;
 use app\modules\manager\models\PostProvider;
@@ -93,6 +94,26 @@ class ManagerController extends Controller
             }
         }
         return $this->render('PostChange', ['model' => $model]);
+    }
+
+    public function PostSearch($slug)
+    {
+        $session = \Yii::$app->session;
+        $searchQuery = Category::find()
+            ->where(['slug' => $slug])
+            ->one();
+        if (!$searchQuery) {
+            $session->setFlash('error', 'Постов с такой категорией не сущетсвует!');
+            return $this->redirect('/manager/manager/manager');
+        } else {
+            $searchQuery = $searchQuery->getPost();
+            $searchModel = new PostProvider();
+            $dataProvider = $searchModel->search($this->request->queryParams);
+            return ($this->render('PostSearch', [
+                'searchModel' => $searchModel,
+                'dataProvider' => $dataProvider,
+            ]));
+        }
     }
 
 }

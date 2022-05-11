@@ -12,40 +12,7 @@ $this->registerCssFile("@web/css/postItem.css");
 ?>
 
 <div class="post-item">
-    <!--<ul class="post">
-    <li>
-       Имя поста:
-    </li>
 
-    <li>
-        Категория поста:
-    </li>
-
-    <li class="text">
-        Коротко о главном:
-    </li>
-
-    <li class="text">
-        Длинно о не главном:
-    </li>
-</ul>
-<ul class="post">
-    <li>
-        <? /*= $model->name */ ?>
-    </li>
-
-    <li>
-        <? /*= $model->category */ ?>
-    </li>
-
-    <li class="text">
-        <? /*= $model->textShort */ ?>
-    </li>
-
-    <li class="text">
-        <? /*= $model->textFull */ ?>
-    </li>
-</ul>-->
 </div>
 
 
@@ -62,9 +29,17 @@ $this->registerCssFile("@web/css/postItem.css");
         <th>Category</th>
     </tr>
     <tr>
-        <td>
-            <?= $model->category ?>
-        </td>
+        <td><?php
+            $category = $model->categories;
+            $result = [];
+            foreach ($category as $key => $value)
+                $result[] = $value->name;
+            echo implode(', ', $result);
+            /*
+            $category = \yii\helpers\ArrayHelper::getColumn($category, 'name');
+            echo implode(', ', $category);
+        \yii\helpers\VarDumper::dump($category,3,true);*/
+            ?></td>
     </tr>
     <tr>
         <th>Short review</th>
