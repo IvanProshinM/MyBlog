@@ -10,32 +10,20 @@ use yii\widgets\ListView;
 /* @var $Category app\models\Post; */
 /* @var $dataProvider yii\data\ActiveDataProvider; */
 
-$this->registerCssFile("@web/css/postList.css");
-
-$this->title = 'Post List';
 ?>
-
-<div class="post-list">
-
-    <div class="post-list_content">
-        <h1><?= Html::encode($this->title) ?></h1>
+<?php $form = ActiveForm::begin(); ?>
 
 
-        <?php $form = ActiveForm::begin(); ?>
+<?= ListView::widget([
+    'dataProvider' => $dataProvider,
+    'itemOptions' => ['class' => 'item'],
+    'itemView' => function ($model) {
+        return $this->render('PostItem', ['model' => $model]);
+    },
+    'layout' => "{items}",
+]) ?>
+<br>
+<br>
+<?php ActiveForm::end(); ?>
 
-
-        <?= ListView::widget([
-            'dataProvider' => $dataProvider,
-            'itemOptions' => ['class' => 'item'],
-            'itemView' => function ($model) {
-                return $this->render('PostItem', ['model' => $model]);
-            },
-            'layout' => "{items}",
-        ]) ?>
-        <br>
-        <br>
-    </div>
-    <?php ActiveForm::end(); ?>
-
-</div>
 

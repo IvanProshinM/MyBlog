@@ -15,6 +15,8 @@ use yii\behaviors\SluggableBehavior;
  * @property string|null $slug;
  * @property int $createdAt;
  * @property int $updatedAt;
+ *
+ * @property-read Post[] $post
  */
 class Category extends ActiveRecord
 {
@@ -60,9 +62,12 @@ class Category extends ActiveRecord
         return $this->hasMany(PostCategory::class, ['category_id' => 'id']);
     }
 
+    /**
+     * @return \yii\db\ActiveQuery
+     */
     public function getPost()
     {
-        return $this->hasMany(Post::class, ['id' => 'post_id'])->via('postCategories');
+        return $this->hasMany(Post::class, ['id' => 'post_id'])->via('categoriesPost');
     }
 
 

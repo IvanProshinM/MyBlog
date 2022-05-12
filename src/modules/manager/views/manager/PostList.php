@@ -41,7 +41,7 @@ $this->title = 'Post List';
         <?php
         $categoryName = \app\models\Category::find()->all();
         foreach ($categoryName as $value): ?>
-            <?= Html::a($value->name, ['/manager/manager/search', 'slug'=>$value->slug ], ['target' => '_blank']) ?>
+            <?= Html::a($value->name, ['/manager/manager/post-search', 'slug'=>$value->slug ], ['target' => '_blank']) ?>
             <br>
         <?php endforeach ?>
 

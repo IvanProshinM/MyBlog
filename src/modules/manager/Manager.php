@@ -20,6 +20,7 @@ class Manager extends \yii\base\Module
     {
         parent::init();
 
+        Yii::$app->user->loginUrl = '/auth/authorization';
         /*Yii::$app->user->loginUrl = '/auth/authorization';*/
     }
 }

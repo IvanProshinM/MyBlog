@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\modules\manager\models\PostProvider;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -59,10 +60,10 @@ class SiteController extends Controller
      *
      * @return string
      */
-    public function actionIndex()
+/*    public function actionIndex()
     {
         return $this->render('index');
-    }
+    }*/
 
     /**
      * Login action.
@@ -124,5 +125,15 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+
+    public function actionIndex()
+    {
+        $searchModel = new PostProvider();
+        $dataProvider = $searchModel->search($this->request->queryParams);
+        return ($this->render('index', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]));
     }
 }

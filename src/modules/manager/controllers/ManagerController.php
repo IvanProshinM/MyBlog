@@ -2,6 +2,8 @@
 
 namespace app\modules\manager\controllers;
 
+use app\components\AccessRuleAdmin;
+use app\components\AccessRuleRedactor;
 use app\models\Category;
 use app\models\Post;
 use app\modules\manager\models\PostChange;
@@ -10,10 +12,30 @@ use app\modules\admin\search\CategorySearch;
 use app\modules\manager\models\PostCreate;
 use app\modules\manager\services\CreatePostService;
 use app\modules\manager\services\PostChangeService;
+use yii\data\ActiveDataProvider;
+use yii\filters\AccessControl;
+use yii\helpers\VarDumper;
 use yii\web\Controller;
 
 class ManagerController extends Controller
 {
+    public function behaviors()
+    {
+        return [
+            'access' => [
+                'class' => AccessControl::class,
+                'ruleConfig' => [
+                    'class' => AccessRuleRedactor::class,
+                ],
+                'rules' => [
+                    [
+                        'allow' => true,
+                    ]
+                ]
+            ],
+        ];
+    }
+
 
     /**
      * @var CreatePostService
@@ -96,7 +118,7 @@ class ManagerController extends Controller
         return $this->render('PostChange', ['model' => $model]);
     }
 
-    public function PostSearch($slug)
+    public function actionPostSearch($slug)
     {
         $session = \Yii::$app->session;
         $searchQuery = Category::find()
@@ -106,13 +128,19 @@ class ManagerController extends Controller
             $session->setFlash('error', 'Постов с такой категорией не сущетсвует!');
             return $this->redirect('/manager/manager/manager');
         } else {
-            $searchQuery = $searchQuery->getPost();
-            $searchModel = new PostProvider();
-            $dataProvider = $searchModel->search($this->request->queryParams);
-            return ($this->render('PostSearch', [
-                'searchModel' => $searchModel,
-                'dataProvider' => $dataProvider,
-            ]));
+            $postQuery = $searchQuery->getPost();
+            $dataProvider = new ActiveDataProvider([
+                'query' => $postQuery,
+                'pagination' => [
+                    'pageSize' => 3,
+                ],
+            ]);
+            return $this->render('PostSearch', [
+                    'searchModel' => $postQuery,
+                    'dataProvider' => $dataProvider,
+                ]
+
+            );
         }
     }
 
