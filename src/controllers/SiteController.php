@@ -2,8 +2,10 @@
 
 namespace app\controllers;
 
+use app\models\Category;
 use app\modules\manager\models\PostProvider;
 use Yii;
+use yii\data\ActiveDataProvider;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\Response;
@@ -135,5 +137,30 @@ class SiteController extends Controller
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]));
+    }
+    public function actionPostSearchIndex($slug)
+    {
+        $session = \Yii::$app->session;
+        $searchQuery = Category::find()
+            ->where(['slug' => $slug])
+            ->one();
+        if (!$searchQuery) {
+            $session->setFlash('error', 'Постов с такой категорией не сущетсвует!');
+            return $this->redirect('/manager/manager/manager');
+        } else {
+            $postQuery = $searchQuery->getPost();
+            $dataProvider = new ActiveDataProvider([
+                'query' => $postQuery,
+                'pagination' => [
+                    'pageSize' => 3,
+                ],
+            ]);
+            return $this->render('PostSearch', [
+                    'searchModel' => $postQuery,
+                    'dataProvider' => $dataProvider,
+                ]
+
+            );
+        }
     }
 }
