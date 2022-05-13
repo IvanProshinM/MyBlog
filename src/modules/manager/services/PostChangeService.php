@@ -7,13 +7,13 @@ use app\modules\manager\models\PostChange;
 
 class PostChangeService
 {
-    public function PostChange(PostChange $model)
+    public function PostChange(PostChange $model, Post $post)
     {
-        $post = new Post();
         $post->name = $model->name;
-        $post->category = $model->category;
         $post->textShort = $model->textShort;
         $post->textFull = $model->textFull;
+        $post->publicDate = \Yii::$app->formatter->format($model->publicDate, 'timestamp' );
+        $post->categoriesListId = $model->categoriesList;
         return $post;
     }
 }

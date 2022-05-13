@@ -4,6 +4,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use vova07\imperavi\Widget;
+use kartik\date\DatePicker;
 
 /* @var $this yii\web\View */
 /* @var $form yii\widgets\ActiveForm */
@@ -53,8 +54,29 @@ $form->field($model, 'textFull')->widget(Widget::className(), [
     ],
 ]);
 ?>
+<?php
 
 
+echo $form->field($model, 'publicDate')->widget(DatePicker::classname(), [
+    'options' => ['placeholder' => 'Enter public date ...'],
+    'pluginOptions' => [
+        'autoclose' => true
+    ],
+
+]);
+
+
+
+/*echo DatePicker::widget([
+    'name' => 'check_issue_date',
+    'value' => date('d-M-Y', strtotime('+2 days')),
+    'options' => ['placeholder' => 'Select issue date ...'],
+    'pluginOptions' => [
+        'format' => 'dd-M-yyyy',
+        'todayHighlight' => true
+    ]
+]);*/
+?>
     <div class="form-group">
         <br>
         <?= Html::submitButton('Создать', ['class' => 'btn btn-primary']) ?>

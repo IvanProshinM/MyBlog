@@ -100,20 +100,20 @@ class ManagerController extends Controller
             ->one();
         $model = new PostChange();
         $session = \Yii::$app->session;
+        $post->publicDate = \Yii::$app->formatter->format($post->publicDate, 'date');
         $model->load($post->attributes, '');
         if ($model->load(\Yii::$app->request->post()) && \Yii::$app->request->isPost) {
-            $uniquePost = Post::find()
+            /*$uniquePost = Post::find()
                 ->where(['name' => $model->name])
                 ->one();
             if ($uniquePost) {
                 $session->setFlash('error', 'Пост с таким именем существует');
                 return $this->render('PostChange', ['model' => $model]);
-            } else {
-                $post = $this->postChangeService->PostChange($model);
-                $post->save();
-                $session->setFlash('success', 'Пост успешно изменен');
-                $this->redirect('/manager/manager/manager');
-            }
+            } else {*/
+            $post = $this->postChangeService->PostChange($model, $post);
+            $post->save();
+            $session->setFlash('success', 'Пост успешно изменен');
+            $this->redirect('/manager/manager/manager');
         }
         return $this->render('PostChange', ['model' => $model]);
     }
@@ -132,7 +132,7 @@ class ManagerController extends Controller
             $dataProvider = new ActiveDataProvider([
                 'query' => $postQuery,
                 'pagination' => [
-                    'pageSize' => 3,
+                    'pageSize' => 5,
                 ],
             ]);
             return $this->render('PostSearch', [

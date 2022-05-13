@@ -11,6 +11,7 @@ class PostCreate extends Model
     public $categoriesList;
     public $textShort;
     public $textFull;
+    public $publicDate;
 
     public function rules()
     {
@@ -18,6 +19,7 @@ class PostCreate extends Model
             [['name', 'textFull', 'textShort'], 'required'],
             [['name'], 'string', 'min' => 4, 'max' => 16],
             [['name', 'textFull', 'textShort'], 'string'],
+            [['publicDate'], 'date', 'format' => 'dd.MM.yyyy', 'timestampAttribute' => 'publicDate'],
             [['categoriesList'], 'safe']
         ];
     }

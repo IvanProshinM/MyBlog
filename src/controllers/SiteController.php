@@ -152,7 +152,7 @@ class SiteController extends Controller
             $dataProvider = new ActiveDataProvider([
                 'query' => $postQuery,
                 'pagination' => [
-                    'pageSize' => 3,
+                    'pageSize' => 5,
                 ],
             ]);
             return $this->render('PostSearch', [

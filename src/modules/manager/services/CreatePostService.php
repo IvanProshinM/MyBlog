@@ -24,7 +24,7 @@ class CreatePostService
             $newPost->textFull = $model->textFull;
             $newPost->status = Post::STATUS_NOT_PUBLIC;
             $newPost->commentOff = false;
-            $newPost->publicDate = time();
+            $newPost->publicDate = $model->publicDate;
             $newPost->categoriesListId = $model->categoriesList;
             return $newPost;
         }

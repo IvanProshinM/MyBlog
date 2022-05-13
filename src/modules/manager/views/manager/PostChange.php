@@ -4,6 +4,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use vova07\imperavi\Widget;
+use kartik\date\DatePicker;
 
 /* @var $this yii\web\View */
 /* @var $form yii\widgets\ActiveForm */
@@ -18,23 +19,13 @@ $this->title = 'Post Redaction';
 <?php $form = ActiveForm::begin(); ?>
 
 <?php
-/*$categoryList = \app\models\Category::find()->asArray()->all();
-$result = [];*/
-/*foreach ($categoryList as $category) {
-    $result[$category['id']] = $category['name'];
-
-}*/
-
-/*$result = \yii\helpers\ArrayHelper::map($categoryList, 'id', 'name');
-
-\yii\helpers\VarDumper::dump($result, 10, true);*/
+$categoryList = \app\models\Category::find()->asArray()->all();
+$result = \yii\helpers\ArrayHelper::map($categoryList, 'id', 'name');
 
 ?>
 
 <?= $form->field($model, 'name') ?>
-<?= $form->field($model, 'category')/*->checkboxList(
-   $result
-)*/ ?>
+<?= $form->field($model, 'categoriesList')->checkboxList($result) ?>
 <?= $form->field($model, 'textShort')->textarea(['rows' => '3']) ?>
 <? /*= $form->field($model, 'textFull')->textarea(['rows' => '6']) */ ?>
 
@@ -55,6 +46,17 @@ $form->field($model, 'textFull')->widget(Widget::className(), [
         ],
     ],
 ]);
+
+
+echo $form->field($model, 'publicDate')->widget(DatePicker::classname(), [
+    'options' => ['placeholder' => 'Enter public date ...'],
+    'pluginOptions' => [
+        'autoclose' => true
+    ],
+
+]);
+
+
 ?>
 
 

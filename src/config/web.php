@@ -25,6 +25,15 @@ $config = [
 
     /*'container' => require __DIR__ . '/container.php',*/
     'components' => [
+        /*'assetManager' => [
+            'bundles' => [
+                'kartik\form\ActiveFormAsset' => [
+                    'bsDependencyEnabled' => false // do not load bootstrap assets for a specific asset bundle
+                ],
+            ],
+        ],*/
+
+
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'WgIUGzS2vU2kTSot4Sr8ReWjmJAyae0x',
@@ -59,6 +68,11 @@ $config = [
                     'levels' => ['error', 'warning'],
                 ],
             ],
+        ],
+        'formatter' => [
+            'dateFormat' => 'dd.MM.yyyy',
+            'decimalSeparator' => ',',
+            'thousandSeparator' => ' ',
         ],
         'db' => $db,
 
