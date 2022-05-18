@@ -102,6 +102,7 @@ class ManagerController extends Controller
         $session = \Yii::$app->session;
         $post->publicDate = \Yii::$app->formatter->format($post->publicDate, 'date');
         $model->load($post->attributes, '');
+        $model->categoriesList = $post->getCategoriesListId();
         if ($model->load(\Yii::$app->request->post()) && \Yii::$app->request->isPost) {
             /*$uniquePost = Post::find()
                 ->where(['name' => $model->name])

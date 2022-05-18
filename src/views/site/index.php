@@ -13,7 +13,7 @@ $this->title = 'My Yii Application';
 /* @var $this yii\web\View */
 /* @var $form yii\widgets\ActiveForm */
 /* @var $Category app\models\Post; */
-/* @var $dataProvider yii\data\ActiveDataProvider; */
+/* @var $dataProvider app\controllers\SiteController; */
 
 $this->registerCssFile("@web/css/postList.css");
 
@@ -35,7 +35,7 @@ $this->title = 'Post List';
             'itemView' => function ($model) {
                 return $this->render('PostItem', ['model' => $model]);
             },
-            'layout' => "{items}",
+            'layout' => "{items}\n{pager}",
         ]) ?>
         <br>
         <br>

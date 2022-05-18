@@ -57,6 +57,25 @@ $this->registerCssFile("@web/css/postItem.css");
             <?= $model->textFull ?>
         </td>
     </tr>
+    <tr>
+        <th>
+            <?php
+            if (!Yii::$app->user->isGuest && Yii::$app->user->identity->isAdmin()) {
+                echo Html::tag('p', 'Public date');
+            }
+            ?>
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <?php $publicDate = $model->publicDate;
+            $publicDate = date('y.m.d');
+            if (!Yii::$app->user->isGuest && Yii::$app->user->identity->isAdmin()) {
+                echo $publicDate;
+            }
+            ?>
+        </td>
+    </tr>
 </table>
 
 

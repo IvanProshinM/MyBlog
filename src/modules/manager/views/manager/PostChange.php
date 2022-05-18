@@ -19,8 +19,10 @@ $this->title = 'Post Redaction';
 <?php $form = ActiveForm::begin(); ?>
 
 <?php
+;
 $categoryList = \app\models\Category::find()->asArray()->all();
 $result = \yii\helpers\ArrayHelper::map($categoryList, 'id', 'name');
+
 
 ?>
 

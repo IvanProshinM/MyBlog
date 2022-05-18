@@ -23,7 +23,7 @@ use yii\helpers\ArrayHelper;
 class Post extends ActiveRecord
 {
 
-    public array $categoriesListId;
+    public $categoriesListId;
 
     public const STATUS_NOT_PUBLIC = 0;
     public const STATUS_PUBLIC = 1;

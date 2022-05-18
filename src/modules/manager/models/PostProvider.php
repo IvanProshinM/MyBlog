@@ -4,6 +4,7 @@ namespace app\modules\manager\models;
 
 use app\models\Post;
 use yii\data\ActiveDataProvider;
+use yii\helpers\VarDumper;
 
 class PostProvider extends Post
 
@@ -11,7 +12,9 @@ class PostProvider extends Post
 
     public function search($params)
     {
-        $query = Post::find();
+        $currentDate = time();
+        $query = Post::find()
+            ->where(['<=', 'publicDate', $currentDate]);
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
             'pagination' => [
@@ -29,6 +32,10 @@ class PostProvider extends Post
             return $dataProvider;
         }
         $query->andFilterWhere(['like', 'name', $this->name]);
+        $query->andFilterWhere(['like', 'name', $this->name]);
+
         return $dataProvider;
     }
 }
+
+

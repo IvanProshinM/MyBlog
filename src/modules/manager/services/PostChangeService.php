@@ -13,6 +13,8 @@ class PostChangeService
         $post->textShort = $model->textShort;
         $post->textFull = $model->textFull;
         $post->publicDate = \Yii::$app->formatter->format($model->publicDate, 'timestamp' );
+        \Yii::warning($model->categoriesList);
+
         $post->categoriesListId = $model->categoriesList;
         return $post;
     }

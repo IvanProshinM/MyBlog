@@ -12,7 +12,7 @@ class PostChange extends Model
     public $textShort;
     public $textFull;
     public $publicDate;
-    public $categoriesList;
+    public $categoriesList = [];
 
     public function rules()
     {
