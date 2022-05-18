@@ -69,7 +69,7 @@ $this->registerCssFile("@web/css/postItem.css");
     <tr>
         <td>
             <?php $publicDate = $model->publicDate;
-            $publicDate = date('y.m.d');
+            $publicDate = date('d.m.y');
             if (!Yii::$app->user->isGuest && Yii::$app->user->identity->isAdmin()) {
                 echo $publicDate;
             }
