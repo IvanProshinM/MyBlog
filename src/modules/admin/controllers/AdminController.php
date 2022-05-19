@@ -50,7 +50,7 @@ class AdminController extends Controller
      */
     private $changeUserService;
 
-    public function __construct(
+/*    public function __construct(
         $id,
         $module,
         FindCategoryService $categoryService,
@@ -61,15 +61,15 @@ class AdminController extends Controller
         $this->categoryService = $categoryService;
         $this->changeUserService = $changeUserService;
 
-    }
+    }*/
 
 
-    public function actionAdminPage()
+    public function actionIndex()
     {
         return ($this->render('adminPage'));
     }
 
-    public function actionCategoryPage()
+/*    public function actionCategoryPage()
     {
         $searchModel = new CategorySearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
@@ -127,7 +127,7 @@ class AdminController extends Controller
         return $this->render('CategoryUpdate', ['model' => $model]);
     }
 
-    public function actionUserPage()
+    public function actionUser()
     {
         $searchModel = new UserSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
@@ -148,13 +148,12 @@ class AdminController extends Controller
         unset($attributes['password']);
         $model->load($attributes, '');
         if ($model->load(Yii::$app->request->post()) && Yii::$app->request->isPost) {
-/*            var_dump($model);*/
             $user = $this->changeUserService->change($model, $user);
             $user->save();
             $session->setFlash('success', 'Данные пользоваетля успешно изменены');
             $this->redirect('/admin/admin/user-page');
         }
         return $this->render('UserChange', ['model' => $model]);
-    }
+    }*/
 
 }

@@ -82,7 +82,7 @@ $config = [
             'rules' => [
                 '/' => 'site/index',
                 '/category/<slug>' => 'site/category',
-
+                'admin'=>'admin/admin',
             ],
         ],
 

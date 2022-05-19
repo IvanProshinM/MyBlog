@@ -59,7 +59,7 @@ AppAsset::register($this);
                 ""
                 ),
                 (!Yii::$app->user->isGuest && Yii::$app->user->identity->isAdmin()) ? (
-                ['label' => 'Admin Page', 'url' => ['/admin/admin/admin-page']]
+                ['label' => 'Admin Page', 'url' => ['/admin']]
                 ) : (
                 ""
                 ),
