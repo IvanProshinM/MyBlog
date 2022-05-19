@@ -80,7 +80,6 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                'pattern' => '<page:\d+>',
                 '/' => 'site/index',
                 '/category/<slug>' => 'site/category',
 

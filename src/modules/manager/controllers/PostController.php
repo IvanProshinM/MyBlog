@@ -17,7 +17,7 @@ use yii\filters\AccessControl;
 use yii\helpers\VarDumper;
 use yii\web\Controller;
 
-class ManagerController extends Controller
+class PostController extends Controller
 {
     public function behaviors()
     {
@@ -61,7 +61,7 @@ class ManagerController extends Controller
     }
 
 
-    public function actionManager()
+    public function actionIndex()
     {
         $searchModel = new PostProvider();
         $dataProvider = $searchModel->search($this->request->queryParams);
@@ -114,7 +114,7 @@ class ManagerController extends Controller
             $post = $this->postChangeService->PostChange($model, $post);
             $post->save();
             $session->setFlash('success', 'Пост успешно изменен');
-            $this->redirect('/manager/manager/manager');
+            $this->redirect('/post/post/post');
         }
         return $this->render('PostChange', ['model' => $model]);
     }
@@ -127,7 +127,7 @@ class ManagerController extends Controller
             ->one();
         if (!$searchQuery) {
             $session->setFlash('error', 'Постов с такой категорией не сущетсвует!');
-            return $this->redirect('/manager/manager/manager');
+            return $this->redirect('/post/post/post');
         } else {
             $postQuery = $searchQuery->getPost();
             $dataProvider = new ActiveDataProvider([

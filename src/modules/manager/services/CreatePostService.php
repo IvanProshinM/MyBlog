@@ -3,7 +3,7 @@
 namespace app\modules\manager\services;
 
 use app\models\Post;
-use app\modules\manager\controllers\ManagerController;
+use app\modules\manager\controllers\PostController;
 use app\modules\manager\models\PostCreate;
 
 class CreatePostService

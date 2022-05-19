@@ -64,12 +64,12 @@ AppAsset::register($this);
                 ""
                 ),
                 !Yii::$app->user->isGuest ? (
-                ['label' => 'Post Creation', 'url' => ['/manager/manager/manager-create']]
+                ['label' => 'Post Creation', 'url' => ['/post/post/post-create']]
                 ) : (
                 ""
                 ),
                 !Yii::$app->user->isGuest ? (
-                ['label' => 'Post List', 'url' => ['/manager/manager/manager']]
+                ['label' => 'Post List', 'url' => ['/manager/post']]
                 ) : (
                 ""
                 )
