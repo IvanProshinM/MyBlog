@@ -93,7 +93,7 @@ class PostController extends Controller
 
     }
 
-    public function actionPostChange($id)
+    public function actionUpdate($id)
     {
         $post = Post::find()
             ->where(['id' => $id])
@@ -114,7 +114,7 @@ class PostController extends Controller
             $post = $this->postChangeService->PostChange($model, $post);
             $post->save();
             $session->setFlash('success', 'Пост успешно изменен');
-            $this->redirect('/post/post/post');
+            $this->redirect('/manager/post');
         }
         return $this->render('PostChange', ['model' => $model]);
     }

@@ -80,7 +80,7 @@ $this->registerCssFile("@web/css/postItem.css");
 
 
 <?php if (!Yii::$app->user->isGuest && Yii::$app->user->identity->isAdmin()) {
-    echo Html::a('change post', ['post-change', 'id' => $id]);
+    echo Html::a('change post', ['update', 'id' => $id]);
 } ?>
 
 
