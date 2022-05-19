@@ -63,7 +63,7 @@ class AuthController extends Controller
         $this->userRecoverPasswordService = $userRecoverPasswordService;
     }
 
-    public function actionRegistration()
+    public function actionSignup()
     {
         $model = new Registration();
         $session = \Yii::$app->session;
@@ -131,7 +131,7 @@ class AuthController extends Controller
         return $this->render('authorization', ['model' => $model]);
     }
 
-    public function actionRecover()
+    public function actionRecovery()
     {
         $model = new Recover();
         $session = \Yii::$app->session;

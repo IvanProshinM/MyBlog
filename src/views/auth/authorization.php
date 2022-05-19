@@ -27,6 +27,6 @@ $this->title = 'Вход';
 
 <?php echo Yii::$app->session->getFlash('alert'); ?>
 
-<?= Html::a('Забыли пароль?', ['auth/recover'], ['target'=>'_blank']) ?>
+<?= Html::a('Забыли пароль?', ['auth/recovery'], ['target'=>'_blank']) ?>
 
 <?php ActiveForm::end(); ?>
