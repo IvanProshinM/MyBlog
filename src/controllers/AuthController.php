@@ -110,7 +110,7 @@ class AuthController extends Controller
     }
 
 
-    public function actionAuthorization()
+    public function actionLogin()
     {
         $model = new Authorization();
         $session = \Yii::$app->session;
