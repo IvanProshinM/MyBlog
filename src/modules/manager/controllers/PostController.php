@@ -71,7 +71,7 @@ class PostController extends Controller
         ]));
     }
 
-    public function actionManagerCreate()
+    public function actionCreate()
     {
 
         $model = new PostCreate();
