@@ -26,6 +26,7 @@ class CreatePostService
             $newPost->commentOff = false;
             $newPost->publicDate = $model->publicDate;
             $newPost->categoriesListId = $model->categoriesList;
+            $newPost->redactor = \Yii::$app->user->id;
             return $newPost;
         }
     }

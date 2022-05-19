@@ -19,6 +19,7 @@ use yii\helpers\ArrayHelper;
  * @property int updatedAt;
  * @property Category[] categories;
  * @property int[] categoriesListId;
+ * @property int redactor;
  */
 class Post extends ActiveRecord
 {
@@ -37,7 +38,7 @@ class Post extends ActiveRecord
     {
         return [
             [['name', 'textShort', 'textFull'], 'string'],
-            [['id', 'status'], 'integer'],
+            [['id', 'status','redactor'], 'integer'],
             [['commentOff'], 'boolean'],
             ['categoriesListId', 'safe']
         ];
