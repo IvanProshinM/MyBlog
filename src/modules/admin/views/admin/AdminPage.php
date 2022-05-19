@@ -23,9 +23,8 @@ $this->title = 'Admin Kingdom';
 <?= Html::a('Users Page', ['/admin/user/']); ?>
     <br>
     <br>
-<?= Html::a('Category Page', ['admin/category-page']); ?>
+<?= Html::a('Category Page', ['/admin/category']); ?>
     <br>
     <br>
-<?= Html::a('Post List', ['/post/post']) ?>
 
 <?php ActiveForm::end(); ?>

@@ -119,7 +119,7 @@ class PostController extends Controller
         return $this->render('PostChange', ['model' => $model]);
     }
 
-    public function actionPostSearch($slug)
+    public function actionPost($slug)
     {
         $session = \Yii::$app->session;
         $searchQuery = Category::find()

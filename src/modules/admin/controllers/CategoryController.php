@@ -60,11 +60,6 @@ class CategoryController extends Controller
 
     public function actionIndex()
     {
-        return ($this->render('adminPage'));
-    }
-
-    public function actionCategoryPage()
-    {
         $searchModel = new CategorySearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
         return ($this->render('CategoryPage', [
@@ -74,7 +69,7 @@ class CategoryController extends Controller
     }
 
 
-    public function actionCategoryCreate()
+    public function actionCreate()
     {
         $model = new CreateCategory();
         $session = Yii::$app->session;
@@ -85,7 +80,7 @@ class CategoryController extends Controller
                 $Category->name = $model->name;
                 $Category->save();
                 $session->setFlash('success', 'Категория успешно добавлена');
-                return $this->redirect(['/admin/admin/category-page']);
+                return $this->redirect(['/admin/category']);
             } else {
                 $session->setFlash('error', 'Категория с таким именем уже существует');
                 return $this->render('CategoryCreate', ['model' => $model]);
@@ -114,7 +109,7 @@ class CategoryController extends Controller
                 $Category->name = $model->name;
                 $Category->save();
                 $session->setFlash('success', 'Категория успешно изменена');
-                return $this->redirect('/admin/admin/category-page');
+                return $this->redirect('/admin/category');
             }
         }
 

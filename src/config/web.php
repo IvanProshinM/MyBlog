@@ -83,6 +83,7 @@ $config = [
                 '/' => 'site/index',
                 '/category/<slug>' => 'site/category',
                 'admin'=>'admin/admin',
+                '/post/<slug>' => 'post/post'
             ],
         ],
 
