@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /** @var yii\web\View $this */
 /** @var $user */
 
-$verifyLink = Yii::$app->urlManager->createAbsoluteUrl(['auth/change-password', 'resetHash' => $user->resetHash]);
+$verifyLink = Yii::$app->urlManager->createAbsoluteUrl(['auth/reset', 'resetHash' => $user->resetHash]);
 ?>
 <div class="verify-email">
     <p>Hello <?= Html::encode($user->username) ?>,</p>

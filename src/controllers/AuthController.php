@@ -84,7 +84,7 @@ class AuthController extends Controller
         return $this->render('registration', ['model' => $model]);
     }
 
-    public function actionConfirmMail($activateHash)
+    public function actionConfirm($activateHash)
     {
         $session = Yii::$app->session;
         $user = User::find()
@@ -101,11 +101,11 @@ class AuthController extends Controller
             $user->role = 1;
             $user->save();
             $session->setFlash('success', 'Аккаунт успешно активирован');
-            return $this->redirect('/auth/authorization');
+            return $this->redirect('/auth/login');
 
         } else {
             $session->setFlash('error', 'Хэш не действителен');
-            $this->redirect('/auth/authorization');
+            $this->redirect('/auth/login');
         }
     }
 
@@ -139,7 +139,7 @@ class AuthController extends Controller
             $resetPassword = $this->userRecoverPasswordService->reset($model);
             if ($resetPassword) {
                 $session->setFlash('success', 'Ссылка для сброса пароля отправлена на почту');
-                return $this->redirect(['auth/authorization']);
+                return $this->redirect(['auth/login']);
             }
             $session->setFlash('error', 'Пользователь с такой почтой не найден');
             return $this->render('recover', ['model' => $model]);
@@ -147,7 +147,7 @@ class AuthController extends Controller
         return $this->render('recover', ['model' => $model]);
     }
 
-    public function actionChangePassword($resetHash)
+    public function actionReset($resetHash)
     {
         $model = new ChangePassword();
         $session = \Yii::$app->session;
@@ -155,7 +155,7 @@ class AuthController extends Controller
             $user = $this->userRecoverPasswordService->changePassword($model, $resetHash);
             $user->save();
             $session->setFlash('success', 'Пароль успешно изменён.');
-            return $this->redirect(['auth/authorization']);
+            return $this->redirect(['auth/login']);
 
         } else {
             return $this->render('changePassword', ['model' => $model]);
@@ -168,7 +168,7 @@ class AuthController extends Controller
         Yii::$app->user->logout();
         $session = Yii::$app->session;
         $session->setFlash('success', 'Вы успешно разлогинились.');
-        return $this->redirect(['auth/authorization']);
+        return $this->redirect(['auth/login']);
     }
 
 
