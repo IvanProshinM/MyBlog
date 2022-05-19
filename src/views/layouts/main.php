@@ -38,9 +38,9 @@ AppAsset::register($this);
         echo Nav::widget([
             'options' => ['class' => 'navbar-nav'],
             'items' => [
-               /* ['label' => 'About', 'url' => ['/site/about']],*/
+                ['label' => 'Blog', 'url' => ['/site/index']],
 
-               /* ['label' => 'Contact', 'url' => ['/site/contact']],*/
+                /* ['label' => 'Contact', 'url' => ['/site/contact']],*/
                 Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/auth/login']]
                 ) : (

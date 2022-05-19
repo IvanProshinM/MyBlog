@@ -121,11 +121,6 @@ class SiteController extends Controller
         ]);
     }
 
-    /**
-     * Displays about page.
-     *
-     * @return string
-     */
     public function actionAbout()
     {
         return $this->render('about');
@@ -134,7 +129,6 @@ class SiteController extends Controller
     public function actionIndex()
     {
         $searchModel = new PostProvider();
-
         $dataProvider = $searchModel->search($this->request->queryParams);
         return ($this->render('index', [
             'searchModel' => $searchModel,
@@ -142,7 +136,7 @@ class SiteController extends Controller
         ]));
     }
 
-    public function actionPostSearchIndex($slug)
+    public function actionCategory($slug)
     {
         $session = \Yii::$app->session;
         $currentDate = time();
@@ -152,7 +146,7 @@ class SiteController extends Controller
             ->one();
         if (!$searchQuery) {
             $session->setFlash('error', 'Постов с такой категорией не сущетсвует!');
-            return $this->redirect('/manager/manager/manager');
+            return $this->redirect('/');
         } else {
             $postQuery = $searchQuery->getPost()->where(['<=', 'publicDate', $currentDate]);
             /*VarDumper::dump($postQuery, 5, true);*/
