@@ -45,7 +45,6 @@ class PostController extends Controller
     /**
      * @var PostChangeService;
      */
-
     public $postChangeService;
 
     public function __construct(

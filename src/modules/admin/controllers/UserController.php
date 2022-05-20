@@ -75,7 +75,7 @@ class UserController extends Controller
             $user = $this->changeUserService->change($model, $user);
             $user->save();
             $session->setFlash('success', 'Данные пользоваетля успешно изменены');
-            $this->redirect('/admin/user');
+            return $this->redirect('/admin/user');
         }
         return $this->render('UserChange', ['model' => $model]);
     }

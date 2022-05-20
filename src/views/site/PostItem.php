@@ -18,15 +18,15 @@ $this->registerCssFile("@web/css/postItem.css");
 
 <table>
     <tr>
-        <th>Post name:</th>
-    </tr>
-    <tr>
         <td>
-            <?= Html::a($model->name, ['site/view', 'slug' => $model->slug]) ?>
+            <?php
+            $options = ['class' => 'post-item_name'];
+
+            echo Html::a($model->name, ['site/view', 'slug' => $model->slug], $options) ?>
         </td>
     </tr>
     <tr>
-        <th>Category</th>
+        <th>Категории</th>
     </tr>
     <tr>
         <td><?php
@@ -42,28 +42,29 @@ $this->registerCssFile("@web/css/postItem.css");
             ?></td>
     </tr>
     <tr>
-        <th>Short review</th>
+        <th>Коротко о главном</th>
     </tr>
     <tr>
         <td>
             <?= $model->textShort ?>
         </td>
     </tr>
-<!--    <tr>
+    <!--    <tr>
         <th>Long review</th>
     </tr>
     <tr>
         <td>
-            <?/*= $model->textFull */?>
+            <? /*= $model->textFull */ ?>
         </td>
     </tr>-->
 </table>
 
 
-<?php /*if (!Yii::$app->user->isGuest && Yii::$app->user->identity->isAdmin()) {
-    echo Html::a('change post', ['post-change', 'id' => $id]);
-} */ ?>
-
+<?= Html::a('Подробнее',['site/view', 'slug' => $model->slug],['class'=>'btn btn-primary']) ?>
+<br>
+<br>
+<p>Опубликован:</p>
+<?= date('d.m.y', $model->publicDate) ?>
 
 <hr class="dividing-line">
 <br>

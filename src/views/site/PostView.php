@@ -18,15 +18,12 @@ $this->registerCssFile("@web/css/postItem.css");
 
 <table>
     <tr>
-        <th>Post name:</th>
-    </tr>
-    <tr>
-        <td>
+        <td class="post-item_name">
             <?= $model->name ?>
         </td>
     </tr>
     <tr>
-        <th>Category</th>
+        <th>Категории</th>
     </tr>
     <tr>
         <td><?php
@@ -42,15 +39,7 @@ $this->registerCssFile("@web/css/postItem.css");
             ?></td>
     </tr>
     <tr>
-        <th>Short review</th>
-    </tr>
-    <tr>
-        <td>
-            <?= $model->textShort ?>
-        </td>
-    </tr>
-    <tr>
-        <th>Long review</th>
+        <th>Не коротко о главном</th>
     </tr>
     <tr>
         <td>
@@ -59,10 +48,10 @@ $this->registerCssFile("@web/css/postItem.css");
     </tr>
 </table>
 
-
-<?php /*if (!Yii::$app->user->isGuest && Yii::$app->user->identity->isAdmin()) {
-    echo Html::a('change post', ['post-change', 'id' => $id]);
-} */ ?>
+<br>
+<br>
+<p>Опубликован:</p>
+<?= $model->publicDate = date('d.m.y') ?>
 
 
 <hr class="dividing-line">
