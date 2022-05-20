@@ -30,7 +30,7 @@ $this->title = 'Post List';
             'itemView' => function ($model) {
                 return $this->render('PostItem', ['model' => $model]);
             },
-            'layout' => "{items}",
+            'layout' => "{items}\n{pager}",
         ]) ?>
         <br>
         <br>

@@ -103,6 +103,15 @@ class SiteController extends Controller
         return $this->goHome();
     }
 
+
+    public function actionView($slug)
+    {
+        $model = Post::find()
+            ->where(['slug' => $slug])
+            ->one();
+        return $this->render('PostView', ['model' => $model]);
+    }
+
     /**
      * Displays contact page.
      *

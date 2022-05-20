@@ -79,7 +79,8 @@ $this->registerCssFile("@web/css/postItem.css");
 </table>
 
 
-<?php if (!Yii::$app->user->isGuest && Yii::$app->user->identity->isAdmin()) {
+<?php
+if (!Yii::$app->user->isGuest && (Yii::$app->user->identity->isAdmin() || (Yii::$app->user->id === $model->redactor ))) {
     echo Html::a('change post', ['update', 'id' => $id]);
 } ?>
 

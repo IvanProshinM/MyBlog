@@ -6,6 +6,7 @@ use app\modules\manager\query\PostQuery;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 use yii\helpers\ArrayHelper;
+use yii\behaviors\SluggableBehavior;
 
 /**
  * @property int id;
@@ -20,6 +21,7 @@ use yii\helpers\ArrayHelper;
  * @property Category[] categories;
  * @property int[] categoriesListId;
  * @property int redactor;
+ * @property string slug;
  */
 class Post extends ActiveRecord
 {
@@ -37,8 +39,8 @@ class Post extends ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'textShort', 'textFull'], 'string'],
-            [['id', 'status','redactor'], 'integer'],
+            [['name', 'textShort', 'textFull', 'slug'], 'string'],
+            [['id', 'status', 'redactor'], 'integer'],
             [['commentOff'], 'boolean'],
             ['categoriesListId', 'safe']
         ];
@@ -49,10 +51,10 @@ class Post extends ActiveRecord
     {
         return [
             TimestampBehavior::class,
-            /*       [
-                       'class' => SluggableBehavior::class,
-                       'attribute' => 'name',
-                   ],*/
+            [
+                'class' => SluggableBehavior::class,
+                'attribute' => 'name',
+            ],
         ];
 
     }

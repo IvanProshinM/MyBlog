@@ -22,7 +22,7 @@ $this->registerCssFile("@web/css/postItem.css");
     </tr>
     <tr>
         <td>
-            <?= $model->name ?>
+            <?= Html::a($model->name, ['site/view', 'slug' => $model->slug]) ?>
         </td>
     </tr>
     <tr>
@@ -49,20 +49,20 @@ $this->registerCssFile("@web/css/postItem.css");
             <?= $model->textShort ?>
         </td>
     </tr>
-    <tr>
+<!--    <tr>
         <th>Long review</th>
     </tr>
     <tr>
         <td>
-            <?= $model->textFull ?>
+            <?/*= $model->textFull */?>
         </td>
-    </tr>
+    </tr>-->
 </table>
 
 
 <?php /*if (!Yii::$app->user->isGuest && Yii::$app->user->identity->isAdmin()) {
     echo Html::a('change post', ['post-change', 'id' => $id]);
-} */?>
+} */ ?>
 
 
 <hr class="dividing-line">
