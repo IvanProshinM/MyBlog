@@ -5,19 +5,13 @@ namespace app\modules\admin\controllers;
 
 use app\components\AccessRuleAdmin;
 use app\models\Category;
-use app\models\User;
-use app\modules\admin\models\ChangeUser;
 use app\modules\admin\models\CreateCategory;
 use app\modules\admin\models\UpdateCategory;
-use app\modules\admin\services\ChangeUserService;
 use app\modules\admin\services\FindCategoryService;
 use app\modules\admin\search\CategorySearch;
-use app\services\UserCreateService;
-use app\services\UserRegistrationNotification;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use Yii;
-use app\modules\admin\search\UserSearch;
 
 
 class CategoryController extends Controller

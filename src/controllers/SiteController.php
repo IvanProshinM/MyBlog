@@ -8,7 +8,6 @@ use app\modules\manager\models\PostProvider;
 use Yii;
 use yii\data\ActiveDataProvider;
 use yii\filters\AccessControl;
-use yii\helpers\VarDumper;
 use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
@@ -64,10 +63,6 @@ class SiteController extends Controller
      *
      * @return string
      */
-    /*    public function actionIndex()
-        {
-            return $this->render('index');
-        }*/
 
     /**
      * Login action.
@@ -151,14 +146,12 @@ class SiteController extends Controller
         $currentDate = time();
         $searchQuery = Category::find()
             ->where(['slug' => $slug])
-            /*->andWhere(['=', 'publicDate', 'currentDate'])*/
             ->one();
         if (!$searchQuery) {
             $session->setFlash('error', 'Постов с такой категорией не сущетсвует!');
             return $this->redirect('/');
         } else {
             $postQuery = $searchQuery->getPost()->where(['<=', 'publicDate', $currentDate]);
-            /*VarDumper::dump($postQuery, 5, true);*/
             $dataProvider = new ActiveDataProvider([
                 'query' => $postQuery,
                 'pagination' => [

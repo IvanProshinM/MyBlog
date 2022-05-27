@@ -32,7 +32,6 @@ class PostProvider extends Post
             return $dataProvider;
         }
         $query->andFilterWhere(['like', 'name', $this->name]);
-        $query->andFilterWhere(['like', 'name', $this->name]);
 
         return $dataProvider;
     }

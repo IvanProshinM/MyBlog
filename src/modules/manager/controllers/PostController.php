@@ -2,19 +2,16 @@
 
 namespace app\modules\manager\controllers;
 
-use app\components\AccessRuleAdmin;
 use app\components\AccessRuleRedactor;
 use app\models\Category;
 use app\models\Post;
 use app\modules\manager\models\PostChange;
 use app\modules\manager\models\PostProvider;
-use app\modules\admin\search\CategorySearch;
 use app\modules\manager\models\PostCreate;
 use app\modules\manager\services\CreatePostService;
 use app\modules\manager\services\PostChangeService;
 use yii\data\ActiveDataProvider;
 use yii\filters\AccessControl;
-use yii\helpers\VarDumper;
 use yii\web\Controller;
 
 class PostController extends Controller
@@ -82,7 +79,6 @@ class PostController extends Controller
                 return $this->render('PostCreate', ['model' => $model]);
             } else {
                 $post->save();
-                /*var_dump($post->errors);*/
                 $session->setFlash('success', 'пост успешно создан');
                 return $this->render('PostCreate', ['model' => $model]);
             }
@@ -103,13 +99,6 @@ class PostController extends Controller
         $model->load($post->attributes, '');
         $model->categoriesList = $post->getCategoriesListId();
         if ($model->load(\Yii::$app->request->post()) && \Yii::$app->request->isPost) {
-            /*$uniquePost = Post::find()
-                ->where(['name' => $model->name])
-                ->one();
-            if ($uniquePost) {
-                $session->setFlash('error', 'Пост с таким именем существует');
-                return $this->render('PostChange', ['model' => $model]);
-            } else {*/
             $post = $this->postChangeService->PostChange($model, $post);
             $post->save();
             $session->setFlash('success', 'Пост успешно изменен');

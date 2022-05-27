@@ -20,6 +20,9 @@ $config = [
         ],
         'manager' => [
             'class' => 'app\modules\manager\Manager',
+        ],
+        'api' => [
+            'class' => 'app\modules\api\Api',
         ]
     ],
 
@@ -82,9 +85,13 @@ $config = [
             'rules' => [
                 '/' => 'site/index',
                 '/category/<slug>' => 'site/category',
-                'admin'=>'admin/admin',
+                'admin' => 'admin/admin',
                 '/post/<slug>' => 'post/post',
-                '/view/<slug>'=> 'site/view'
+                '/view/<slug>' => 'site/view',
+                '/api'=> 'api/view-json',
+               /* 'api/category'=> 'api/view-json/category',
+                'api/user'=>'api/view-json/user'*/
+
             ],
         ],
 
