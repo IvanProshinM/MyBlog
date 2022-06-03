@@ -2,13 +2,20 @@
 
 use yii\helpers\Html;
 use yii\widgets\ListView;
+use vova07\imperavi\Widget;
 
 /**
  * @var app\models\Post $model ;
+ * @var app\models\CommentsForm $commentsForm ;
+ * @var app\models\Comments $commentsModel ;
+ * @var $form yii\widgets\ActiveForm
  */
+
 $id = $model->id;
 
 $this->registerCssFile("@web/css/postItem.css");
+$this->registerCssFile("@web/css/postView.css");
+
 ?>
 
 <div class="post-item">
@@ -43,7 +50,7 @@ $this->registerCssFile("@web/css/postItem.css");
     </tr>
     <tr>
         <td>
-            <?= $model->textFull  ?>
+            <?= $model->textFull ?>
         </td>
     </tr>
 </table>
@@ -57,3 +64,45 @@ $this->registerCssFile("@web/css/postItem.css");
 <hr class="dividing-line">
 <br>
 <br>
+<br>
+Комментарии:
+<?php foreach ($commentsModel as $item): ?>
+    <ul class="comments">
+        <li class="comments__list"><p class="comments__title">Автор: &nbsp </p> <?= $item->author ?></li>
+        <li><?= $item->content ?></li>
+        <li class="comments__list"><p class="comments__title">Дата Создания: &nbsp </p>  <?= gmdate("d-m-Y", $item->created_at) ?></li>
+    </ul>
+
+<?php endforeach ?>
+
+<br>
+<br>
+<br>
+<p>Оставить комментарий:</p>
+<?php $form = \yii\widgets\ActiveForm::begin() ?>
+
+<?= $form->field($commentsForm, 'content')->widget(Widget::className(), [
+    'settings' => [
+        'lang' => 'ru',
+        'minHeight' => 200,
+        'plugins' => [
+            'clips',
+            'fullscreen',
+        ],
+        'clips' => [
+            ['Lorem ipsum...', 'Lorem...'],
+            ['red', '<span class="label-red">red</span>'],
+            ['green', '<span class="label-green">green</span>'],
+            ['blue', '<span class="label-blue">blue</span>'],
+        ],
+    ],
+]);
+?>
+<? /*= Html::a('Добавить комментарий', ['/comments/add','id'=>$model->id], ['target'=>'_blank','class' => 'btn btn-primary']) */ ?>
+<?= Html::submitButton('Добавить комментарий', ['formaction' => '/comments/add?id=' . $model->id, 'class' => 'btn btn-primary']) ?>
+
+<?php $form = \yii\widgets\ActiveForm::end() ?>
+
+<br>
+<br>
+

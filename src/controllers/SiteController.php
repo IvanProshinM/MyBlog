@@ -3,6 +3,8 @@
 namespace app\controllers;
 
 use app\models\Category;
+use app\models\Comments;
+use app\models\CommentsForm;
 use app\models\Post;
 use app\modules\manager\models\PostProvider;
 use Yii;
@@ -104,7 +106,11 @@ class SiteController extends Controller
         $model = Post::find()
             ->where(['slug' => $slug])
             ->one();
-        return $this->render('PostView', ['model' => $model]);
+        $commentsModel = Comments::find()
+            ->where(['=','postId',$model->id])
+            ->all();
+        $commentsForm = new CommentsForm();
+        return $this->render('PostView', ['model' => $model, 'commentsForm' => $commentsForm,'commentsModel'=>$commentsModel]);
     }
 
     /**
@@ -164,6 +170,8 @@ class SiteController extends Controller
                 ]
 
             );
+
         }
     }
+
 }

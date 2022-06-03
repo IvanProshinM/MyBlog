@@ -25,9 +25,9 @@ use app\modules\admin\query\UserQuery;
 class User extends \yii\db\ActiveRecord implements IdentityInterface
 {
 
-    public CONST ROLE_READER = 0;
-    public CONST ROLE_REDACTOR = 1;
-    public CONST ROLE_ADMIN = 2;
+    public const ROLE_READER = 0;
+    public const ROLE_REDACTOR = 1;
+    public const ROLE_ADMIN = 2;
 
     public static function tableName()
     {
@@ -119,6 +119,12 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
     public static function find()
     {
         return new UserQuery(static::class);
+    }
+
+    public function getNickname()
+    {
+        $nickname = Yii::$app->user->identity->nickname;
+        return $nickname;
     }
 
 
