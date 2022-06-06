@@ -10,6 +10,7 @@ use app\services\AddCommentService;
 use app\services\UserCreateService;
 use Yii;
 use app\models\Post;
+use yii\web\Response;
 
 
 class CommentsController extends \yii\web\Controller
@@ -37,7 +38,7 @@ class CommentsController extends \yii\web\Controller
         $model = new CommentsForm();
         $session = \Yii::$app->session;
         $post = Post::find()
-            ->where(['id'=>$id])
+            ->where(['id' => $id])
             ->one();
         if (Yii::$app->user->identity === null) {
             $author = 'Guest';
@@ -52,7 +53,12 @@ class CommentsController extends \yii\web\Controller
             $session->setFlash('success', 'Комментарий успешно добавлен ');
         }
 
-        return $this->redirect(['/view/'.$post->slug]);
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        return [
+            'author' => $comments->author,
+            'content' => $comments->content,
+            'created_at' => gmdate("d-m-Y", $comments->created_at)
+        ];
     }
 
 

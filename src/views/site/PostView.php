@@ -1,7 +1,6 @@
 <?php
 
 use yii\helpers\Html;
-use yii\widgets\ListView;
 use vova07\imperavi\Widget;
 
 /**
@@ -70,10 +69,19 @@ $this->registerCssFile("@web/css/postView.css");
     <ul class="comments">
         <li class="comments__list"><p class="comments__title">Автор: &nbsp </p> <?= $item->author ?></li>
         <li><?= $item->content ?></li>
-        <li class="comments__list"><p class="comments__title">Дата Создания: &nbsp </p>  <?= gmdate("d-m-Y", $item->created_at) ?></li>
+        <li class="comments__list"><p class="comments__title">Дата Создания:
+                &nbsp </p> <?= gmdate("d-m-Y", $item->created_at) ?></li>
     </ul>
 
 <?php endforeach ?>
+
+<ul id="comment-list">
+    <li id="author"></li>
+    <br>
+    <li id="content"></li>
+    <li id=date></li>
+    <br>
+</ul>
 
 <br>
 <br>
@@ -98,11 +106,36 @@ $this->registerCssFile("@web/css/postView.css");
     ],
 ]);
 ?>
-<? /*= Html::a('Добавить комментарий', ['/comments/add','id'=>$model->id], ['target'=>'_blank','class' => 'btn btn-primary']) */ ?>
 <?= Html::submitButton('Добавить комментарий', ['formaction' => '/comments/add?id=' . $model->id, 'class' => 'btn btn-primary']) ?>
-
 <?php $form = \yii\widgets\ActiveForm::end() ?>
 
+<?php
+$js = <<<JS
+        $('form').on('beforeSubmit', function(){
+    var data = $(this).serialize();
+     $.ajax({
+url: '/comments/add?id=' + $model->id,
+type: 'POST',
+data: data,
+success: function(res){
+    const author = "<b>Автор: </b> " + res.author;
+    const unixDate = "<b>Дата Создания: </b> " + res.created_at;
+    document.getElementById("author").innerHTML = author;
+    document.getElementById("content").innerHTML = res.content;
+    document.getElementById("date").innerHTML = unixDate;
+    document.getElementById("comment-list").setAttribute('class', "comments");
+console.log(res);
+},
+error: function(){ 
+alert('Error!');
+}
+});
+return false;
+});
+
+JS;
+$this->registerJs($js, $this::POS_READY);
+?>
 <br>
 <br>
 
