@@ -35,7 +35,7 @@ class Order extends ActiveRecord
         return [
             [['id','patient_id','doctor_id','status_id','discharged_at','doctor_attempted_at', 'created_at', 'updated_at'], 'integer'],
             [['symptoms','home_coordinate'], 'string'],
-            [['temperature'], 'float'],
+            ['temperature','number' ]
         ];
     }
 

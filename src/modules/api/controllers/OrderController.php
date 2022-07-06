@@ -3,8 +3,11 @@
 namespace app\modules\api\controllers;
 
 
+use app\modules\api\models\CreateOrderModel;
+use app\modules\api\services\CreateOrderService;
+use yii\filters\auth\HttpBearerAuth;
 use yii\helpers\VarDumper;
-use yii\web\Controller;
+use yii\rest\Controller;
 
 class OrderController extends Controller
 {
@@ -12,6 +15,28 @@ class OrderController extends Controller
     public $offset;
     public $limit;
 
+    /**
+     * @var CreateOrderService
+     */
+    private $createOrderService;
+
+
+    public function __construct($id, $module,
+                                CreateOrderService $createOrderService,
+        $config = [])
+    {
+        parent::__construct($id, $module, $config);
+        $this->createOrderService = $createOrderService;
+    }
+
+
+    public function behaviors()
+    {
+        $behaviors = parent::behaviors();
+        $behaviors['authenticator']['class'] = HttpBearerAuth::className();
+        $behaviors['authenticator']['only'] = ['update'];
+        return $behaviors;
+    }
 
     public function actionAll()
     {
@@ -63,13 +88,24 @@ class OrderController extends Controller
 
     public function actionCreate()
     {
-        $create = [
-            "temperature" => "37.6",
-            "symptoms" => "Болит голова, живот, нога, глаза"
-        ];
-        echo $create["temperature"];
-        echo $create["symptoms"];
 
+        $model = new CreateOrderModel();
+        $data = \Yii::$app->request->getBodyParams();
+        $model->load($data);
+        if (!$model->validate()) {
+            return null;
+        }
+        $user = \Yii::$app->user->identity;
+        if (!$user) {
+            return null;
+        }
+
+        $order = $this->createOrderService->CreateOrder($model, $user);
+
+        return [
+            "temperature" => $order->temperature,
+            "symptoms" => $order->symptoms
+        ];
     }
 
     public function actionAccept()
