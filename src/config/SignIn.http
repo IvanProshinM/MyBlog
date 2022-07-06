@@ -1,0 +1,59 @@
+GET http://localhost:80/api/item?id=99
+Accept: application/json
+
+###
+
+POST http://localhost:80/api/user/sign-in
+Content-Type: application/json
+Accept: application/json
+
+{
+  "phone": "8(982)294-87-88"
+}
+###
+POST http://localhost:80/api/user/confirm
+Content-Type: application/json
+Accept: application/json
+
+{
+  "phone": "8(982)294-87-88",
+  "sms_code_confirm": "1112",
+  "first_name": "Иван",
+  "middle_name": "Васильевич",
+  "last_name": "Пупкин",
+  "gender": "male",
+  "birthday": "1990-12-25"
+}
+
+###
+
+GET http://localhost:80/api/user/profile
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 20d135f0f28185b84a4cf7ab51f29500
+
+###
+
+POST http://localhost:80/api/user/firebase
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 20d135f0f28185b84a4cf7aa51f29500
+
+{
+  "firebase_token": "asdasdq4124afasd"
+}
+
+###
+
+POST http://localhost:80/api/user/coordinate
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 20d135f0f28185b84a4cf7aa51f29500
+
+{
+  "latitude": 59.97192,
+  "longitude": 30.324516
+}
+
+
+

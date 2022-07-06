@@ -2,118 +2,57 @@
 
 namespace app\models;
 
-use app\query\CategoryQuery;
-use Yii;
+use app\modules\api\query\UserQuery;
+use yii\behaviors\TimestampBehavior;
+use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
-use app\modules\admin\query\UserQuery;
 
 /**
- * This is the model class for table "user".
+ * @property int $id;
+ * @property string|null $phone;
+ * @property string $first_name;
+ * @property string|null $middle_name;
+ * @property string $last_name;
+ * @property string $gender;
+ * @property int $birthday;
+ * @property string $sms_code_confirm;
+ * @property string $auth_key;
+ * @property string $password_hash;
+ * @property string $password_reset_token;
+ * @property int $status_id;
+ * @property int $created_at;
+ * @property int $updated_at;
+ * @property int $confirmed_at;
+ * @property int $role_id;
+ * @property string $firebase_token;
+ * @property string $last_coordinate;
  *
- * @property int $id
- * @property string|null $username
- * @property string|null $nickname
- * @property string|null $email
- * @property string|null $password
- * @property int|null $gender
- * @property string|null $resetHash
- * @property string|null $activateHash
- * @property string|null $activatedAt
- * @property int $role
- * @property string|null $status
+ *
  */
-class User extends \yii\db\ActiveRecord implements IdentityInterface
+class User extends ActiveRecord implements IdentityInterface
 {
 
-    public const ROLE_READER = 0;
-    public const ROLE_REDACTOR = 1;
-    public const ROLE_ADMIN = 2;
 
     public static function tableName()
     {
-        return 'user';
+        return "user";
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public static function findIdentity($id)
+    public function rules()
     {
-        return self::findOne($id);
+        return [
+            [['id', 'status_id', 'created_at', 'updated_at', 'confirmed_at', 'role_id',], 'integer'],
+            [['phone', 'first_name', 'middle_name', 'last_name', 'gender', 'sms_code_confirm', 'auth_key', 'password_hash', 'password_reset_token', 'firebase_token',], 'string'],
+            ['birthday', 'date', 'format' => 'Y-m-d'],
+        ];
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function validateAuthKey($authKey)
+    public function behaviors()
     {
-        return $this->authKey === $authKey;
-    }
+        return [
+            TimestampBehavior::class
+        ];
 
-    /**
-     * {@inheritdoc}
-     */
-    public static function findIdentityByAccessToken($token, $type = null)
-    {
-        foreach (self::$users as $user) {
-            if ($user['accessToken'] === $token) {
-                return new static($user);
-            }
-        }
-
-        return null;
-    }
-
-    /**
-     * Finds user by username
-     *
-     * @param string $username
-     * @return static|null
-     */
-    public static function findByUsername($username)
-    {
-        foreach (self::$users as $user) {
-            if (strcasecmp($user['username'], $username) === 0) {
-                return new static($user);
-            }
-        }
-
-        return null;
-    }
-
-    public function getAuthKey()
-    {
-        return $this->authKey;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-
-    /**
-     * Validates password
-     *
-     * @param string $password password to validate
-     * @return bool if password provided is valid for current user
-     */
-    public function validatePassword($password)
-    {
-        return Yii::$app->security->validatePassword($password, $this->password);
-    }
-
-    public function setPassword($password)
-    {
-        $this->password = \Yii::$app->security->generatePasswordHash($password);
-    }
-
-    public function isAdmin()
-    {
-        return $this->role == User::ROLE_ADMIN;
     }
 
     public static function find()
@@ -121,11 +60,33 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
         return new UserQuery(static::class);
     }
 
-    public function getNickname()
+    public static function findIdentityByAccessToken($token, $type = null)
     {
-        $nickname = Yii::$app->user->identity->nickname;
-        return $nickname;
+        return static::findOne(['auth_key' => $token]);
     }
 
+    public static function findIdentity($id)
+    {
+    }
 
+    public function getId()
+    {
+        return $this->getPrimaryKey();
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getAuthKey()
+    {
+        return $this->auth_key;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function validateAuthKey($authKey)
+    {
+        return $this->getAuthKey() === $authKey;
+    }
 }

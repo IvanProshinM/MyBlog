@@ -1,54 +1,53 @@
 <?php
 
-use yii\helpers\Html;
-use yii\widgets\ActiveForm;
-use yii\widgets\ListView;
+/** @var yii\web\View $this */
 
 $this->title = 'My Yii Application';
 ?>
 <div class="site-index">
 
-</div>
-<?php
-/* @var $this yii\web\View */
-/* @var $form yii\widgets\ActiveForm */
-/* @var $Category app\models\Post; */
-/* @var $dataProvider app\controllers\SiteController; */
+    <div class="jumbotron text-center bg-transparent">
+        <h1 class="display-4">Congratulations!</h1>
 
-$this->registerCssFile("@web/css/postList.css");
+        <p class="lead">You have successfully created your Yii-powered application.</p>
 
-$this->title = 'Post List';
-?>
-
-<div class="post-list">
-
-    <div class="post-list_content">
-        <h1><?= Html::encode($this->title) ?></h1>
-
-
-        <?php $form = ActiveForm::begin(); ?>
-
-
-        <?= ListView::widget([
-            'dataProvider' => $dataProvider,
-            'itemOptions' => ['class' => 'item'],
-            'itemView' => function ($model) {
-                return $this->render('PostItem', ['model' => $model]);
-            },
-            'layout' => "{items}\n{pager}",
-        ]) ?>
-        <br>
-        <br>
+        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
     </div>
-    <?php ActiveForm::end(); ?>
-    <div class="post-list_side-bar">
-        <p>Categories:</p>
-        <?php
-        $categoryName = \app\models\Category::find()->all();
-        foreach ($categoryName as $value): ?>
-            <?= Html::a($value->name, ['/site/category/', 'slug' => $value->slug], ['target' => '_blank']) ?>
-            <br>
-        <?php endforeach ?>
+
+    <div class="body-content">
+
+        <div class="row">
+            <div class="col-lg-4">
+                <h2>Heading</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur.</p>
+
+                <p><a class="btn btn-outline-secondary" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
+            </div>
+            <div class="col-lg-4">
+                <h2>Heading</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur.</p>
+
+                <p><a class="btn btn-outline-secondary" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
+            </div>
+            <div class="col-lg-4">
+                <h2>Heading</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur.</p>
+
+                <p><a class="btn btn-outline-secondary" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
+            </div>
+        </div>
 
     </div>
 </div>
