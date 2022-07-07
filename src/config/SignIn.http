@@ -67,4 +67,15 @@ Authorization: Bearer 20d135f0f28185b84a4cf7aa51f29500
   "symptoms": "Болит голова, живот, нога, глаза"
 }
 
+###
+
+POST http://localhost:80/api/order/accept
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 20d135f0f28185b84a4cf7aa51f29500
+
+{
+  "order_id": "4"
+}
+
 

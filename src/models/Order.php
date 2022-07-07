@@ -24,6 +24,8 @@ use yii\db\ActiveRecord;
 class Order extends ActiveRecord
 {
 
+    public const STATUS_TREATMENT = 1;
+
 
     public static function tableName()
     {

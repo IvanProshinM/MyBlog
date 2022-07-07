@@ -3,8 +3,11 @@
 namespace app\modules\api\controllers;
 
 
+use app\modules\api\models\AcceptModel;
 use app\modules\api\models\CreateOrderModel;
+use app\modules\api\services\AcceptOrderService;
 use app\modules\api\services\CreateOrderService;
+use yii\db\Exception;
 use yii\filters\auth\HttpBearerAuth;
 use yii\helpers\VarDumper;
 use yii\rest\Controller;
@@ -18,15 +21,21 @@ class OrderController extends Controller
     /**
      * @var CreateOrderService
      */
+    /**
+     * @var AcceptOrderService
+     */
     private $createOrderService;
+    private $acceptOrderService;
 
 
     public function __construct($id, $module,
                                 CreateOrderService $createOrderService,
+                                AcceptOrderService $acceptOrderService,
         $config = [])
     {
         parent::__construct($id, $module, $config);
         $this->createOrderService = $createOrderService;
+        $this->acceptOrderService = $acceptOrderService;
     }
 
 
@@ -110,7 +119,28 @@ class OrderController extends Controller
 
     public function actionAccept()
     {
-        echo 'order_id:100500';
+        $model = new AcceptModel();
+        $data = \Yii::$app->request->getBodyParams();
+        $model->load($data);
+        if (!$model->validate()) {
+            return null;
+        }
+        $user = \Yii::$app->user->identity;
+        if (!$user) {
+            throw new Exception('Пользователь не авторизован');
+        }
+        if ($user->role_id !== 2) {
+            throw new Exception('Пользователь не является доктором');
+
+        }
+        $order = $this->acceptOrderService->AcceptOrder($model, $user);
+        if (!$order) {
+            throw new Exception('Доктор с  таким id отстутсвтует');
+        }
+        return [
+            "order_id" => $order->id
+        ];
+
     }
 
     public function actionHomeCoordinates()
