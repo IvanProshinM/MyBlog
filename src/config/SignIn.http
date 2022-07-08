@@ -78,4 +78,18 @@ Authorization: Bearer 20d135f0f28185b84a4cf7aa51f29500
   "order_id": "4"
 }
 
+###
+
+POST http://localhost:80/api/order/home-coordinates
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 20d135f0f28185b84a4cf7aa51f29500
+
+{
+  "order_id": 4,
+  "latitude": 59.97192,
+  "longitude": 30.324516
+}
+
+
 

@@ -3,14 +3,18 @@
 namespace app\modules\api\controllers;
 
 
+use app\models\Order;
 use app\modules\api\models\AcceptModel;
 use app\modules\api\models\CreateOrderModel;
+use app\modules\api\models\HomeCoordinatesModel;
 use app\modules\api\services\AcceptOrderService;
 use app\modules\api\services\CreateOrderService;
 use yii\db\Exception;
+use yii\db\Expression;
 use yii\filters\auth\HttpBearerAuth;
 use yii\helpers\VarDumper;
 use yii\rest\Controller;
+use Yii;
 
 class OrderController extends Controller
 {
@@ -145,9 +149,43 @@ class OrderController extends Controller
 
     public function actionHomeCoordinates()
     {
-        echo '"order_id": "100500",
-           "latitude": 59.97192,
-           "longitude": 30.324516';
+        $model = new HomeCoordinatesModel();
+
+        $data = \Yii::$app->request->getBodyParams();
+        $model->load($data);
+
+        if (!$model->validate()) {
+           throw new \Exception('Валидация, хуле');
+        }
+        $user = \Yii::$app->user->identity;
+        if (!$user) {
+            throw new Exception('Пользователь не авторизован');
+        }
+        if ($user->role_id !== 2) {
+            throw new Exception('Пользователь не является доктором');
+
+        }
+        $order = Order::find()->where(['id' => $model->order_id])->one();
+        if (!$order) {
+            throw new Exception('Заявка не найдена');
+        }
+        $params = [
+            ':latitude' => $model->latitude,
+            ':longitude' => $model->longitude,
+            ':order_id' => $order->id
+        ];
+
+        $sql = new Expression("UPDATE `order` SET `home_coordinate`=POINT(:latitude, :longitude) WHERE `id` = :order_id");
+
+        Yii::$app->db->createCommand($sql, $params)->execute();
+        return [
+
+            "order_id" => "5",
+            "point" => [
+                "latitude" => -45.62390335574153,
+                "longitude" => -3.9551761173743847
+            ]
+        ];
     }
 
 }
