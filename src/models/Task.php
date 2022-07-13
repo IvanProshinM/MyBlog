@@ -30,8 +30,9 @@ class Task extends ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'order_id', 'patient_id', 'doctor_id', 'status_id', 'created_at', 'updated_at', 'planned_at', 'done_at', 'removed_at'], 'integer'],
+            [['id', 'order_id', 'patient_id', 'doctor_id', 'status_id', 'created_at', 'updated_at', 'done_at', 'removed_at'], 'integer'],
             [['title',], 'string'],
+            ['planned_at', 'date', 'format' => 'Y-m-d']
         ];
     }
 

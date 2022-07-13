@@ -91,5 +91,48 @@ Authorization: Bearer 20d135f0f28185b84a4cf7aa51f29500
   "longitude": 30.324516
 }
 
+###
+
+POST http://localhost:80/api/task/create
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 20d135f0f28185b84a4cf7aa51f29500
+
+{
+  "order_id": "4",
+  "date_to": "2021-05-25",
+  "title": "Арбидол",
+  "quantity": 2
+}
+
+###
+
+GET http://localhost:80/api/task/all?order_id=2
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 20d135f0f28185b84a4cf7aa51f29500
+
+###
+
+GET http://localhost:80/api/task/active?offset=2&limit=2&order_id=2
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 20d135f0f28185b84a4cf7aa51f29500
+
+###
+
+GET http://localhost:80/api/task/removed?offset=1&limit=3&order_id=2
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 20d135f0f28185b84a4cf7aa51f29500
+
+###
+
+GET http://localhost:80/api/task/done?offset=3&limit=4&order_id=2
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 20d135f0f28185b84a4cf7aa51f29500
+
+
 
 
