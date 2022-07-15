@@ -89,4 +89,11 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return $this->getAuthKey() === $authKey;
     }
+
+    public function getAge()
+    {
+        $currentYear = (integer) date('Y',time());
+        $userBirthday = (integer) date('Y',strtotime($this->birthday));
+        return ($currentYear-$userBirthday);
+    }
 }

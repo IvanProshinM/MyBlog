@@ -6,10 +6,13 @@ use app\models\Order;
 use app\models\Task;
 use app\modules\api\models\ActiveTaskModel;
 use app\modules\api\models\CategoryTaskProvider;
+use app\modules\api\models\FindTaskModel;
+use app\modules\api\services\MarkDoneService;
 use app\modules\api\models\ShowTasksModel;
 use app\modules\api\models\TaskCreateModel;
 use app\modules\api\models\TaskProvider;
 use app\modules\api\services\CreateTaskService;
+use app\modules\api\services\MarkRemovedService;
 use yii\data\ActiveDataProvider;
 use yii\db\Exception;
 use yii\rest\Controller;
@@ -20,16 +23,31 @@ class TaskController extends Controller
     /**
      * @var CreateTaskService
      */
-
     private $createTaskService;
+
+    /**
+     * @var MarkDoneService
+     */
+
+    private $markDoneService;
+
+    /**
+     * @var MarkRemovedService
+     */
+
+    private $markRemovedService;
 
     public function __construct($id,
         $module,
                                 CreateTaskService $createTaskService,
+                                MarkDoneService $markDoneService,
+                                MarkRemovedService $markRemovedService,
         $config = [])
     {
         parent::__construct($id, $module, $config);
         $this->createTaskService = $createTaskService;
+        $this->markDoneService = $markDoneService;
+        $this->markRemovedService = $markRemovedService;
     }
 
 
@@ -155,12 +173,46 @@ class TaskController extends Controller
 
     public function actionMarkRemove()
     {
-        echo '"task_id": "100500"';
+        $model = new FindTaskModel();
+        $user = \Yii::$app->user->identity;
+        $data = \Yii::$app->request->getBodyParams();
+        $model->load($data);
+        if (!$model->validate()) {
+            return null;
+        }
+        if ($user->role_id != 2) {
+            throw new Exception('Пользователь не является доктором');
+        }
+        $task = $this->markRemovedService->remove($model);
+        if (!$task) {
+            throw new \Exception('Задача с таким id не найдена или задача уже была удалена');
+        }
+        return [
+            "order_id"=>$task->order_id
+        ];
     }
 
     public function actionMarkDone()
     {
-        echo '"task_id": "100500"';
+        $model = new FindTaskModel();
+        $user = \Yii::$app->user->identity;
+        $data = \Yii::$app->request->getBodyParams();
+        $model->load($data);
+
+        if (!$model->validate()) {
+            return null;
+        }
+        if ($user->role_id != 2) {
+            throw new Exception('Пользователь не является доктором');
+        }
+        $task = $this->markDoneService->done($model);
+        if (!$task) {
+            throw new \Exception('Задача с таким id не найдена или задача была выполнена');
+        }
+
+        return [
+            "order_id" => $task->order_id
+        ];
     }
 }
 
