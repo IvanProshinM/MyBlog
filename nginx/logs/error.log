@@ -4399,3 +4399,1435 @@ $_SERVER = [
 2022/06/06 10:40:31 [notice] 1#1: start worker process 31
 2022/06/06 10:40:31 [notice] 1#1: start worker process 32
 2022/06/06 10:40:31 [notice] 1#1: start worker process 33
+2022/06/07 13:42:02 [notice] 1#1: using the "epoll" event method
+2022/06/07 13:42:02 [notice] 1#1: nginx/1.21.6
+2022/06/07 13:42:02 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/06/07 13:42:02 [notice] 1#1: OS: Linux 5.10.16.3-microsoft-standard-WSL2
+2022/06/07 13:42:02 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/06/07 13:42:02 [notice] 1#1: start worker processes
+2022/06/07 13:42:02 [notice] 1#1: start worker process 23
+2022/06/07 13:42:02 [notice] 1#1: start worker process 24
+2022/06/07 13:42:02 [notice] 1#1: start worker process 25
+2022/06/07 13:42:02 [notice] 1#1: start worker process 26
+2022/06/07 13:42:02 [notice] 1#1: start worker process 27
+2022/06/07 13:42:02 [notice] 1#1: start worker process 28
+2022/06/07 13:42:02 [notice] 1#1: start worker process 29
+2022/06/07 13:42:02 [notice] 1#1: start worker process 30
+2022/06/07 13:42:02 [notice] 1#1: start worker process 31
+2022/06/07 13:42:02 [notice] 1#1: start worker process 32
+2022/06/07 13:42:02 [notice] 1#1: start worker process 33
+2022/06/07 13:42:02 [notice] 1#1: start worker process 34
+2022/06/07 13:42:05 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/06/07 13:42:05 [notice] 23#23: gracefully shutting down
+2022/06/07 13:42:05 [notice] 33#33: gracefully shutting down
+2022/06/07 13:42:05 [notice] 24#24: gracefully shutting down
+2022/06/07 13:42:05 [notice] 25#25: gracefully shutting down
+2022/06/07 13:42:05 [notice] 26#26: gracefully shutting down
+2022/06/07 13:42:05 [notice] 27#27: gracefully shutting down
+2022/06/07 13:42:05 [notice] 28#28: gracefully shutting down
+2022/06/07 13:42:05 [notice] 28#28: exiting
+2022/06/07 13:42:05 [notice] 29#29: gracefully shutting down
+2022/06/07 13:42:05 [notice] 30#30: gracefully shutting down
+2022/06/07 13:42:05 [notice] 31#31: gracefully shutting down
+2022/06/07 13:42:05 [notice] 32#32: gracefully shutting down
+2022/06/07 13:42:05 [notice] 32#32: exiting
+2022/06/07 13:42:05 [notice] 34#34: gracefully shutting down
+2022/06/07 13:42:05 [notice] 23#23: exiting
+2022/06/07 13:42:05 [notice] 33#33: exiting
+2022/06/07 13:42:05 [notice] 24#24: exiting
+2022/06/07 13:42:05 [notice] 24#24: exit
+2022/06/07 13:42:05 [notice] 25#25: exiting
+2022/06/07 13:42:05 [notice] 26#26: exiting
+2022/06/07 13:42:05 [notice] 27#27: exiting
+2022/06/07 13:42:05 [notice] 28#28: exit
+2022/06/07 13:42:05 [notice] 29#29: exiting
+2022/06/07 13:42:05 [notice] 30#30: exiting
+2022/06/07 13:42:05 [notice] 31#31: exiting
+2022/06/07 13:42:05 [notice] 32#32: exit
+2022/06/07 13:42:05 [notice] 34#34: exiting
+2022/06/07 13:42:05 [notice] 23#23: exit
+2022/06/07 13:42:05 [notice] 33#33: exit
+2022/06/07 13:42:05 [notice] 25#25: exit
+2022/06/07 13:42:05 [notice] 26#26: exit
+2022/06/07 13:42:05 [notice] 27#27: exit
+2022/06/07 13:42:05 [notice] 29#29: exit
+2022/06/07 13:42:05 [notice] 30#30: exit
+2022/06/07 13:42:05 [notice] 31#31: exit
+2022/06/07 13:42:05 [notice] 34#34: exit
+2022/06/07 13:42:05 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2022/06/07 13:42:05 [notice] 1#1: worker process 25 exited with code 0
+2022/06/07 13:42:05 [notice] 1#1: worker process 27 exited with code 0
+2022/06/07 13:42:05 [notice] 1#1: worker process 29 exited with code 0
+2022/06/07 13:42:05 [notice] 1#1: worker process 31 exited with code 0
+2022/06/07 13:42:05 [notice] 1#1: worker process 32 exited with code 0
+2022/06/07 13:42:05 [notice] 1#1: signal 29 (SIGIO) received
+2022/06/07 13:42:05 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2022/06/07 13:42:05 [notice] 1#1: signal 17 (SIGCHLD) received from 24
+2022/06/07 13:42:05 [notice] 1#1: worker process 24 exited with code 0
+2022/06/07 13:42:05 [notice] 1#1: worker process 26 exited with code 0
+2022/06/07 13:42:05 [notice] 1#1: worker process 30 exited with code 0
+2022/06/07 13:42:05 [notice] 1#1: signal 29 (SIGIO) received
+2022/06/07 13:42:05 [notice] 1#1: signal 17 (SIGCHLD) received from 26
+2022/06/07 13:42:05 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2022/06/07 13:42:05 [notice] 1#1: worker process 28 exited with code 0
+2022/06/07 13:42:05 [notice] 1#1: worker process 33 exited with code 0
+2022/06/07 13:42:05 [notice] 1#1: worker process 34 exited with code 0
+2022/06/07 13:42:05 [notice] 1#1: signal 29 (SIGIO) received
+2022/06/07 13:42:05 [notice] 1#1: signal 17 (SIGCHLD) received from 23
+2022/06/07 13:42:05 [notice] 1#1: worker process 23 exited with code 0
+2022/06/07 13:42:05 [notice] 1#1: exit
+2022/06/07 13:42:24 [notice] 1#1: using the "epoll" event method
+2022/06/07 13:42:24 [notice] 1#1: nginx/1.21.6
+2022/06/07 13:42:24 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/06/07 13:42:24 [notice] 1#1: OS: Linux 5.10.16.3-microsoft-standard-WSL2
+2022/06/07 13:42:24 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/06/07 13:42:24 [notice] 1#1: start worker processes
+2022/06/07 13:42:24 [notice] 1#1: start worker process 22
+2022/06/07 13:42:24 [notice] 1#1: start worker process 23
+2022/06/07 13:42:24 [notice] 1#1: start worker process 24
+2022/06/07 13:42:24 [notice] 1#1: start worker process 25
+2022/06/07 13:42:24 [notice] 1#1: start worker process 26
+2022/06/07 13:42:24 [notice] 1#1: start worker process 27
+2022/06/07 13:42:24 [notice] 1#1: start worker process 28
+2022/06/07 13:42:24 [notice] 1#1: start worker process 29
+2022/06/07 13:42:24 [notice] 1#1: start worker process 30
+2022/06/07 13:42:24 [notice] 1#1: start worker process 31
+2022/06/07 13:42:24 [notice] 1#1: start worker process 32
+2022/06/07 13:42:24 [notice] 1#1: start worker process 33
+2022/06/07 14:33:37 [error] 23#23: *2 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/controllers/SiteController.php on line 180. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Resp" while reading upstream, client: 192.168.220.1, server: _ls, request: "GET /site/read-xml HTTP/1.1", upstream: "fastcgi://192.168.220.2:9000", host: "localhost"
+2022/06/07 14:33:37 [error] 23#23: *2 FastCGI sent in stderr: "onse.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/controllers/SiteController.php on line 180. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOME' => '/var/www',
+    'PHP_IDE_CONFIG' => 'serverName=Docker',
+    'VERSION_PRESTISSIMO_PLUGIN' => '^0.3.0',
+    'PHP_MD5' => '',
+    'PHP_URL' => 'https://www.php.net/get/php-7.4.4.tar.xz/from/this/mirror',
+    'SUPERVISOR_GROUP_NAME' => 'php-fpm',
+    'GPG_KEYS' => '42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312',
+    'PATH' => '/app:/app/vendor/bin:/root/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ENABLE_XDEBUG' => '0',
+    'TERM' => 'linux',
+    'SUPERVISOR_SERVER_URL' => 'unix:///var/run/supervisor.sock',
+    'XDEBUG_CONFIG' => 'remote_host=host.docker.internal remote_enable=1',
+    'SUPERVISOR_ENABLED' => '1',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_SHA256' => '1873c4cefdd3df9a78dcffb2198bba5c2f0464f55c9c960720c84df483fca74c',
+    'PHP_USER_ID' => '33',
+    'PHP_VERSION' => '7.4.4',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'VERSION_COMPOSER_ASSET_PLUGI
+2022/06/07 14:33:37 [error] 23#23: *2 FastCGI sent in stderr: "DDR' => '192.168.220.1',
+    'SERVER_SOFTWARE' => 'nginx/1.21.6',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/var/www/html/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/read-xml',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1654612415.894579,
+    'REQUEST_TIME' => 1654612415,
+    'argv' => [],
+    'argc' => 0,
+]" while reading upstream, client: 192.168.220.1, server: _ls, request: "GET /site/read-xml HTTP/1.1", upstream: "fastcgi://192.168.220.2:9000", host: "localhost"
+2022/06/07 14:34:27 [warn] 23#23: *2 an upstream response is buffered to a temporary file /var/cache/nginx/fastcgi_temp/1/00/0000000001 while reading upstream, client: 192.168.220.1, server: _ls, request: "GET /site/read-xml HTTP/1.1", upstream: "fastcgi://192.168.220.2:9000", host: "localhost"
+2022/06/07 14:34:27 [error] 23#23: *2 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOME' => '/var/www',
+    'PHP_IDE_CONFIG' => 'serverName=Docker',
+    'VERSION_PRESTISSIMO_PLUGIN' => '^0.3.0',
+    'PHP_MD5' => '',
+    'PHP_URL' => 'https://www.php.net/get/php-7.4.4.tar.xz/from/this/mirror',
+    'SUPERVISOR_GROUP_NAME' => 'php-fpm',
+    'GPG_KEYS' => '42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312',
+    'PATH' => '/app:/app/vendor/bin:/root/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ENABLE_XDEBUG' => '0',
+    'TERM' => 'linux',
+    'SUPERVISOR_SERVER_URL' => 'unix:///var/run/supervisor.sock',
+    'XDEBUG_CONFIG' => 'remote_host=host.docker.internal remote_enable=1',
+    'SUPERVISOR_ENABLED' => '1',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 
+2022/06/07 14:34:27 [error] 23#23: *2 FastCGI sent in stderr: "0720c84df483fca74c',
+    'PHP_USER_ID' => '33',
+    'PHP_VERSION' => '7.4.4',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'VERSION_COMPOSER_ASSET_PLUGIN' => '^1.4.4',
+    'COMPOSER_ALLOW_SUPERUSER' => '1',
+    'VERSION_COMPOSER_MERGE_PLUGIN' => '^1.4.1',
+    'SUPERVISOR_PROCESS_NAME' => 'php-fpm',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'VERSION_CODECEPTION' => '^2.2.6',
+    'HOSTNAME' => '826214f5e5ff',
+    'PWD' => '/var/www/html',
+    'PHP_LDFLAGS' => '-Wl,-O1 -Wl,--hash-style=both -pie',
+    'VERSION_YII2' => '^2.0.15',
+    'PHP_ASC_URL' => 'https://www.php.net/get/php-7.4.4.tar.xz.asc/from/this/mirror',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'Phpstorm-89cce848=56c0081c-7b12-498d-8d30-c19973b00096; PHPSESSID=04db64f42d32834fed08c86dc279af89; _csrf=523d8298ffab69158d1403c2ce18e2516c8e59178eed1857f395401df4b3b734a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22-GNOENrG4ugVEjLqtCICV8RKAxtf8RAE%22%3B%7D',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_SEC_FETCH_DEST' => 'document',
+    'HTTP_SEC_FETCH_USER' => '?1',
+    'HTTP_SEC_FETCH_MODE' => 'navigate',
+    'HTTP_SEC_FETCH_SITE' => 'none',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_SEC_CH_UA_PLATFORM' => '"Windows"',
+    'HTTP_SEC_CH_UA_MOBILE' => '?0',
+    'HTTP_SEC_CH_UA' => '" Not A;Brand";v="99", "
+2022/06/07 14:49:45 [warn] 26#26: *9 an upstream response is buffered to a temporary file /var/cache/nginx/fastcgi_temp/2/00/0000000002 while reading upstream, client: 192.168.220.1, server: _ls, request: "GET /site/read-xml HTTP/1.1", upstream: "fastcgi://192.168.220.2:9000", host: "localhost"
+2022/06/07 14:49:45 [error] 26#26: *9 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOME' => '/var/www',
+    'PHP_IDE_CONFIG' => 'serverName=Docker',
+    'VERSION_PRESTISSIMO_PLUGIN' => '^0.3.0',
+    'PHP_MD5' => '',
+    'PHP_URL' => 'https://www.php.net/get/php-7.4.4.tar.xz/from/this/mirror',
+    'SUPERVISOR_GROUP_NAME' => 'php-fpm',
+    'GPG_KEYS' => '42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312',
+    'PATH' => '/app:/app/vendor/bin" while reading upstream, client: 192.168.220.1, server: _ls, request: "GET /site/read-xml HTTP/1.1", upstream: "fastcgi://192.168.220.2:9000", host: "localhost"
+2022/06/07 14:49:45 [error] 26#26: *9 FastCGI sent in stderr: ":/root/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ENABLE_XDEBUG' => '0',
+    'TERM' => 'linux',
+    'SUPERVISOR_SERVER_URL' => 'unix:///var/run/supervisor.sock',
+    'XDEBUG_CONFIG' => 'remote_host=host.docker.internal remote_enable=1',
+    'SUPERVISOR_ENABLED' => '1',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_SHA256' => '1873c4cefdd3df9a78dcffb2198bba5c2f0464f55c9c960720c84df483fca74c',
+    'PHP_USER_ID' => '33',
+    'PHP_VERSION' => '7.4.4',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'VERSION_COMPOSER_ASSET_PLUGIN' => '^1.4.4',
+    'COMPOSER_ALLOW_SUPERUSER' => '1',
+    'VERSION_COMPOSER_MERGE_PLUGIN' => '^1.4.1',
+    'SUPERVISOR_PROCESS_NAME' => 'php-fpm',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'VERSION_CODECEPTION' => '^2.2.6',
+    'HOSTNAME' => '826214f5e5ff',
+    'PWD' => '/var/www/html',
+    'PHP_LDFLAGS' => '-Wl,-O1 -Wl,--hash-style=both -pie',
+    'VERSION_YII2' => '^2.0.15',
+    'PHP_ASC_URL' => 'https://www.php.net/get/php-7.4.4.tar.xz.asc/from/this/mirror',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'Phpstorm-89cce848=56c0081c-7b12-498d-8d30-c19973b00096; PHPSESSID=04db64f42d32834fed08c86dc279af89; _csrf=523d8298ffab69158d1403c2ce18e2516c8e59178eed1857f395401df4b3b734a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22-GNOENrG4ugVEjLqtCICV8RKAxtf8RAE%22%3B%7D',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_SEC_FETCH_DEST' => 'document',
+    'HTTP_SEC_FETCH_USER' => '?1',
+    'HTTP_SEC_FETCH_MODE' => 'navigate',
+    'HTTP_SEC_FETCH_SI
+2022/06/07 14:55:12 [error] 29#29: *13 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOME' => '/var/www',
+    'PHP_IDE_CONFIG' => 'serverName=Docker',
+    'VERSION_PRESTISSIMO_PLUGIN' => '^0.3.0',
+    'PHP_MD5' => '',
+    'PHP_URL' => 'https://www.php.net/get/php-7.4.4.tar.xz/from/this/mirror',
+    'SUPERVISOR_GROUP_NAME' => 'php-fpm',
+    'GPG_KEYS' => '42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312',
+    'PATH' => '/app:/app/vendor/bin:/root/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ENABLE_XDEBUG' => '0',
+    'TERM' => 'linux',
+    'SUPERVISOR_SERVER_URL' => 'unix:///var/run/supervisor.sock',
+    'XDEBUG_CONFIG' => 'remote_host=host.docker.internal remote_enable=1',
+    'SUPERVISOR_ENABLED' => '1',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2
+2022/06/07 14:55:12 [error] 29#29: *13 FastCGI sent in stderr: "',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'VERSION_CODECEPTION' => '^2.2.6',
+    'HOSTNAME' => '826214f5e5ff',
+    'PWD' => '/var/www/html',
+    'PHP_LDFLAGS' => '-Wl,-O1 -Wl,--hash-style=both -pie',
+    'VERSION_YII2' => '^2.0.15',
+    'PHP_ASC_URL' => 'https://www.php.net/get/php-7.4.4.tar.xz.asc/from/this/mirror',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'Phpstorm-89cce848=56c0081c-7b12-498d-8d30-c19973b00096; PHPSESSID=04db64f42d32834fed08c86dc279af89; _csrf=523d8298ffab69158d1403c2ce18e2516c8e59178eed1857f395401df4b3b734a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22-GNOENrG4ugVEjLqtCICV8RKAxtf8RAE%22%3B%7D',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_SEC_FETCH_DEST' => 'document',
+    'HTTP_SEC_FETCH_USER' => '?1',
+    'HTTP_SEC_FETCH_MODE' => 'navigate',
+    'HTTP_SEC_FETCH_SITE' => 'none',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_SEC_CH_UA_PLATFORM' => '"Windows"',
+    'HTTP_SEC_CH_UA_MOBILE' => '?0',
+    'HTTP_SEC_CH_UA' => '" Not A;Brand";v="99", "Chromium";v="102", "Google Chrome";v="102"',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_PRAGMA' => 'no-cache',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => 'localhost',
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '_ls',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '192.168.220.4',
+    'REMOTE_PORT' => '60424',
+2022/06/07 14:55:30 [warn] 29#29: *13 an upstream response is buffered to a temporary file /var/cache/nginx/fastcgi_temp/3/00/0000000003 while reading upstream, client: 192.168.220.1, server: _ls, request: "GET /site/read-xml HTTP/1.1", upstream: "fastcgi://192.168.220.2:9000", host: "localhost"
+2022/06/07 14:55:30 [error] 29#29: *13 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOME' => '/var/www',
+    'PHP_IDE_CONFIG' => 'serverName=Docker',
+    'VERSION_PRESTISSIMO_PLUGIN' => '^0.3.0',
+    'PHP_MD5' => '',
+    'PHP_URL' => 'https://www.php.net/get/php-7.4.4.tar.xz/from/this/mirror',
+    'SUPERVISOR_GROUP_NAME' => 'php-fpm',
+    'GPG_KEYS' => '42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312',
+    'PATH' => '/app:/app/vendor/bin" while reading upstream, client: 192.168.220.1, server: _ls, request: "GET /site/read-xml HTTP/1.1", upstream: "fastcgi://192.168.220.2:9000", host: "localhost"
+2022/06/07 14:55:30 [error] 29#29: *13 FastCGI sent in stderr: ":/root/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ENABLE_XDEBUG' => '0',
+    'TERM' => 'linux',
+    'SUPERVISOR_SERVER_URL' => 'unix:///var/run/supervisor.sock',
+    'XDEBUG_CONFIG' => 'remote_host=host.docker.internal remote_enable=1',
+    'SUPERVISOR_ENABLED' => '1',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_SHA256' => '1873c4cefdd3df9a78dcffb2198bba5c2f0464f55c9c960720c84df483fca74c',
+    'PHP_USER_ID' => '33',
+    'PHP_VERSION' => '7.4.4',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'VERSION_COMPOSER_ASSET_PLUGIN' => '^1.4.4',
+    'COMPOSER_ALLOW_SUPERUSER' => '1',
+    'VERSION_COMPOSER_MERGE_PLUGIN' => '^1.4.1',
+    'SUPERVISOR_PROCESS_NAME' => 'php-fpm',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'VERSION_CODECEPTION' => '^2.2.6',
+    'HOSTNAME' => '826214f5e5ff',
+    'PWD' => '/var/www/html',
+    'PHP_LDFLAGS' => '-Wl,-O1 -Wl,--hash-style=both -pie',
+    'VERSION_YII2' => '^2.0.15',
+    'PHP_ASC_URL' => 'https://www.php.net/get/php-7.4.4.tar.xz.asc/from/this/mirror',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'Phpstorm-89cce848=56c0081c-7b12-498d-8d30-c19973b00096; PHPSESSID=04db64f42d32834fed08c86dc279af89; _csrf=523d8298ffab69158d1403c2ce18e2516c8e59178eed1857f395401df4b3b734a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22-GNOENrG4ugVEjLqtCICV8RKAxtf8RAE%22%3B%7D',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_SEC_FETCH_DEST' => 'document',
+    'HTTP_SEC_FETCH_USER' => '?1',
+    'HTTP_SEC_FETCH_MODE' => 'navigate',
+    'HTTP_SEC_FETCH_S
+2022/06/07 15:10:26 [error] 33#33: *19 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOME' => '/var/www',
+    'PHP_IDE_CONFIG' => 'serverName=Docker',
+    'VERSION_PRESTISSIMO_PLUGIN' => '^0.3.0',
+    'PHP_MD5' => '',
+    'PHP_URL' => 'https://www.php.net/get/php-7.4.4.tar.xz/from/this/mirror',
+    'SUPERVISOR_GROUP_NAME' => 'php-fpm',
+    'GPG_KEYS' => '42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312',
+    'PATH' => '/app:/app/vendor/bin:/root/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ENABLE_XDEBUG' => '0',
+    'TERM' => 'linux',
+    'SUPERVISOR_SERVER_URL' => 'unix:///var/run/supervisor.sock',
+    'XDEBUG_CONFIG' => 'remote_host=host.docker.internal remote_enable=1',
+    'SUPERVISOR_ENABLED' => '1',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2
+2022/06/07 15:10:26 [error] 33#33: *19 FastCGI sent in stderr: " -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'VERSION_CODECEPTION' => '^2.2.6',
+    'HOSTNAME' => '826214f5e5ff',
+    'PWD' => '/var/www/html',
+    'PHP_LDFLAGS' => '-Wl,-O1 -Wl,--hash-style=both -pie',
+    'VERSION_YII2' => '^2.0.15',
+    'PHP_ASC_URL' => 'https://www.php.net/get/php-7.4.4.tar.xz.asc/from/this/mirror',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'Phpstorm-89cce848=56c0081c-7b12-498d-8d30-c19973b00096; PHPSESSID=04db64f42d32834fed08c86dc279af89; _csrf=523d8298ffab69158d1403c2ce18e2516c8e59178eed1857f395401df4b3b734a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22-GNOENrG4ugVEjLqtCICV8RKAxtf8RAE%22%3B%7D',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_SEC_FETCH_DEST' => 'document',
+    'HTTP_SEC_FETCH_USER' => '?1',
+    'HTTP_SEC_FETCH_MODE' => 'navigate',
+    'HTTP_SEC_FETCH_SITE' => 'none',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_SEC_CH_UA_PLATFORM' => '"Windows"',
+    'HTTP_SEC_CH_UA_MOBILE' => '?0',
+    'HTTP_SEC_CH_UA' => '" Not A;Brand";v="99", "Chromium";v="102", "Google Chrome";v="102"',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_PRAGMA' => 'no-cache',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => 'localhost',
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '_ls',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '192.168.220.4',
+    'REMOTE_PORT' => '60446',
+    'REMOTE_ADDR' => '192.168.220.1',
+    'SERVER_SOFTWARE' => 
+2022/06/07 15:12:13 [error] 22#22: *21 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOME' => '/var/www',
+    'PHP_IDE_CONFIG' => 'serverName=Docker',
+    'VERSION_PRESTISSIMO_PLUGIN' => '^0.3.0',
+    'PHP_MD5' => '',
+    'PHP_URL' => 'https://www.php.net/get/php-7.4.4.tar.xz/from/this/mirror',
+    'SUPERVISOR_GROUP_NAME' => 'php-fpm',
+    'GPG_KEYS' => '42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312',
+    'PATH' => '/app:/app/vendor/bin:/root/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ENABLE_XDEBUG' => '0',
+    'TERM' => 'linux',
+    'SUPERVISOR_SERVER_URL' => 'unix:///var/run/supervisor.sock',
+    'XDEBUG_CONFIG' => 'remote_host=host.docker.internal remote_enable=1',
+    'SUPERVISOR_ENABLED' => '1',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2
+2022/06/07 15:12:13 [error] 22#22: *21 FastCGI sent in stderr: "',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'VERSION_CODECEPTION' => '^2.2.6',
+    'HOSTNAME' => '826214f5e5ff',
+    'PWD' => '/var/www/html',
+    'PHP_LDFLAGS' => '-Wl,-O1 -Wl,--hash-style=both -pie',
+    'VERSION_YII2' => '^2.0.15',
+    'PHP_ASC_URL' => 'https://www.php.net/get/php-7.4.4.tar.xz.asc/from/this/mirror',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'Phpstorm-89cce848=56c0081c-7b12-498d-8d30-c19973b00096; PHPSESSID=04db64f42d32834fed08c86dc279af89; _csrf=523d8298ffab69158d1403c2ce18e2516c8e59178eed1857f395401df4b3b734a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22-GNOENrG4ugVEjLqtCICV8RKAxtf8RAE%22%3B%7D',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_SEC_FETCH_DEST' => 'document',
+    'HTTP_SEC_FETCH_USER' => '?1',
+    'HTTP_SEC_FETCH_MODE' => 'navigate',
+    'HTTP_SEC_FETCH_SITE' => 'none',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_SEC_CH_UA_PLATFORM' => '"Windows"',
+    'HTTP_SEC_CH_UA_MOBILE' => '?0',
+    'HTTP_SEC_CH_UA' => '" Not A;Brand";v="99", "Chromium";v="102", "Google Chrome";v="102"',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_PRAGMA' => 'no-cache',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => 'localhost',
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '_ls',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '192.168.220.4',
+    'REMOTE_PORT' => '60458',
+2022/06/07 15:13:51 [error] 22#22: *24 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOME' => '/var/www',
+    'PHP_IDE_CONFIG' => 'serverName=Docker',
+    'VERSION_PRESTISSIMO_PLUGIN' => '^0.3.0',
+    'PHP_MD5' => '',
+    'PHP_URL' => 'https://www.php.net/get/php-7.4.4.tar.xz/from/this/mirror',
+    'SUPERVISOR_GROUP_NAME' => 'php-fpm',
+    'GPG_KEYS' => '42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312',
+    'PATH' => '/app:/app/vendor/bin:/root/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ENABLE_XDEBUG' => '0',
+    'TERM' => 'linux',
+    'SUPERVISOR_SERVER_URL' => 'unix:///var/run/supervisor.sock',
+    'XDEBUG_CONFIG' => 'remote_host=host.docker.internal remote_enable=1',
+    'SUPERVISOR_ENABLED' => '1',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2
+2022/06/07 15:13:51 [error] 22#22: *24 FastCGI sent in stderr: "f55c9c960720c84df483fca74c',
+    'PHP_USER_ID' => '33',
+    'PHP_VERSION' => '7.4.4',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'VERSION_COMPOSER_ASSET_PLUGIN' => '^1.4.4',
+    'COMPOSER_ALLOW_SUPERUSER' => '1',
+    'VERSION_COMPOSER_MERGE_PLUGIN' => '^1.4.1',
+    'SUPERVISOR_PROCESS_NAME' => 'php-fpm',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'VERSION_CODECEPTION' => '^2.2.6',
+    'HOSTNAME' => '826214f5e5ff',
+    'PWD' => '/var/www/html',
+    'PHP_LDFLAGS' => '-Wl,-O1 -Wl,--hash-style=both -pie',
+    'VERSION_YII2' => '^2.0.15',
+    'PHP_ASC_URL' => 'https://www.php.net/get/php-7.4.4.tar.xz.asc/from/this/mirror',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'Phpstorm-89cce848=56c0081c-7b12-498d-8d30-c19973b00096; PHPSESSID=04db64f42d32834fed08c86dc279af89; _csrf=523d8298ffab69158d1403c2ce18e2516c8e59178eed1857f395401df4b3b734a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22-GNOENrG4ugVEjLqtCICV8RKAxtf8RAE%22%3B%7D',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_SEC_FETCH_DEST' => 'document',
+    'HTTP_SEC_FETCH_USER' => '?1',
+    'HTTP_SEC_FETCH_MODE' => 'navigate',
+    'HTTP_SEC_FETCH_SITE' => 'none',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_SEC_CH_UA_PLATFORM' => '"Windows"',
+    'HTTP_SEC_CH_UA_MOBILE' => '?0',
+    'HTTP_SEC_CH_UA' => '" Not A;Brand";
+2022/06/07 15:14:20 [warn] 22#22: *24 an upstream response is buffered to a temporary file /var/cache/nginx/fastcgi_temp/4/00/0000000004 while reading upstream, client: 192.168.220.1, server: _ls, request: "GET /site/read-xml HTTP/1.1", upstream: "fastcgi://192.168.220.2:9000", host: "localhost"
+2022/06/07 15:14:21 [error] 22#22: *24 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOME' => '/var/www',
+    'PHP_IDE_CONFIG' => 'serverName=Docker',
+    'VERSION_PRESTISSIMO_PLUGIN' => '^0.3.0',
+    'PHP_MD5' => '',
+    'PHP_URL' => 'https://www.php.net/get/php-7.4.4.tar.xz/from/this/mirror',
+    'SUPERVISOR_GROUP_NAME' => 'php-fpm',
+    'GPG_KEYS' => '42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312',
+    'PATH' => '/app:/app/vendor/bin" while reading upstream, client: 192.168.220.1, server: _ls, request: "GET /site/read-xml HTTP/1.1", upstream: "fastcgi://192.168.220.2:9000", host: "localhost"
+2022/06/07 15:14:21 [error] 22#22: *24 FastCGI sent in stderr: ":/root/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ENABLE_XDEBUG' => '0',
+    'TERM' => 'linux',
+    'SUPERVISOR_SERVER_URL' => 'unix:///var/run/supervisor.sock',
+    'XDEBUG_CONFIG' => 'remote_host=host.docker.internal remote_enable=1',
+    'SUPERVISOR_ENABLED' => '1',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_SHA256' => '1873c4cefdd3df9a78dcffb2198bba5c2f0464f55c9c960720c84df483fca74c',
+    'PHP_USER_ID' => '33',
+    'PHP_VERSION' => '7.4.4',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c',
+    'VERSION_COMPOSER_ASSET_PLUGIN' => '^1.4.4',
+    'COMPOSER_ALLOW_SUPERUSER' => '1',
+    'VERSION_COMPOSER_MERGE_PLUGIN' => '^1.4.1',
+    'SUPERVISOR_PROCESS_NAME' => 'php-fpm',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'VERSION_CODECEPTION' => '^2.2.6',
+    'HOSTNAME' => '826214f5e5ff',
+    'PWD' => '/var/www/html',
+    'PHP_LDFLAGS' => '-Wl,-O1 -Wl,--hash-style=both -pie',
+    'VERSION_YII2' => '^2.0.15',
+    'PHP_ASC_URL' => 'https://www.php.net/get/php-7.4.4.tar.xz.asc/from/this/mirror',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'Phpstorm-89cce848=56c0081c-7b12-498d-8d30-c19973b00096; PHPSESSID=04db64f42d32834fed08c86dc279af89; _csrf=523d8298ffab69158d1403c2ce18e2516c8e59178eed1857f395401df4b3b734a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22-GNOENrG4ugVEjLqtCICV8RKAxtf8RAE%22%3B%7D',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_SEC_FETCH_DEST' => 'document',
+    'HTTP_SEC_FETCH_USER' => '?1',
+    'HTTP_SEC_FETCH_MODE' => 'navigate',
+    'HTTP_SEC_FETCH_S
+2022/06/07 15:15:10 [error] 22#22: *24 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOME' => '/var/www',
+    'PHP_IDE_CONFIG' => 'serverName=Docker',
+    'VERSION_PRESTISSIMO_PLUGIN' => '^0.3.0',
+    'PHP_MD5' => '',
+    'PHP_URL' => 'https://www.php.net/get/php-7.4.4.tar.xz/from/this/mirror',
+    'SUPERVISOR_GROUP_NAME' => 'php-fpm',
+    'GPG_KEYS' => '42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312',
+    'PATH' => '/app:/app/vendor/bin:/root/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ENABLE_XDEBUG' => '0',
+    'TERM' => 'linux',
+    'SUPERVISOR_SERVER_URL' => 'unix:///var/run/supervisor.sock',
+    'XDEBUG_CONFIG' => 'remote_host=host.docker.internal remote_enable=1',
+    'SUPERVISOR_ENABLED' => '1',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2
+2022/06/07 15:15:10 [error] 22#22: *24 FastCGI sent in stderr: " 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_SEC_CH_UA_PLATFORM' => '"Windows"',
+    'HTTP_SEC_CH_UA_MOBILE' => '?0',
+    'HTTP_SEC_CH_UA' => '" Not A;Brand";v="99", "Chromium";v="102", "Google Chrome";v="102"',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_PRAGMA' => 'no-cache',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => 'localhost',
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '_ls',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '192.168.220.4',
+    'REMOTE_PORT' => '60466',
+    'REMOTE_ADDR' => '192.168.220.1',
+    'SERVER_SOFTWARE' => 'nginx/1.21.6',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/var/www/html/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/read-xml',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1654614908.842229,
+    'REQUEST_TIME' => 1654614908,
+    'argv' => [],
+    'argc' => 0,
+]" while reading upstream, client: 192.168.220.1, server: _ls, request: "GET /site/read-xml HTTP/1.1", upstream: "fastcgi://192.168.220.2:9000", host: "localhost"
+2022/06/07 15:15:32 [error] 22#22: *24 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOME' => '/var/www',
+    'PHP_IDE_CONFIG' => 'serverName=Docker',
+    'VERSION_PRESTISSIMO_PLUGIN' => '^0.3.0',
+    'PHP_MD5' => '',
+    'PHP_URL' => 'https://www.php.net/get/php-7.4.4.tar.xz/from/this/mirror',
+    'SUPERVISOR_GROUP_NAME' => 'php-fpm',
+    'GPG_KEYS' => '42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312',
+    'PATH' => '/app:/app/vendor/bin:/root/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ENABLE_XDEBUG' => '0',
+    'TERM' => 'linux',
+    'SUPERVISOR_SERVER_URL' => 'unix:///var/run/supervisor.sock',
+    'XDEBUG_CONFIG' => 'remote_host=host.docker.internal remote_enable=1',
+    'SUPERVISOR_ENABLED' => '1',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2
+2022/06/07 15:15:32 [error] 22#22: *24 FastCGI sent in stderr: "kg-config 		re2c',
+    'VERSION_COMPOSER_ASSET_PLUGIN' => '^1.4.4',
+    'COMPOSER_ALLOW_SUPERUSER' => '1',
+    'VERSION_COMPOSER_MERGE_PLUGIN' => '^1.4.1',
+    'SUPERVISOR_PROCESS_NAME' => 'php-fpm',
+    'PHP_INI_DIR' => '/usr/local/etc/php',
+    'PHP_CFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_EXTRA_CONFIGURE_ARGS' => '--enable-fpm --with-fpm-user=www-data --with-fpm-group=www-data --disable-cgi',
+    'VERSION_CODECEPTION' => '^2.2.6',
+    'HOSTNAME' => '826214f5e5ff',
+    'PWD' => '/var/www/html',
+    'PHP_LDFLAGS' => '-Wl,-O1 -Wl,--hash-style=both -pie',
+    'VERSION_YII2' => '^2.0.15',
+    'PHP_ASC_URL' => 'https://www.php.net/get/php-7.4.4.tar.xz.asc/from/this/mirror',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'Phpstorm-89cce848=56c0081c-7b12-498d-8d30-c19973b00096; PHPSESSID=04db64f42d32834fed08c86dc279af89; _csrf=523d8298ffab69158d1403c2ce18e2516c8e59178eed1857f395401df4b3b734a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22-GNOENrG4ugVEjLqtCICV8RKAxtf8RAE%22%3B%7D',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_SEC_FETCH_DEST' => 'document',
+    'HTTP_SEC_FETCH_USER' => '?1',
+    'HTTP_SEC_FETCH_MODE' => 'navigate',
+    'HTTP_SEC_FETCH_SITE' => 'none',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_SEC_CH_UA_PLATFORM' => '"Windows"',
+    'HTTP_SEC_CH_UA_MOBILE' => '?0',
+    'HTTP_SEC_CH_UA' => '" Not A;Brand";v="99", "Chromium";v="102", "Google Chrome";v="102"',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_PRAGMA' => 'no-cache',
+    'HTTP_CONNECTION' => 'keep-alive',
+  
+2022/06/07 15:44:04 [error] 22#22: *31 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOME' => '/var/www',
+    'PHP_IDE_CONFIG' => 'serverName=Docker',
+    'VERSION_PRESTISSIMO_PLUGIN' => '^0.3.0',
+    'PHP_MD5' => '',
+    'PHP_URL' => 'https://www.php.net/get/php-7.4.4.tar.xz/from/this/mirror',
+    'SUPERVISOR_GROUP_NAME' => 'php-fpm',
+    'GPG_KEYS' => '42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312',
+    'PATH' => '/app:/app/vendor/bin:/root/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ENABLE_XDEBUG' => '0',
+    'TERM' => 'linux',
+    'SUPERVISOR_SERVER_URL' => 'unix:///var/run/supervisor.sock',
+    'XDEBUG_CONFIG' => 'remote_host=host.docker.internal remote_enable=1',
+    'SUPERVISOR_ENABLED' => '1',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2
+2022/06/07 15:44:04 [error] 22#22: *31 FastCGI sent in stderr: "BILE' => '?0',
+    'HTTP_SEC_CH_UA' => '" Not A;Brand";v="99", "Chromium";v="102", "Google Chrome";v="102"',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_PRAGMA' => 'no-cache',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => 'localhost',
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '_ls',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '192.168.220.4',
+    'REMOTE_PORT' => '60496',
+    'REMOTE_ADDR' => '192.168.220.1',
+    'SERVER_SOFTWARE' => 'nginx/1.21.6',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/var/www/html/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/read-xml',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1654616641.963106,
+    'REQUEST_TIME' => 1654616641,
+    'argv' => [],
+    'argc' => 0,
+]" while reading upstream, client: 192.168.220.1, server: _ls, request: "GET /site/read-xml HTTP/1.1", upstream: "fastcgi://192.168.220.2:9000", host: "localhost"
+2022/06/07 15:44:21 [error] 22#22: *31 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOME' => '/var/www',
+    'PHP_IDE_CONFIG' => 'serverName=Docker',
+    'VERSION_PRESTISSIMO_PLUGIN' => '^0.3.0',
+    'PHP_MD5' => '',
+    'PHP_URL' => 'https://www.php.net/get/php-7.4.4.tar.xz/from/this/mirror',
+    'SUPERVISOR_GROUP_NAME' => 'php-fpm',
+    'GPG_KEYS' => '42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312',
+    'PATH' => '/app:/app/vendor/bin:/root/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ENABLE_XDEBUG' => '0',
+    'TERM' => 'linux',
+    'SUPERVISOR_SERVER_URL' => 'unix:///var/run/supervisor.sock',
+    'XDEBUG_CONFIG' => 'remote_host=host.docker.internal remote_enable=1',
+    'SUPERVISOR_ENABLED' => '1',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2
+2022/06/07 15:44:21 [error] 22#22: *31 FastCGI sent in stderr: "    'PHP_LDFLAGS' => '-Wl,-O1 -Wl,--hash-style=both -pie',
+    'VERSION_YII2' => '^2.0.15',
+    'PHP_ASC_URL' => 'https://www.php.net/get/php-7.4.4.tar.xz.asc/from/this/mirror',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'Phpstorm-89cce848=56c0081c-7b12-498d-8d30-c19973b00096; PHPSESSID=04db64f42d32834fed08c86dc279af89; _csrf=523d8298ffab69158d1403c2ce18e2516c8e59178eed1857f395401df4b3b734a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22-GNOENrG4ugVEjLqtCICV8RKAxtf8RAE%22%3B%7D',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_SEC_FETCH_DEST' => 'document',
+    'HTTP_SEC_FETCH_USER' => '?1',
+    'HTTP_SEC_FETCH_MODE' => 'navigate',
+    'HTTP_SEC_FETCH_SITE' => 'none',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_SEC_CH_UA_PLATFORM' => '"Windows"',
+    'HTTP_SEC_CH_UA_MOBILE' => '?0',
+    'HTTP_SEC_CH_UA' => '" Not A;Brand";v="99", "Chromium";v="102", "Google Chrome";v="102"',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_PRAGMA' => 'no-cache',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => 'localhost',
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '_ls',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '192.168.220.4',
+    'REMOTE_PORT' => '60496',
+    'REMOTE_ADDR' => '192.168.220.1',
+    'SERVER_SOFTWARE' => 'nginx/1.21.6',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/var/www/html/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/read-xml',
+    'SCRIPT_NAME' => '
+2022/06/07 15:44:49 [error] 22#22: *31 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:" while reading upstream, client: 192.168.220.1, server: _ls, request: "GET /site/read-xml HTTP/1.1", upstream: "fastcgi://192.168.220.2:9000", host: "localhost"
+2022/06/07 15:44:49 [error] 22#22: *31 FastCGI sent in stderr: "
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/vendor/yiisoft/yii2/helpers/BaseVarDumper.php on line 38. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOME' => '/var/www',
+    'PHP_IDE_CONFIG' => 'serverName=Docker',
+    'VERSION_PRESTISSIMO_PLUGIN' => '^0.3.0',
+    'PHP_MD5' => '',
+    'PHP_URL' => 'https://www.php.net/get/php-7.4.4.tar.xz/from/this/mirror',
+    'SUPERVISOR_GROUP_NAME' => 'php-fpm',
+    'GPG_KEYS' => '42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312',
+    'PATH' => '/app:/app/vendor/bin:/root/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ENABLE_XDEBUG' => '0',
+    'TERM' => 'linux',
+    'SUPERVISOR_SERVER_URL' => 'unix:///var/run/supervisor.sock',
+    'XDEBUG_CONFIG' => 'remote_host=host.docker.internal remote_enable=1',
+    'SUPERVISOR_ENABLED' => '1',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64',
+    'PHP_SHA256' => '1873c4cefdd3df9a78dcffb2198bba5c2f0464f55c9c960720c84df483fca74c',
+    'PHP_USER_ID' => '33',
+    'PHP_VERSION' => '7.4.4',
+    'PHPIZE_DEPS' => 'autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 	
+2022/06/07 15:44:49 [error] 22#22: *31 FastCGI sent in stderr: " 'SERVER_NAME' => '_ls',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '192.168.220.4',
+    'REMOTE_PORT' => '60496',
+    'REMOTE_ADDR' => '192.168.220.1',
+    'SERVER_SOFTWARE' => 'nginx/1.21.6',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/var/www/html/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/site/read-xml',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1654616687.441029,
+    'REQUEST_TIME' => 1654616687,
+    'argv' => [],
+    'argc' => 0,
+]" while reading upstream, client: 192.168.220.1, server: _ls, request: "GET /site/read-xml HTTP/1.1", upstream: "fastcgi://192.168.220.2:9000", host: "localhost"
+2022/06/09 09:43:56 [notice] 1#1: using the "epoll" event method
+2022/06/09 09:43:56 [notice] 1#1: nginx/1.21.6
+2022/06/09 09:43:56 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/06/09 09:43:56 [notice] 1#1: OS: Linux 5.10.16.3-microsoft-standard-WSL2
+2022/06/09 09:43:56 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/06/09 09:43:56 [notice] 1#1: start worker processes
+2022/06/09 09:43:56 [notice] 1#1: start worker process 23
+2022/06/09 09:43:56 [notice] 1#1: start worker process 24
+2022/06/09 09:43:56 [notice] 1#1: start worker process 25
+2022/06/09 09:43:56 [notice] 1#1: start worker process 26
+2022/06/09 09:43:56 [notice] 1#1: start worker process 27
+2022/06/09 09:43:56 [notice] 1#1: start worker process 28
+2022/06/09 09:43:56 [notice] 1#1: start worker process 29
+2022/06/09 09:43:56 [notice] 1#1: start worker process 30
+2022/06/09 09:43:56 [notice] 1#1: start worker process 31
+2022/06/09 09:43:56 [notice] 1#1: start worker process 32
+2022/06/09 09:43:56 [notice] 1#1: start worker process 33
+2022/06/09 09:43:56 [notice] 1#1: start worker process 34
+2022/06/09 09:45:01 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/06/09 09:45:01 [notice] 23#23: gracefully shutting down
+2022/06/09 09:45:01 [notice] 32#32: gracefully shutting down
+2022/06/09 09:45:01 [notice] 25#25: gracefully shutting down
+2022/06/09 09:45:01 [notice] 24#24: gracefully shutting down
+2022/06/09 09:45:01 [notice] 26#26: gracefully shutting down
+2022/06/09 09:45:01 [notice] 27#27: gracefully shutting down
+2022/06/09 09:45:01 [notice] 29#29: gracefully shutting down
+2022/06/09 09:45:01 [notice] 29#29: exiting
+2022/06/09 09:45:01 [notice] 28#28: gracefully shutting down
+2022/06/09 09:45:01 [notice] 28#28: exiting
+2022/06/09 09:45:01 [notice] 30#30: gracefully shutting down
+2022/06/09 09:45:01 [notice] 31#31: gracefully shutting down
+2022/06/09 09:45:01 [notice] 31#31: exiting
+2022/06/09 09:45:01 [notice] 33#33: gracefully shutting down
+2022/06/09 09:45:01 [notice] 34#34: gracefully shutting down
+2022/06/09 09:45:01 [notice] 23#23: exiting
+2022/06/09 09:45:01 [notice] 32#32: exiting
+2022/06/09 09:45:01 [notice] 25#25: exiting
+2022/06/09 09:45:01 [notice] 26#26: exiting
+2022/06/09 09:45:01 [notice] 27#27: exiting
+2022/06/09 09:45:01 [notice] 29#29: exit
+2022/06/09 09:45:01 [notice] 28#28: exit
+2022/06/09 09:45:01 [notice] 30#30: exiting
+2022/06/09 09:45:01 [notice] 31#31: exit
+2022/06/09 09:45:01 [notice] 33#33: exiting
+2022/06/09 09:45:01 [notice] 34#34: exiting
+2022/06/09 09:45:01 [notice] 34#34: exit
+2022/06/09 09:45:01 [notice] 23#23: exit
+2022/06/09 09:45:01 [notice] 32#32: exit
+2022/06/09 09:45:01 [notice] 25#25: exit
+2022/06/09 09:45:01 [notice] 26#26: exit
+2022/06/09 09:45:01 [notice] 27#27: exit
+2022/06/09 09:45:01 [notice] 30#30: exit
+2022/06/09 09:45:01 [notice] 33#33: exit
+2022/06/09 09:45:01 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2022/06/09 09:45:01 [notice] 1#1: worker process 26 exited with code 0
+2022/06/09 09:45:01 [notice] 1#1: worker process 30 exited with code 0
+2022/06/09 09:45:01 [notice] 1#1: worker process 31 exited with code 0
+2022/06/09 09:45:01 [notice] 1#1: worker process 32 exited with code 0
+2022/06/09 09:45:01 [notice] 1#1: signal 29 (SIGIO) received
+2022/06/09 09:45:01 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2022/06/09 09:45:02 [notice] 1#1: signal 17 (SIGCHLD) received from 29
+2022/06/09 09:45:02 [notice] 1#1: worker process 23 exited with code 0
+2022/06/09 09:45:02 [notice] 1#1: worker process 29 exited with code 0
+2022/06/09 09:45:02 [notice] 1#1: worker process 33 exited with code 0
+2022/06/09 09:45:02 [notice] 1#1: signal 29 (SIGIO) received
+2022/06/09 09:45:02 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2022/06/09 09:45:02 [notice] 1#1: signal 17 (SIGCHLD) received from 25
+2022/06/09 09:45:02 [notice] 1#1: worker process 25 exited with code 0
+2022/06/09 09:45:02 [notice] 1#1: worker process 27 exited with code 0
+2022/06/09 09:45:02 [notice] 1#1: worker process 28 exited with code 0
+2022/06/09 09:45:02 [notice] 1#1: signal 29 (SIGIO) received
+2022/06/09 09:45:02 [notice] 1#1: signal 17 (SIGCHLD) received from 27
+2022/06/09 09:45:02 [notice] 1#1: signal 17 (SIGCHLD) received from 34
+2022/06/09 09:45:02 [notice] 1#1: worker process 34 exited with code 0
+2022/06/09 09:45:02 [notice] 1#1: signal 29 (SIGIO) received
+2022/07/04 08:55:14 [notice] 1#1: using the "epoll" event method
+2022/07/04 08:55:14 [notice] 1#1: nginx/1.21.6
+2022/07/04 08:55:14 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/07/04 08:55:14 [notice] 1#1: OS: Linux 5.10.16.3-microsoft-standard-WSL2
+2022/07/04 08:55:14 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/07/04 08:55:14 [notice] 1#1: start worker processes
+2022/07/04 08:55:14 [notice] 1#1: start worker process 23
+2022/07/04 08:55:14 [notice] 1#1: start worker process 24
+2022/07/04 08:55:14 [notice] 1#1: start worker process 25
+2022/07/04 08:55:14 [notice] 1#1: start worker process 26
+2022/07/04 08:55:14 [notice] 1#1: start worker process 27
+2022/07/04 08:55:14 [notice] 1#1: start worker process 28
+2022/07/04 08:55:14 [notice] 1#1: start worker process 29
+2022/07/04 08:55:14 [notice] 1#1: start worker process 30
+2022/07/04 08:55:14 [notice] 1#1: start worker process 31
+2022/07/04 08:55:14 [notice] 1#1: start worker process 32
+2022/07/04 08:55:14 [notice] 1#1: start worker process 33
+2022/07/04 08:55:14 [notice] 1#1: start worker process 34
+2022/07/05 11:06:42 [notice] 1#1: using the "epoll" event method
+2022/07/05 11:06:42 [notice] 1#1: nginx/1.21.6
+2022/07/05 11:06:42 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/07/05 11:06:42 [notice] 1#1: OS: Linux 5.10.16.3-microsoft-standard-WSL2
+2022/07/05 11:06:42 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/07/05 11:06:42 [notice] 1#1: start worker processes
+2022/07/05 11:06:42 [notice] 1#1: start worker process 22
+2022/07/05 11:06:42 [notice] 1#1: start worker process 23
+2022/07/05 11:06:42 [notice] 1#1: start worker process 24
+2022/07/05 11:06:42 [notice] 1#1: start worker process 25
+2022/07/05 11:06:42 [notice] 1#1: start worker process 26
+2022/07/05 11:06:42 [notice] 1#1: start worker process 27
+2022/07/05 11:06:42 [notice] 1#1: start worker process 28
+2022/07/05 11:06:42 [notice] 1#1: start worker process 29
+2022/07/05 11:06:42 [notice] 1#1: start worker process 30
+2022/07/05 11:06:42 [notice] 1#1: start worker process 31
+2022/07/05 11:06:42 [notice] 1#1: start worker process 32
+2022/07/05 11:06:42 [notice] 1#1: start worker process 33
+2022/07/05 11:06:48 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/07/05 11:06:48 [notice] 22#22: gracefully shutting down
+2022/07/05 11:06:48 [notice] 22#22: exiting
+2022/07/05 11:06:48 [notice] 23#23: gracefully shutting down
+2022/07/05 11:06:48 [notice] 23#23: exiting
+2022/07/05 11:06:48 [notice] 24#24: gracefully shutting down
+2022/07/05 11:06:48 [notice] 24#24: exiting
+2022/07/05 11:06:48 [notice] 25#25: gracefully shutting down
+2022/07/05 11:06:48 [notice] 25#25: exiting
+2022/07/05 11:06:48 [notice] 26#26: gracefully shutting down
+2022/07/05 11:06:48 [notice] 26#26: exiting
+2022/07/05 11:06:48 [notice] 28#28: gracefully shutting down
+2022/07/05 11:06:48 [notice] 28#28: exiting
+2022/07/05 11:06:48 [notice] 27#27: gracefully shutting down
+2022/07/05 11:06:48 [notice] 27#27: exiting
+2022/07/05 11:06:48 [notice] 29#29: gracefully shutting down
+2022/07/05 11:06:48 [notice] 29#29: exiting
+2022/07/05 11:06:48 [notice] 30#30: gracefully shutting down
+2022/07/05 11:06:48 [notice] 31#31: gracefully shutting down
+2022/07/05 11:06:48 [notice] 31#31: exiting
+2022/07/05 11:06:48 [notice] 32#32: gracefully shutting down
+2022/07/05 11:06:48 [notice] 32#32: exiting
+2022/07/05 11:06:48 [notice] 33#33: gracefully shutting down
+2022/07/05 11:06:48 [notice] 33#33: exiting
+2022/07/05 11:06:48 [notice] 22#22: exit
+2022/07/05 11:06:48 [notice] 23#23: exit
+2022/07/05 11:06:48 [notice] 24#24: exit
+2022/07/05 11:06:48 [notice] 25#25: exit
+2022/07/05 11:06:48 [notice] 26#26: exit
+2022/07/05 11:06:48 [notice] 28#28: exit
+2022/07/05 11:06:48 [notice] 27#27: exit
+2022/07/05 11:06:48 [notice] 29#29: exit
+2022/07/05 11:06:48 [notice] 30#30: exiting
+2022/07/05 11:06:48 [notice] 31#31: exit
+2022/07/05 11:06:48 [notice] 32#32: exit
+2022/07/05 11:06:48 [notice] 33#33: exit
+2022/07/05 11:06:48 [notice] 30#30: exit
+2022/07/05 11:06:48 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2022/07/05 11:06:48 [notice] 1#1: worker process 24 exited with code 0
+2022/07/05 11:06:48 [notice] 1#1: worker process 25 exited with code 0
+2022/07/05 11:06:48 [notice] 1#1: worker process 30 exited with code 0
+2022/07/05 11:06:48 [notice] 1#1: signal 29 (SIGIO) received
+2022/07/05 11:06:48 [notice] 1#1: signal 17 (SIGCHLD) received from 24
+2022/07/05 11:06:48 [notice] 1#1: signal 17 (SIGCHLD) received from 26
+2022/07/05 11:06:48 [notice] 1#1: worker process 26 exited with code 0
+2022/07/05 11:06:48 [notice] 1#1: worker process 27 exited with code 0
+2022/07/05 11:06:48 [notice] 1#1: signal 29 (SIGIO) received
+2022/07/05 11:06:48 [notice] 1#1: signal 17 (SIGCHLD) received from 29
+2022/07/05 11:06:48 [notice] 1#1: worker process 22 exited with code 0
+2022/07/05 11:06:48 [notice] 1#1: worker process 29 exited with code 0
+2022/07/05 11:06:48 [notice] 1#1: signal 29 (SIGIO) received
+2022/07/05 11:06:48 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2022/07/05 11:06:48 [notice] 1#1: worker process 23 exited with code 0
+2022/07/05 11:06:48 [notice] 1#1: worker process 31 exited with code 0
+2022/07/05 11:06:48 [notice] 1#1: worker process 33 exited with code 0
+2022/07/05 11:06:48 [notice] 1#1: signal 29 (SIGIO) received
+2022/07/05 11:06:48 [notice] 1#1: signal 17 (SIGCHLD) received from 23
+2022/07/05 11:06:48 [notice] 1#1: signal 17 (SIGCHLD) received from 28
+2022/07/05 11:06:48 [notice] 1#1: worker process 28 exited with code 0
+2022/07/05 11:06:48 [notice] 1#1: signal 29 (SIGIO) received
+2022/07/05 11:06:48 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2022/07/05 11:06:48 [notice] 1#1: worker process 32 exited with code 0
+2022/07/05 11:06:48 [notice] 1#1: exit
+2022/08/22 15:08:34 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/08/22 15:08:34 [notice] 24#24: gracefully shutting down
+2022/08/22 15:08:34 [notice] 31#31: gracefully shutting down
+2022/08/22 15:08:34 [notice] 23#23: gracefully shutting down
+2022/08/22 15:08:34 [notice] 25#25: gracefully shutting down
+2022/08/22 15:08:34 [notice] 26#26: gracefully shutting down
+2022/08/22 15:08:34 [notice] 26#26: exiting
+2022/08/22 15:08:34 [notice] 27#27: gracefully shutting down
+2022/08/22 15:08:34 [notice] 27#27: exiting
+2022/08/22 15:08:34 [notice] 28#28: gracefully shutting down
+2022/08/22 15:08:34 [notice] 29#29: gracefully shutting down
+2022/08/22 15:08:34 [notice] 29#29: exiting
+2022/08/22 15:08:34 [notice] 30#30: gracefully shutting down
+2022/08/22 15:08:34 [notice] 30#30: exiting
+2022/08/22 15:08:34 [notice] 32#32: gracefully shutting down
+2022/08/22 15:08:34 [notice] 32#32: exiting
+2022/08/22 15:08:34 [notice] 33#33: gracefully shutting down
+2022/08/22 15:08:34 [notice] 34#34: gracefully shutting down
+2022/08/22 15:08:34 [notice] 34#34: exiting
+2022/08/22 15:08:34 [notice] 24#24: exiting
+2022/08/22 15:08:34 [notice] 31#31: exiting
+2022/08/22 15:08:34 [notice] 23#23: exiting
+2022/08/22 15:08:34 [notice] 25#25: exiting
+2022/08/22 15:08:34 [notice] 26#26: exit
+2022/08/22 15:08:34 [notice] 27#27: exit
+2022/08/22 15:08:34 [notice] 28#28: exiting
+2022/08/22 15:08:34 [notice] 29#29: exit
+2022/08/22 15:08:34 [notice] 30#30: exit
+2022/08/22 15:08:34 [notice] 32#32: exit
+2022/08/22 15:08:34 [notice] 33#33: exiting
+2022/08/22 15:08:34 [notice] 34#34: exit
+2022/08/22 15:08:34 [notice] 24#24: exit
+2022/08/22 15:08:34 [notice] 31#31: exit
+2022/08/22 15:08:34 [notice] 23#23: exit
+2022/08/22 15:08:34 [notice] 25#25: exit
+2022/08/22 15:08:34 [notice] 28#28: exit
+2022/08/22 15:08:34 [notice] 33#33: exit
+2022/08/22 15:08:35 [notice] 1#1: signal 17 (SIGCHLD) received from 29
+2022/08/22 15:08:35 [notice] 1#1: worker process 29 exited with code 0
+2022/08/22 15:08:35 [notice] 1#1: signal 29 (SIGIO) received
+2022/08/22 15:08:35 [notice] 1#1: signal 17 (SIGCHLD) received from 34
+2022/08/22 15:08:35 [notice] 1#1: worker process 24 exited with code 0
+2022/08/22 15:08:35 [notice] 1#1: worker process 28 exited with code 0
+2022/08/22 15:08:35 [notice] 1#1: worker process 32 exited with code 0
+2022/08/22 15:08:35 [notice] 1#1: worker process 34 exited with code 0
+2022/08/22 15:08:35 [notice] 1#1: signal 29 (SIGIO) received
+2022/08/22 15:08:35 [notice] 1#1: signal 17 (SIGCHLD) received from 28
+2022/08/22 15:08:35 [notice] 1#1: signal 17 (SIGCHLD) received from 25
+2022/08/22 15:08:35 [notice] 1#1: worker process 25 exited with code 0
+2022/08/22 15:08:35 [notice] 1#1: worker process 31 exited with code 0
+2022/08/22 15:08:35 [notice] 1#1: signal 29 (SIGIO) received
+2022/08/22 15:08:35 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2022/08/22 15:08:35 [notice] 1#1: signal 17 (SIGCHLD) received from 26
+2022/08/22 15:08:35 [notice] 1#1: worker process 23 exited with code 0
+2022/08/22 15:08:35 [notice] 1#1: worker process 26 exited with code 0
+2022/08/22 15:08:35 [notice] 1#1: worker process 33 exited with code 0
+2022/08/22 15:08:35 [notice] 1#1: signal 29 (SIGIO) received
+2022/08/22 15:08:35 [notice] 1#1: signal 17 (SIGCHLD) received from 23
+2022/08/22 15:08:35 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2022/08/22 15:08:35 [notice] 1#1: worker process 27 exited with code 0
+2022/08/22 15:08:35 [notice] 1#1: worker process 30 exited with code 0
+2022/08/22 15:08:35 [notice] 1#1: exit
+2022/08/22 15:08:47 [notice] 1#1: using the "epoll" event method
+2022/08/22 15:08:47 [notice] 1#1: nginx/1.21.6
+2022/08/22 15:08:47 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/08/22 15:08:47 [notice] 1#1: OS: Linux 5.10.16.3-microsoft-standard-WSL2
+2022/08/22 15:08:47 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/08/22 15:08:47 [notice] 1#1: start worker processes
+2022/08/22 15:08:47 [notice] 1#1: start worker process 23
+2022/08/22 15:08:47 [notice] 1#1: start worker process 24
+2022/08/22 15:08:47 [notice] 1#1: start worker process 25
+2022/08/22 15:08:47 [notice] 1#1: start worker process 26
+2022/08/22 15:08:47 [notice] 1#1: start worker process 27
+2022/08/22 15:08:47 [notice] 1#1: start worker process 28
+2022/08/22 15:08:47 [notice] 1#1: start worker process 29
+2022/08/22 15:08:47 [notice] 1#1: start worker process 30
+2022/08/22 15:08:47 [notice] 1#1: start worker process 31
+2022/08/22 15:08:47 [notice] 1#1: start worker process 32
+2022/08/22 15:08:47 [notice] 1#1: start worker process 33
+2022/08/22 15:08:47 [notice] 1#1: start worker process 34
+2022/08/22 15:11:53 [error] 26#26: *5 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/controllers/SiteController.php on line 142. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/web/ErrorHandler.php(136): yii\web\Response->send()
+#2 /var/www/html/vendor/yiisoft/yii2/base/ErrorHandler.php(135): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+yii\web\HeadersAlreadySentException: Headers already sent in /var/www/html/controllers/SiteController.php on line 142. in /var/www/html/vendor/yiisoft/yii2/web/Response.php:368
+Stack trace:
+#0 /var/www/html/vendor/yiisoft/yii2/web/Response.php(341): yii\web\Response->sendHeaders()
+#1 /var/www/html/vendor/yiisoft/yii2/base/Application.php(390): yii\web\Response->send()
+#2 /var/www/html/web/index.php(12): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HOME' => '/var/www',
+    'PHP_IDE_CONFIG' => 'serverName=Docker',
+    'VERSION_PRESTISSIMO_PLUGIN' => '^0.3.0',
+    'PHP_MD5' => '',
+    'PHP_URL' => 'https://www.php.net/get/php-7.4.4.tar.xz/from/this/mirror',
+    'SUPERVISOR_GROUP_NAME' => 'php-fpm',
+    'GPG_KEYS' => '42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312',
+    'PATH' => '/app:/app/vendor/bin:/root/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    'PHP_ENABLE_XDEBUG' => '0',
+    'TERM' => 'linux',
+    'SUPERVISOR_SERVER_URL' => 'unix:///var/run/supervisor.sock',
+    'XDEBUG_CONFIG' => 'remote_host=host.docker.internal remote_enable=1',
+    'SUPERVISOR_ENABLED' => '1',
+    'PHP_CPPFLAGS' => '-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_
+2022/08/22 15:11:53 [error] 26#26: *5 FastCGI sent in stderr: " '-Wl,-O1 -Wl,--hash-style=both -pie',
+    'VERSION_YII2' => '^2.0.15',
+    'PHP_ASC_URL' => 'https://www.php.net/get/php-7.4.4.tar.xz.asc/from/this/mirror',
+    'USER' => 'www-data',
+    'HTTP_COOKIE' => 'Phpstorm-89cce848=56c0081c-7b12-498d-8d30-c19973b00096',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_SEC_FETCH_DEST' => 'document',
+    'HTTP_SEC_FETCH_USER' => '?1',
+    'HTTP_SEC_FETCH_MODE' => 'navigate',
+    'HTTP_SEC_FETCH_SITE' => 'none',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_SEC_CH_UA_PLATFORM' => '"Windows"',
+    'HTTP_SEC_CH_UA_MOBILE' => '?0',
+    'HTTP_SEC_CH_UA' => '"Chromium";v="104", " Not A;Brand";v="99", "Google Chrome";v="104"',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_PRAGMA' => 'no-cache',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'HTTP_HOST' => 'localhost',
+    'SCRIPT_FILENAME' => '/var/www/html/web/index.php',
+    'REDIRECT_STATUS' => '200',
+    'SERVER_NAME' => '_ls',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '192.168.220.4',
+    'REMOTE_PORT' => '40858',
+    'REMOTE_ADDR' => '192.168.220.1',
+    'SERVER_SOFTWARE' => 'nginx/1.21.6',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REQUEST_SCHEME' => 'http',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'DOCUMENT_ROOT' => '/var/www/html/web',
+    'DOCUMENT_URI' => '/index.php',
+    'REQUEST_URI' => '/',
+    'SCRIPT_NAME' => '/index.php',
+    'CONTENT_LENGTH' => '',
+    'CONTENT_TYPE' => '',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1661181113.102183,
+    'REQUEST_TIME' =>
+2022/08/22 15:49:31 [notice] 29#29: signal 15 (SIGTERM) received, exiting
+2022/08/22 15:49:31 [notice] 26#26: signal 15 (SIGTERM) received, exiting
+2022/08/22 15:49:31 [notice] 34#34: signal 15 (SIGTERM) received, exiting
+2022/08/22 15:49:31 [notice] 34#34: exiting
+2022/08/22 15:49:31 [notice] 34#34: exit
+2022/08/22 15:49:31 [notice] 30#30: signal 15 (SIGTERM) received, exiting
+2022/08/22 15:49:31 [notice] 1#1: signal 15 (SIGTERM) received, exiting
+2022/08/22 15:49:31 [notice] 27#27: signal 15 (SIGTERM) received, exiting
+2022/08/22 15:49:31 [notice] 23#23: signal 15 (SIGTERM) received, exiting
+2022/08/22 15:49:31 [notice] 23#23: exiting
+2022/08/22 15:49:31 [notice] 24#24: signal 15 (SIGTERM) received, exiting
+2022/08/22 15:49:31 [notice] 29#29: exiting
+2022/08/22 15:49:31 [notice] 29#29: exit
+2022/08/22 15:49:31 [notice] 25#25: signal 15 (SIGTERM) received, exiting
+2022/08/22 15:49:31 [notice] 26#26: exiting
+2022/08/22 15:49:31 [notice] 30#30: exiting
+2022/08/22 15:49:31 [notice] 32#32: signal 15 (SIGTERM) received, exiting
+2022/08/22 15:49:31 [notice] 31#31: signal 15 (SIGTERM) received, exiting
+2022/08/22 15:49:31 [notice] 28#28: signal 15 (SIGTERM) received, exiting
+2022/08/22 15:49:31 [notice] 33#33: signal 15 (SIGTERM) received, exiting
+2022/08/22 15:49:31 [notice] 27#27: exiting
+2022/08/22 15:49:31 [notice] 23#23: exit
+2022/08/22 15:49:31 [notice] 24#24: exiting
+2022/08/22 15:49:31 [notice] 25#25: exiting
+2022/08/22 15:49:31 [notice] 26#26: exit
+2022/08/22 15:49:31 [notice] 30#30: exit
+2022/08/22 15:49:31 [notice] 32#32: exiting
+2022/08/22 15:49:31 [notice] 31#31: exiting
+2022/08/22 15:49:31 [notice] 28#28: exiting
+2022/08/22 15:49:31 [notice] 33#33: exiting
+2022/08/22 15:49:31 [notice] 27#27: exit
+2022/08/22 15:49:31 [notice] 24#24: exit
+2022/08/22 15:49:31 [notice] 25#25: exit
+2022/08/22 15:49:31 [notice] 32#32: exit
+2022/08/22 15:49:31 [notice] 31#31: exit
+2022/08/22 15:49:31 [notice] 28#28: exit
+2022/08/22 15:49:31 [notice] 33#33: exit
+2022/08/22 15:49:31 [notice] 1#1: signal 14 (SIGALRM) received
+2022/08/22 15:49:31 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2022/08/22 15:49:31 [notice] 1#1: worker process 30 exited with code 0
+2022/08/22 15:49:31 [notice] 1#1: signal 29 (SIGIO) received
+2022/08/22 15:49:31 [notice] 1#1: signal 17 (SIGCHLD) received from 25
+2022/08/22 15:49:31 [notice] 1#1: worker process 23 exited with code 0
+2022/08/22 15:49:31 [notice] 1#1: worker process 25 exited with code 0
+2022/08/22 15:49:31 [notice] 1#1: worker process 29 exited with code 0
+2022/08/22 15:49:31 [notice] 1#1: worker process 31 exited with code 0
+2022/08/22 15:49:31 [notice] 1#1: worker process 33 exited with code 0
+2022/08/22 15:49:31 [notice] 1#1: worker process 34 exited with code 0
+2022/08/22 15:49:31 [notice] 1#1: signal 29 (SIGIO) received
+2022/08/22 15:49:31 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2022/08/22 15:49:31 [notice] 1#1: worker process 32 exited with code 0
+2022/08/22 15:49:31 [notice] 1#1: signal 29 (SIGIO) received
+2022/08/22 15:49:31 [notice] 1#1: signal 17 (SIGCHLD) received from 28
+2022/08/22 15:49:31 [notice] 1#1: worker process 24 exited with code 0
+2022/08/22 15:49:31 [notice] 1#1: worker process 26 exited with code 0
+2022/08/22 15:49:31 [notice] 1#1: worker process 27 exited with code 0
+2022/08/22 15:49:31 [notice] 1#1: worker process 28 exited with code 0
+2022/08/22 15:49:31 [notice] 1#1: exit
+2022/08/23 11:35:53 [notice] 1#1: using the "epoll" event method
+2022/08/23 11:35:53 [notice] 1#1: nginx/1.21.6
+2022/08/23 11:35:53 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/08/23 11:35:53 [notice] 1#1: OS: Linux 5.10.16.3-microsoft-standard-WSL2
+2022/08/23 11:35:53 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/08/23 11:35:53 [notice] 1#1: start worker processes
+2022/08/23 11:35:53 [notice] 1#1: start worker process 22
+2022/08/23 11:35:53 [notice] 1#1: start worker process 23
+2022/08/23 11:35:53 [notice] 1#1: start worker process 24
+2022/08/23 11:35:53 [notice] 1#1: start worker process 25
+2022/08/23 11:35:53 [notice] 1#1: start worker process 26
+2022/08/23 11:35:53 [notice] 1#1: start worker process 27
+2022/08/23 11:35:53 [notice] 1#1: start worker process 28
+2022/08/23 11:35:53 [notice] 1#1: start worker process 29
+2022/08/23 11:35:53 [notice] 1#1: start worker process 30
+2022/08/23 11:35:53 [notice] 1#1: start worker process 31
+2022/08/23 11:35:53 [notice] 1#1: start worker process 32
+2022/08/23 11:35:53 [notice] 1#1: start worker process 33
+2022/08/23 12:25:15 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2022/08/23 12:25:15 [notice] 22#22: gracefully shutting down
+2022/08/23 12:25:15 [notice] 32#32: gracefully shutting down
+2022/08/23 12:25:15 [notice] 23#23: gracefully shutting down
+2022/08/23 12:25:15 [notice] 23#23: exiting
+2022/08/23 12:25:15 [notice] 24#24: gracefully shutting down
+2022/08/23 12:25:15 [notice] 24#24: exiting
+2022/08/23 12:25:15 [notice] 25#25: gracefully shutting down
+2022/08/23 12:25:15 [notice] 26#26: gracefully shutting down
+2022/08/23 12:25:15 [notice] 28#28: gracefully shutting down
+2022/08/23 12:25:15 [notice] 28#28: exiting
+2022/08/23 12:25:15 [notice] 27#27: gracefully shutting down
+2022/08/23 12:25:15 [notice] 27#27: exiting
+2022/08/23 12:25:15 [notice] 29#29: gracefully shutting down
+2022/08/23 12:25:15 [notice] 29#29: exiting
+2022/08/23 12:25:15 [notice] 30#30: gracefully shutting down
+2022/08/23 12:25:15 [notice] 31#31: gracefully shutting down
+2022/08/23 12:25:15 [notice] 22#22: exiting
+2022/08/23 12:25:15 [notice] 33#33: gracefully shutting down
+2022/08/23 12:25:15 [notice] 32#32: exiting
+2022/08/23 12:25:15 [notice] 23#23: exit
+2022/08/23 12:25:15 [notice] 24#24: exit
+2022/08/23 12:25:15 [notice] 25#25: exiting
+2022/08/23 12:25:15 [notice] 26#26: exiting
+2022/08/23 12:25:15 [notice] 28#28: exit
+2022/08/23 12:25:15 [notice] 27#27: exit
+2022/08/23 12:25:15 [notice] 29#29: exit
+2022/08/23 12:25:15 [notice] 30#30: exiting
+2022/08/23 12:25:15 [notice] 31#31: exiting
+2022/08/23 12:25:15 [notice] 22#22: exit
+2022/08/23 12:25:15 [notice] 33#33: exiting
+2022/08/23 12:25:15 [notice] 32#32: exit
+2022/08/23 12:25:15 [notice] 25#25: exit
+2022/08/23 12:25:15 [notice] 26#26: exit
+2022/08/23 12:25:15 [notice] 30#30: exit
+2022/08/23 12:25:15 [notice] 31#31: exit
+2022/08/23 12:25:15 [notice] 33#33: exit
+2022/08/23 12:25:15 [notice] 1#1: signal 17 (SIGCHLD) received from 27
+2022/08/23 12:25:15 [notice] 1#1: worker process 24 exited with code 0
+2022/08/23 12:25:15 [notice] 1#1: worker process 27 exited with code 0
+2022/08/23 12:25:15 [notice] 1#1: signal 29 (SIGIO) received
+2022/08/23 12:25:15 [notice] 1#1: signal 17 (SIGCHLD) received from 24
+2022/08/23 12:25:15 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2022/08/23 12:25:15 [notice] 1#1: worker process 25 exited with code 0
+2022/08/23 12:25:15 [notice] 1#1: worker process 26 exited with code 0
+2022/08/23 12:25:15 [notice] 1#1: worker process 28 exited with code 0
+2022/08/23 12:25:15 [notice] 1#1: worker process 30 exited with code 0
+2022/08/23 12:25:15 [notice] 1#1: signal 29 (SIGIO) received
+2022/08/23 12:25:15 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2022/08/23 12:25:15 [notice] 1#1: worker process 22 exited with code 0
+2022/08/23 12:25:15 [notice] 1#1: worker process 29 exited with code 0
+2022/08/23 12:25:15 [notice] 1#1: worker process 31 exited with code 0
+2022/08/23 12:25:15 [notice] 1#1: signal 29 (SIGIO) received
+2022/08/23 12:25:15 [notice] 1#1: signal 17 (SIGCHLD) received from 22
+2022/08/23 12:25:15 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2022/08/23 12:25:15 [notice] 1#1: worker process 23 exited with code 0
+2022/08/23 12:25:15 [notice] 1#1: worker process 32 exited with code 0
+2022/08/23 12:25:15 [notice] 1#1: signal 29 (SIGIO) received
+2022/08/23 12:25:15 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2022/08/23 12:25:15 [notice] 1#1: worker process 33 exited with code 0
+2022/08/23 12:25:15 [notice] 1#1: exit
+2022/08/23 12:25:51 [notice] 1#1: using the "epoll" event method
+2022/08/23 12:25:51 [notice] 1#1: nginx/1.21.6
+2022/08/23 12:25:51 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/08/23 12:25:51 [notice] 1#1: OS: Linux 5.10.16.3-microsoft-standard-WSL2
+2022/08/23 12:25:51 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/08/23 12:25:51 [notice] 1#1: start worker processes
+2022/08/23 12:25:51 [notice] 1#1: start worker process 22
+2022/08/23 12:25:51 [notice] 1#1: start worker process 23
+2022/08/23 12:25:51 [notice] 1#1: start worker process 24
+2022/08/23 12:25:51 [notice] 1#1: start worker process 25
+2022/08/23 12:25:51 [notice] 1#1: start worker process 26
+2022/08/23 12:25:51 [notice] 1#1: start worker process 27
+2022/08/23 12:25:51 [notice] 1#1: start worker process 28
+2022/08/23 12:25:51 [notice] 1#1: start worker process 29
+2022/08/23 12:25:51 [notice] 1#1: start worker process 30
+2022/08/23 12:25:51 [notice] 1#1: start worker process 31
+2022/08/23 12:25:51 [notice] 1#1: start worker process 32
+2022/08/23 12:25:51 [notice] 1#1: start worker process 33

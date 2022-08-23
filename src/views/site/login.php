@@ -7,7 +7,7 @@
 use yii\bootstrap4\ActiveForm;
 use yii\bootstrap4\Html;
 
-$this->title = 'Login';
+$this->title = 'loginModel';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-login">
@@ -36,7 +36,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
         <div class="form-group">
             <div class="offset-lg-1 col-lg-11">
-                <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
+                <?= Html::submitButton('loginModel', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
             </div>
         </div>
 

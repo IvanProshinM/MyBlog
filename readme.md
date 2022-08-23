@@ -45,4 +45,4 @@ docker-compose exec php chown -R www-data:www-data /var/www/html/runtime/cache
     'timeZone' => 'Europe/Moscow',
     'language' => 'ru',
 ```
-5. Проверить, что база данных ок: войти в контейнер php, в нем выполнить команду: ``php yii migrate``
+5. Проверить, что база данных ок: войти в контейнер php, в нем выполнить команду: ``php yii migrate``# GParser
