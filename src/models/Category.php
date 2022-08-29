@@ -21,10 +21,6 @@ use yii\behaviors\SluggableBehavior;
 class Category extends ActiveRecord
 {
 
-    /**
-     * @var mixed|null
-     */
-    private $activateHash;
 
     public static function tableName()
     {

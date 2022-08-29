@@ -10,6 +10,7 @@ use app\modules\manager\models\PostProvider;
 use Yii;
 use yii\data\ActiveDataProvider;
 use yii\filters\AccessControl;
+use yii\helpers\VarDumper;
 use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
@@ -107,10 +108,10 @@ class SiteController extends Controller
             ->where(['slug' => $slug])
             ->one();
         $commentsModel = Comments::find()
-            ->where(['=','postId',$model->id])
+            ->where(['=', 'postId', $model->id])
             ->all();
         $commentsForm = new CommentsForm();
-        return $this->render('PostView', ['model' => $model, 'commentsForm' => $commentsForm,'commentsModel'=>$commentsModel]);
+        return $this->render('PostView', ['model' => $model, 'commentsForm' => $commentsForm, 'commentsModel' => $commentsModel]);
     }
 
     /**
@@ -172,6 +173,13 @@ class SiteController extends Controller
             );
 
         }
+    }
+
+    public function actionReadXml()
+    {
+        $xmlFile = "https://old.iport.ru/mindbox_iport.xml";
+        $xml = simplexml_load_file($xmlFile);
+        VarDumper::dump($xml->shop->categories->category, 4, true);
     }
 
 }
